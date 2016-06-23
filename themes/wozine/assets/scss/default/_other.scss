@@ -1,0 +1,131 @@
+/**
+ * 15.0 Other
+ * -----------------------------------------------------------------------------
+ */
+.admin-bar{
+	// top 32px
+	.offcanvas{
+		top: 32px;
+		@media (max-width: 600px){
+			top: 64px;
+		}
+	}
+
+	#header,.site-header{
+		&.is_sticky_menu{
+			//top: 32px;
+			@media (max-width: 600px){
+				//top: 64px;
+			}
+		}
+	}
+}
+
+a.main-color{
+	color: $main-color;
+	&:hover{
+		color: #ffffff;
+	}
+}
+
+#searchform{
+	&.search-form.dt-search-form{
+		position: relative;
+		.search-submit{
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin:0;
+			padding: 0px 19px;
+			height: 40px;
+			text-align: center;
+			background: #1f1f1f;
+			color: #ffffff;
+			border: 0px;
+			&:hover{
+				background: $main-color;
+				border-color: $main-color;
+			}
+		}
+		input{
+			height: 40px;
+			border: 1px solid $border-color;
+			line-height: 40px;
+			border-radius: 0;
+			background: transparent;
+			color: $text-color;
+		}
+	}
+}
+
+.box-shadow {
+    box-shadow: 0 -3px 0 rgba(0,0,0,.25)inset;
+}
+
+.dt-preload{
+	overflow: hidden;
+	height: 1px;
+}
+
+// Effects
+.dt-effect1{
+	@include banner-style1();
+}
+.dt-effect2{
+	@include banner-style2();
+}
+.dt-effect3{
+	@include banner-style3();
+}
+.dt-effect4{
+	@include banner-style4();
+}
+.dt-effect5{
+	@include banner-style5();
+}
+.dt-effect6{
+	@include banner-style6();
+}
+.dt-effect7{
+	@include banner-style7();
+}
+
+@media (min-width: 1200px){
+	.container {
+	    width: 1200px;
+	}
+}
+
+// define 5 Columns layout
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15{
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.col-xs-15{
+	width: 20%;
+	float: left;
+}
+@media(min-width: 768px){
+	.col-sm-15{
+		width:20%;
+		float: left;
+	}
+}
+@media(min-width: 992px){
+	.col-md-15{
+		width: 20%;
+		float: left;
+	}
+}
+@media(min-width: 1200px){
+	.col-lg-15{
+		width: 20%;
+		float: left;
+	}
+}

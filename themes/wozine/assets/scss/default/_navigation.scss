@@ -1,0 +1,120 @@
+/**
+ * 5.0 Navigation
+ * -----------------------------------------------------------------------------
+ */
+
+/* Primary Navigation */
+
+.primary-navigation {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	font-size: 13px;
+	&.toggled-on {
+		padding: 72px 0 36px;
+		.nav-menu {
+			display: block;
+		}
+	}
+
+	#main-menu, #main-menu > ul{
+		display: block;
+		background: transparent;
+		/* level 1 */
+		>li{
+			padding: 0 30px 0px 0px;
+			display: inline-block;
+			position: relative;
+			border: 0 none;
+			height: 60px;
+			line-height: 60px;
+			> a{
+				color: #1f1f1f;
+				font-weight: bold;
+				font-size: 13px;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 0;
+				margin: 0;
+				&:hover{
+					color: #333333;
+					text-decoration: none;
+				}
+			}
+			&.current-menu-item{
+				> a{
+					position: relative;
+					color: $main-color;
+				}
+			}
+
+			/* level 2 */
+			ul{
+				background: rgba(255,255,255,0.9);
+				border: 1px solid rgba(0,0,0,0.1);
+				box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+				display: none;
+				position: absolute;
+				top: 100%;
+				li{
+					font-size: 12px;
+				    text-transform: capitalize;
+				    margin: 0;
+				    padding: 0;
+				    border-bottom: 1px solid rgba(0,0,0,0.1);
+				    position: relative;
+				    line-height: 1.2;
+				    min-width: 200px;
+				    a{
+				    	color: #444;
+	    				padding: 8px 15px;
+	    				&:hover{
+	    					background: #fff;
+	    					color: #333;
+	    					text-decoration: none;
+	    				}
+				    }
+
+				    /* level n */
+				    ul{
+				    	background: rgba(255,255,255,0.9);
+						border: 1px solid rgba(0,0,0,0.1);
+						box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+						display: none;
+						position: absolute;
+						left: 100%;
+						top: -1px;
+				    }
+				}
+			}
+		}
+	}
+
+	a {
+		padding: 7px 0;
+		display: block;
+	}
+}
+
+
+/* Secondary Navigation */
+
+.secondary-navigation {
+
+}
+
+.secondary-navigation a {
+
+}
+
+.menu-toggle{
+	display: none;
+	line-height: 60px;
+	padding: 0px 20px;
+	border-left: 1px solid #2f2f2f;
+	border-right: 1px solid #2f2f2f;
+	cursor: pointer;
+	text-align: center;
+	margin: 0px;
+	color: #ffffff;
+}

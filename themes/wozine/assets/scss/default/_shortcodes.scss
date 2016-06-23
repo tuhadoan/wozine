@@ -1,0 +1,119 @@
+/**
+ * 12.0 Shortcodes
+ * -----------------------------------------------------------------------------
+ */
+
+ .dt-custom-box{
+ 	&.feature-item{
+		padding: 40px 0;
+		text-align: center;
+		position: relative;
+		//background-color: #f3f3f3;
+		@include transition(all 0.1s ease-in-out);
+		/*&:before{
+			content: '';
+			width: 1px;
+			height: 100%;
+			position: absolute;
+			right: -15px;
+			top: 0;
+			background: rgba(0,0,0,0.2);
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0)));
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+			background: -o-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+			background: -ms-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+			background: linear-gradient(to bottom,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#00000000',GradientType=0 );
+
+		}*/
+		&:after{
+			content: '';
+			width: 16px;
+			height: 16px;
+			background: #e2e2e2;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			position: absolute;
+			left: 50%;
+			margin-left: -8px;
+			bottom: -8px;
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+		}
+		.dt-custom-link{
+			position: absolute;
+		    width: 100%;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		}
+		.icon {
+			font-size: 32px;
+			color: #73bb67;
+			margin-bottom: 6px;
+		}
+		.feature-item-title {
+			font-size: 1em;
+			text-transform: uppercase;
+			margin: 0;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+
+		.feature-item-desc {
+			color: #b5b5b5;
+		}
+
+		&:hover{
+			padding: 30px 0 50px;
+			&:after {
+				background: #666;
+			}
+		}
+	}
+ }
+
+.instagram{
+	.instagram-wrap{
+		.dt-instagram__list{
+			@include ulclear();
+			@include clearfix();
+			margin-left: -1px;
+			margin-right: -1px;
+			.dt-instagram__item{
+				display: inline-block;
+				vertical-align: top;
+				float: left;
+				width: 25%;
+				padding-left: 1px;
+				padding-right: 1px;
+				margin-bottom: 2px;
+				a{
+					display: block;
+					position: relative;
+					&:before{
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(0,0,0, 0.3);
+						@include opacity(0);
+						@include transition(all 0.3s ease-out);
+					}
+					&:hover{
+						&:before{
+							@include opacity(1);
+						}
+					}
+				}
+			}
+		}
+ 	}
+}
