@@ -1,0 +1,238 @@
+.dt-vc-icon-dt_woo{
+	background: url('../images/dt-woocommerce.png') no-repeat scroll 0 0 transparent !important;
+}
+
+.dt-tooltip-form {
+	height: 100%;
+}
+
+.dt-tooltip-form .submitbox {
+	background: none repeat scroll 0 0 #fcfcfc;
+	border-top: 1px solid #dfdfdf;
+	bottom: 0;
+	left: 0;
+	padding: 8px 16px;
+	position: absolute;
+	right: 0;
+	height: auto;
+}
+
+.dt-tooltip-options {
+	height: calc(100% - 92px);
+	height: -moz-calc(100% - 92px);
+	height: -webkit-calc(100% - 92px);
+	overflow: auto;
+	padding-bottom: 2px;
+}
+
+.dt-tooltip-options>div {
+	padding: 5px 0;
+}
+
+.dt-tooltip-form p.howto {
+	margin: 3px 0;
+}
+
+.dt-tooltip-form label span {
+	display: inline-block;
+	max-width: 24%;
+	padding-right: 5px;
+	text-align: right;
+	width: 24%;
+	vertical-align: top;
+}
+
+.dt-tooltip-form label textarea, .dt-tooltip-form label select,
+	.dt-tooltip-form label input[type="text"] {
+	margin-top: 5px;
+	width: 70%;
+}
+
+#dt-tooltip-cancel {
+	float: left;
+	line-height: 25px;
+}
+
+#dt-tooltip-cancel a {
+	color: #a00;
+	text-decoration: none;
+}
+
+#dt-tooltip-update {
+	float: right;
+	line-height: 23px;
+}
+
+.field-megamenu-fullwidth,
+.field-megamenu-columns,
+.field-menu-icon,
+.field-menu-visibility,
+.field-megamenu-sidebar,
+.field-megamenu-title
+{
+	display: none;
+}
+.enable-megamenu .field-megamenu-fullwidth,
+.enable-megamenu .field-megamenu-columns,
+.enable-megamenu .field-menu-icon,
+.enable-megamenu .field-menu-visibility,
+.enable-megamenu .field-megamenu-sidebar,
+.enable-megamenu .field-megamenu-title{
+	display: block;
+}
+
+.dt-message {
+	padding: 40px;
+	margin: 20px auto;
+	text-align: center;
+	max-width: 500px;
+	background: #fff;
+}
+
+.dt-message-title {
+	line-height: 1.3;
+	margin: 20px 0;
+}
+.dt-message.import-error .dt-message-title{
+	margin: 10px 0 20px;
+	color:#bb5857;
+}
+.dt-message.success .dt-message-title {
+	margin: 10px 0 20px;
+	color: #59ba41;
+}
+
+.dt-message.success .dt-message-text {
+	font-size: 16px;
+}
+
+.dt-importer {
+	padding: 30px;
+	margin: 20px 20px 0 0;
+	background: #fff;
+}
+
+@media only screen and (max-width: 782px) {
+	.dt-importer {
+		margin: 10px 10px 0 0;
+	}
+}
+
+@media only screen and (max-width: 568px) {
+	.dt-importer {
+		padding: 10px;
+	}
+}
+
+.dt-importer-title {
+	text-align: left;
+	line-height: 1.3;
+	margin: 5px 0 25px;
+}
+
+.dt-importer-list {
+	display: none;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.dt-importer-item {
+	float: left;
+	width: 50%;
+	text-align: center;
+	position: relative;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@media only screen and (max-width: 767px) {
+	.dt-importer-item {
+		width: 100%;
+	}
+}
+.dt-importer-item-radio {
+	position: absolute;
+	visibility: hidden;
+}
+
+.dt-importer-item-title {
+	margin: 0;
+	padding: 5px 0 20px;
+}
+
+.dt-importer-item-preview {
+	display: block;
+	padding: 20px 20px 65px;
+	border: 1px solid transparent;
+}
+
+.dt-importer-item:hover .dt-importer-item-preview {
+	border-color: #ccc;
+}
+
+.dt-importer-item-radio:checked+.dt-importer-item-preview {
+	border-color: #59ba41;
+	box-shadow: 0 0 0 2px #59ba41 inset;
+}
+
+.dt-importer-item-radio:checked+.dt-importer-item-preview:before {
+	displaY: block;
+	content: "\f147";
+	font: 40px/1 'dashicons';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #59ba41;
+	color: #fff;
+}
+
+.dt-importer-item-radio:checked+.dt-importer-item-preview h2 {
+	color: #59ba41;
+}
+
+.dt-importer-item-preview img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.dt-importer-item-btn {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 25px;
+}
+
+.dt-importer-option {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.dt-importer-option-title {
+	font-weight: 600;
+}
+
+.dt-importer-option-desc {
+	opacity: 0.5;
+}
+
+.dt-importer-error {
+	margin: 25px 0;
+	padding: 20px 20px 10px;
+	background: #FFD9D9;
+	color: #A24141;
+}
+
+.dt-importer-error p {
+	margin: 0 0 10px;
+}
+
+.dt-importer-note {
+	margin: 25px 0;
+	padding: 20px 20px 10px;
+	background: #DBF2FF;
+	color: #5e6a76;
+}
+
+.dt-importer-note p {
+	margin: 0 0 10px;
+}

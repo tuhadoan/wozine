@@ -1,0 +1,219 @@
+/**
+ * 8.0 Footer
+ * -----------------------------------------------------------------------------
+ */
+a.go-to-top{
+	&,
+	&:hover
+	&:focus{
+		background-color: $go-to-top-bg;
+	    bottom: -50px;
+	    @include opacity(0);
+	    position: fixed;
+	    right: 20px;
+	    @include transition(all 0.2s ease-in-out 0s);
+	    color: #fff;
+	    font-size: 24px;
+	    line-height: 40px;
+	    width: 40px;
+	    height: 40px;
+	    position: fixed;
+	    text-align: center;
+	    z-index: 100;
+	    visibility: hidden;
+	    &.on {
+	    	@include opacity(0.8);
+	    	visibility: visible;
+	    	bottom: 20px;
+	    	&:hover{
+	    		@include opacity(1);
+	    	}
+		}
+	}
+}
+#footer{
+	position: relative;
+	background: #1f1f1f;
+	color: #828282;
+
+		#footer-primary{
+			padding: 0;
+			border-bottom: 1px solid #2f2f2f;
+		}
+
+		.site-footer {
+			position: relative;
+			z-index: 3;
+		}
+
+
+		.footer-sidebar {
+			padding-top: 54px;
+			color:#828282;
+			.footer-primary__group{
+				float: left;
+				position: relative;
+			    min-height: 1px;
+			    padding-right: 15px;
+			    padding-left: 15px;
+			}
+
+			.footer-primary__columns__1{
+				.footer-primary__group{
+					width: 100%;
+				}
+			}
+
+			.footer-primary__columns__2{
+				@media (min-width: 992px){
+					.footer-primary__group{
+						width: 50%;
+					}
+				}
+			}
+
+			.footer-primary__columns__3{
+				@media (min-width: 992px){
+					.footer-primary__group{
+						width: 33.33333333%;
+					}
+				}
+			}
+
+			.widget{
+				margin-bottom: 48px;
+				.widget-title{
+				    color: #ffffff;
+				    font-size: 1.429em;
+				    margin: 0 0 35px;
+				    text-transform: uppercase;
+				    font-weight: bold;
+				    padding-bottom: 7px;
+				    border-bottom: 2px solid #2f2f2f;
+				}
+				a{
+					text-decoration: none;
+					&:hover{
+						color: #ffffff;
+						text-decoration: none;
+					}
+				}
+
+				&.widget_nav_menu{ /* Custom menu widget */
+					ul{
+						li{
+							border-bottom: 1px solid rgba(255,255,255,0.1);
+						    padding-bottom: 9px;
+						    margin-bottom: 9px;
+						    a{
+						    	position: relative;
+						    	padding-left: 15px;
+						    	font-size: 1em;
+						    	&:before{
+						    		position: absolute;
+						    		content: "\f105";
+						    		font: 14px/1 FontAwesome;
+						    		top: 0;
+						    		left: 0;
+						    		font-size: 1em;
+						    	}
+						    	&:hover{
+						    		color: #ffffff;
+						    		&:before{
+						    			color: #ffffff;
+						    		}
+						    	}
+						    }
+
+						    &:last-child{
+						    	border: none;
+						    }
+							ul{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			input:not([type]), input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="search"], textarea, .form-control, select
+			{
+				margin-bottom: 12px;
+			}
+			button, input[type="submit"]{
+				padding: 7px 20px;
+			    background: #6ac229;
+			    color: #fff;
+			    font-size: 1em;
+			    font-weight: bold;
+			    border: 0;
+			    -webkit-border-radius: 2px;
+			    -moz-border-radius: 2px;
+			    border-radius: 2px;
+			}
+
+			.footer-newsletter{
+				position: relative;
+				overflow: hidden;
+				margin-bottom: 12px;
+				.fa{
+					position: absolute;
+					left: 10px;
+					color: #d8d8d8;
+					top: 50%;
+					@include translate(0,-50%);
+				}
+				input.wpcf7-email{
+					padding: 10px 15px 10px 30px;
+					margin: 0;
+				}
+			}
+		}
+
+
+		.site-info {
+			padding: 30px 0px;
+			text-align: center;
+		}
+
+		.site-info a:hover {
+			color: #41a62a;
+			text-decoration: none;
+		}
+
+		.footer-navigation{
+			padding: 15px 0px;
+		}
+		.footer-navigation ul.menu{
+			list-style: none;
+			margin:0;
+			text-align:right;
+		}
+		.footer-navigation ul li{
+			position: relative;
+		    display: inline-block;
+		    padding: 0 13px 0 13px;
+		    line-height: 1;
+		}
+		.footer-navigation ul:after{
+			display:table;
+			content:"";
+			clear:both;
+		}
+		.footer-navigation ul li a{
+			color:#999999;
+		}
+		.footer-navigation ul li a:hover{
+			color:#ffffff;
+			text-decoration:none;
+		}
+		
+		.footer-bottom{
+			color: #8f8f8f;
+			a{
+				color: #ffffff;
+				&:hover{
+					color: $main-color;
+				}
+			}
+		}
+}

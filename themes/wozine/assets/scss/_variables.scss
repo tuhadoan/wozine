@@ -1,0 +1,46 @@
+// Override bootstrap variables
+$main-color:				#54af7d;
+$brand-primary:         	$main-color;
+$text-color:            	#3f3f3f;
+$link-color:      			#3f3f3f;
+$link-hover-color:      	$main-color;
+$link-hover-decoration: 	none;
+$text-color-2: 				#828282;
+
+$font-size: 14px;
+$line-height: 1.5; // 21px
+
+$headings-color: 			#000000;
+
+//== Colors
+// Social media colors
+$social-facebook-color: 	#3b5998; //  59, 89, 152
+$social-twitter-color: 	#55acee; //  85, 172, 238
+$social-flickr-color: 	#ff0084; //  255, 0, 132
+$social-plusgoogle-color: 	#dd4b39;//  221, 75, 57
+$social-youtube-color: 	#bb0000; //  187, 0, 0
+$social-linkedin-color: 	#007bb5; //  0, 123, 181
+$social-instagram-color: 	#a17357; //  233, 89, 80
+$social-whatsapp-color: 	#4dc247; //  77, 194, 71
+$social-pinterest-color: 	#00bf8f; //  203, 32, 39
+$social-vine-color: 	#3b5998;//  0, 191, 143
+$social-tumblr-color: 	#32506d;
+$social-behance-color: 	#1769ff;
+$social-flickr-color: 	#ff0084;
+
+//## Gray and brand colors for use across Bootstrap.
+
+$brand-primary:         	$main-color;
+$brand-primary-secondary: 	$brand-primary; 
+$brand-success:         	#a0ce4e;//#428bca;7aba35 
+$brand-info:            	#63B5FD;
+$brand-warning:         	#FEAB62;
+$brand-danger:          	#FE252C;
+$background-color-default: $main-color;
+$border-color: 				#e8e8e8;
+$dark-border-color: 		#2f2f2f;
+
+// Footer
+
+//Go to top
+$go-to-top-bg: 			$headings-color;
