@@ -68,6 +68,9 @@ a.main-color{
 }
 
 // Effects
+.dt-effect0{
+	@include banner-style0();
+}
 .dt-effect1{
 	@include banner-style1();
 }

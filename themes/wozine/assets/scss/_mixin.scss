@@ -113,6 +113,20 @@
    line-height: $line_height;        /* fallback */
    max-height: $line_height * $lines;       /* fallback */
 }
+// Banner effects default.
+@mixin banner-style0(){
+  a{
+      img{
+        @include opacity(1);
+        @include transition(opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86));
+      }
+      &:hover{
+        img{
+          opacity: 0.6;
+        }
+      }
+  }
+}
 
 // Effects
 @mixin banner-style1(){

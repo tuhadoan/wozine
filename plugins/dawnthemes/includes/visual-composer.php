@@ -377,6 +377,9 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 
 	class WPBakeryShortCode_DT_Post_Grid extends DTWPBakeryShortcode {
 	}
+	
+	class WPBakeryShortCode_DT_Smart_Content_Box extends DTWPBakeryShortcode {
+	}
 
 	class WPBakeryShortCode_DT_Video extends DTWPBakeryShortcode {
 	}
@@ -461,6 +464,16 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 					'base' => 'dt_post_grid', 
 					'name' => __( 'Post Zigzag', 'dawnthemes' ), 
 					'description' => __( 'Display post with 2 styles.', 'dawnthemes' ), 
+					"category" => __( "dawnthemes", 'dawnthemes' ), 
+					'class' => 'dt-vc-element dt-vc-element-dt_post', 
+					'icon' => 'dt-vc-icon-dt_post', 
+					'show_settings_on_create' => true, 
+					'params' => array() ) );
+			vc_map( 
+				array( 
+					'base' => 'dt_smart_content_box', 
+					'name' => __( 'DT Smart Content Box', 'dawnthemes' ), 
+					'description' => '', 
 					"category" => __( "dawnthemes", 'dawnthemes' ), 
 					'class' => 'dt-vc-element dt-vc-element-dt_post', 
 					'icon' => 'dt-vc-icon-dt_post', 
@@ -1071,8 +1084,9 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'heading' => __( 'Load More Button Text', 'dawnthemes' ), 
 						'param_name' => 'loadmore_text', 
 						'dependency' => array( 'element' => "pagination", 'value' => array( 'loadmore' ) ), 
-						'value' => __( 'Load More', 'dawnthemes' ) ) ), 
-				'dt_post_grid' => array( 
+						'value' => __( 'Load More', 'dawnthemes' ) ) ),
+				
+				'dt_post_grid' => array(
 					array( 
 						'type' => 'dropdown', 
 						'heading' => __( 'Layout Style', 'dawnthemes' ), 
@@ -1156,6 +1170,52 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'param_name' => 'categories', 
 						'admin_label' => true, 
 						'description' => __( 'Select a category or leave blank for all', 'dawnthemes' ) ) ),
+				
+				'dt_smart_content_box' => array(
+					array(
+						'type' => 'dropdown',
+						'heading' => __( 'Layout Style', 'dawnthemes' ),
+						'param_name' => 'layout_style',
+						'std' => 'layout_1',
+						'value' => array(
+							__( 'Layout 1 (standard grid)', 'dawnthemes' ) => 'layout_1',
+							__( 'Layout 2 (grid with a big item)', 'dawnthemes' ) => 'layout_2',
+							'description' => __( 'Choose Smart Content Box layout.', 'dawnthemes' ) 
+						),
+					),
+					array(
+						'type' => 'post_category',
+						'heading' => __( 'Categories', 'dawnthemes' ),
+						'param_name' => 'categories',
+						'admin_label' => true,
+						'description' => __( 'Select a category or leave blank for all', 'dawnthemes' )
+					),
+					array( 
+						'type' => 'dropdown', 
+						'heading' => __( 'Order by', 'dawnthemes' ), 
+						'param_name' => 'orderby', 
+						'value' => array( 
+							__( 'Order by published date', 'dawnthemes' ) => 'latest', 
+							//__( 'Only query "featured posts"', 'dawnthemes' ) => 'featured', 
+							__( 'Order randomly', 'dawnthemes' ) => 'random', 
+							__( 'Order by Title Alphabet', 'dawnthemes' ) => 'alphabet', 
+							__( 'Order by Title Reversed Alphabet', 'dawnthemes' ) => 'ralphabet' 
+						),
+						'description' => __( 'Condition to query items', 'dawnthemes' )
+						),
+					array(
+						"type" => "dropdown",
+						"class" => "",
+						"heading" => esc_html__("Order", 'dawnthemes'),
+						"param_name" => "order",
+						"value" => array(
+							esc_html__('Ascending', 'dawnthemes') => "asc",
+							esc_html__('Descending', 'dawnthemes') => "desc",
+						),
+						"description" => '',
+					),
+				),
+				
 				'dt_carousel' => array( 
 					array( 
 						'type' => 'textfield', 
@@ -1595,6 +1655,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 				'dt_animation', 
 				'dt_post', 
 				'dt_post_grid', 
+				'dt_smart_content_box', 
 				'dt_instagram', 
 				'dt_slider', 
 				'dt_carousel', 

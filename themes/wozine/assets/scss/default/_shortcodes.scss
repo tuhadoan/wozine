@@ -3,6 +3,197 @@
  * -----------------------------------------------------------------------------
  */
 
+.dt-smart-content-box{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	.smart-content-box__wrap{
+		position: relative;
+		display: block;
+		overflow: hidden;
+		margin-left: -1px;
+		margin-right: -1px;
+		.dt-module-thumb{
+			position: relative;
+			overflow: hidden;
+			a{
+				position: relative;
+				display: block;
+				overflow: hidden;
+				&:before{
+					position: absolute;
+					content: '';
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+				    background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
+				    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+				    background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+				    background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+				    background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+				    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b3000000', GradientType=0);
+					@include transition(background-color .3s ease);
+				}
+			}
+			img{
+				max-width: none;
+				@include transition(all 1s);
+			}
+		}
+		.dt-smcb-post{
+			position: relative;
+			overflow: hidden;
+			float: left;
+			&:hover{
+				.dt-module-thumb{
+					a{
+						img{
+							@include scale(1.1,1.1);
+						}
+					}
+				}
+			}
+			.dt-smcb-info-container{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				pointer-events: none;
+    			z-index: 1;
+				.dt-smcb-info_wrap{
+					text-align: center;
+					width: 80%;
+					margin: 0px auto;
+					.dt-post-category{
+						display: inline-block;
+						vertical-align: top;
+						font-size: 0.714em;
+						text-transform: uppercase;
+						padding: 3px 15px;
+						background-color: rgba($main-color, 1);
+						color: #ffffff;
+						pointer-events: auto;
+					}
+					.dt-module-title{
+						display: block;
+						margin-bottom: 26px;
+						font-weight: bold;
+						font-size: 1.143em;
+					    font-weight: bold;
+					    pointer-events: auto;
+						a{
+							color: #ffffff;
+						}
+					}
+				}
+			}
+		}
+		.dt-smcb-block1,
+		.dt-smcb-block2,
+		.dt-smcb-block3{
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+
+		.dt-smcb-block1{
+			width: 49%;
+			.dt-module-thumb{
+				height: 404px;
+			}
+			.dt-smcb-info-container{
+				.dt-smcb-info_wrap{
+					.dt-module-title{
+						font-size: 1.929em;
+						@media(max-width: 767px){
+							font-size: 1.529em;
+						}
+						@media(max-width: 479px){
+							font-size: 1.3em;
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+		.dt-smcb-block2{
+			width: 25.5%;
+			float: left;
+			.dt-big-grid-post-1{
+				.dt-module-thumb{
+					height: 404px;
+				}
+			}
+		}
+		.dt-smcb-block3{
+			float: left;
+			width: 25.5%;
+			.dt-big-grid-post-2{
+				margin-bottom: 2px;
+				.dt-module-thumb{
+					height: 201px;
+				}
+			}
+			.dt-big-grid-post-3{
+				.dt-module-thumb{
+					height: 201px;
+				}
+			}
+		}
+		@media(max-width: 1200px){
+		margin-bottom: -2px;
+			.dt-smcb-block1,
+			.dt-smcb-block2,
+			.dt-smcb-block3{
+				.dt-module-thumb{
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.dt-smcb-block1{
+				width: 68%;
+				.dt-module-thumb{
+					height: 403px;
+				}
+			}
+			.dt-smcb-block2{
+				width: 32%;
+				margin-bottom: 2px;
+				.dt-big-grid-post-1{
+					.dt-module-thumb{
+						height: 133px;
+					}
+				}
+			}
+			.dt-smcb-block3{
+				width: 32%;
+				display: block;
+				position: relative;
+				overflow: hidden;
+				.dt-big-grid-post-2,
+				.dt-big-grid-post-3{
+					width: 100%;
+					float: left;
+					.dt-module-thumb{
+						height: 133px;
+					}
+				}
+			}
+		}
+		@media(max-width: 639px){
+			.dt-smcb-block2,
+			.dt-smcb-block3{
+				.dt-smcb-post{
+					.dt-smcb-info-container{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
  .dt-custom-box{
  	&.feature-item{
 		padding: 40px 0;

@@ -250,6 +250,34 @@
 			init: function(){
 				var self = this;
 
+				// Smart Content Box shortcode
+				if( $('.dt-smart-content-box').length ){
+					var $window = $( window );
+					var $windowW = $window.width();
+
+					var DTSmartContentBox = function($windowW, isResize){
+						if($windowW <= 1200){
+							var $blockBig = $('.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-module-thumb');
+							var $blockBigW = $blockBig.width();
+							var $blockBigH = Math.round($blockBigW * 0.8052);
+							$('.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-module-thumb').css("height", $blockBigH);
+
+							var $blockList = $('.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-module-thumb');
+							var $blockListW = $blockList.width();
+							var $blockListH = Math.round($blockListW * 0.568);
+							$('.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-module-thumb, .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-module-thumb').css("height", $blockListH);
+						}else{
+							$('.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-module-thumb').attr("style", '');
+							$('.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-module-thumb, .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-module-thumb').attr("style", '');
+						}
+					}
+					DTSmartContentBox($windowW, false );
+					$window.resize(function(){
+						$windowW = $window.width();
+						DTSmartContentBox($windowW, true);
+					});
+				}
+
 				this.menu_toggle();
 				this.menu();
 				this.scrollToTOp();

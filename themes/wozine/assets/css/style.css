@@ -4430,6 +4430,7 @@ blockquote cite a {
   padding-left: 1px;
   padding-right: 1px;
   margin-bottom: 2px;
+  overflow: hidden;
 }
 .dt-instagram__widget .dt-instagram__widget_wrap .dt-instagram__list .dt-instagram__item a {
   display: block;
@@ -4442,7 +4443,7 @@ blockquote cite a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: all 0.3s ease-out;
@@ -5063,6 +5064,187 @@ a.go-to-top:focus.on:hover {
  * 12.0 Shortcodes
  * -----------------------------------------------------------------------------
  */
+.dt-smart-content-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.dt-smart-content-box .smart-content-box__wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-module-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-module-thumb a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-module-thumb a:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.7)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b3000000', GradientType=0);
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-module-thumb img {
+  max-width: none;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post:hover .dt-module-thumb a img {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post .dt-smcb-info-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post .dt-smcb-info-container .dt-smcb-info_wrap {
+  text-align: center;
+  width: 80%;
+  margin: 0px auto;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post .dt-smcb-info-container .dt-smcb-info_wrap .dt-post-category {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.714em;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  background-color: #54af7d;
+  color: #ffffff;
+  pointer-events: auto;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post .dt-smcb-info-container .dt-smcb-info_wrap .dt-module-title {
+  display: block;
+  margin-bottom: 26px;
+  font-weight: bold;
+  font-size: 1.143em;
+  font-weight: bold;
+  pointer-events: auto;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-post .dt-smcb-info-container .dt-smcb-info_wrap .dt-module-title a {
+  color: #ffffff;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1,
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2,
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 {
+  width: 49%;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-module-thumb {
+  height: 404px;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-smcb-info-container .dt-smcb-info_wrap .dt-module-title {
+  font-size: 1.929em;
+}
+@media (max-width: 767px) {
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-smcb-info-container .dt-smcb-info_wrap .dt-module-title {
+    font-size: 1.529em;
+  }
+}
+@media (max-width: 479px) {
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-smcb-info-container .dt-smcb-info_wrap .dt-module-title {
+    font-size: 1.3em;
+    text-align: left;
+  }
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 {
+  width: 25.5%;
+  float: left;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-big-grid-post-1 .dt-module-thumb {
+  height: 404px;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 {
+  float: left;
+  width: 25.5%;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-2 {
+  margin-bottom: 2px;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-2 .dt-module-thumb {
+  height: 201px;
+}
+.dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-3 .dt-module-thumb {
+  height: 201px;
+}
+@media (max-width: 1200px) {
+  .dt-smart-content-box .smart-content-box__wrap {
+    margin-bottom: -2px;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-module-thumb img,
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-module-thumb img,
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-module-thumb img {
+    width: 100%;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 {
+    width: 68%;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-module-thumb {
+    height: 403px;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 {
+    width: 32%;
+    margin-bottom: 2px;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-big-grid-post-1 .dt-module-thumb {
+    height: 133px;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 {
+    width: 32%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-2,
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-3 {
+    width: 100%;
+    float: left;
+  }
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-2 .dt-module-thumb,
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-big-grid-post-3 .dt-module-thumb {
+    height: 133px;
+  }
+}
+@media (max-width: 639px) {
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block2 .dt-smcb-post .dt-smcb-info-container,
+  .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block3 .dt-smcb-post .dt-smcb-info-container {
+    display: none;
+  }
+}
+
 .dt-custom-box.feature-item {
   padding: 40px 0;
   text-align: center;
@@ -5184,6 +5366,17 @@ a.go-to-top:focus.on:hover {
 /* -----------------------------------------------------------------------------
  13.0 Genaral
  * -----------------------------------------------------------------------------*/
+a.dt-image-link img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+a.dt-image-link:hover img {
+  opacity: 0.6;
+}
+
 @media (min-width: 992px) {
   .page-layout-right-sidebar #main {
     position: relative;
@@ -5512,6 +5705,17 @@ a.main-color:hover {
 .dt-preload {
   overflow: hidden;
   height: 1px;
+}
+
+.dt-effect0 a img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: opacity 175ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.dt-effect0 a:hover img {
+  opacity: 0.6;
 }
 
 .dt-effect1 a {
