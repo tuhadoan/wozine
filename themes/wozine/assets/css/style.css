@@ -5172,6 +5172,7 @@ a.go-to-top:focus.on:hover {
 @media (max-width: 767px) {
   .dt-smart-content-box .smart-content-box__wrap .dt-smcb-block1 .dt-smcb-info-container .dt-smcb-info_wrap .dt-module-title {
     font-size: 1.529em;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 479px) {
