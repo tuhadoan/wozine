@@ -1173,7 +1173,7 @@ function dt_post_featured($post_id='',$post_format='',$is_shortcode = false,$is_
 			$thumb = get_the_post_thumbnail($post_id,$thumb_size,array('data-itemprop'=>'image'));
 			echo '<div class="entry-featured post-thumbnail'.$featured_class.' '.$entry_featured_class.'">';
 			if(!is_singular() || $is_shortcode){
-				echo '<a href="'.get_the_permalink().'" title="'.esc_attr(get_the_title(get_post_thumbnail_id($post_id))).'">'.$thumb.'</a>';
+				echo '<a class="dt-image-link" href="'.get_the_permalink().'" title="'.esc_attr(get_the_title(get_post_thumbnail_id($post_id))).'">'.$thumb.'</a>';
 			}else{
 				echo dt_echo($thumb);
 			}

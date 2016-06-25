@@ -5,7 +5,7 @@ add_action ( 'edit_category_form_fields', 'dawnthemes_extra_category_fields');
 function dawnthemes_extra_category_fields( $tag ) {    //check for existing featured ID
 	$t_id 									= is_object($tag) && $tag->term_id?$tag->term_id:'';
 	$main_color 							= str_replace('#', '', dt_get_theme_option('main_color', '#9CBA75') );
-	$dt_category_representative_color 			= get_option( "dt_category_representative_color$t_id") ? get_option( "dt_category_representative_color$t_id"): '';
+	$dt_category_representative_color 		= get_option( "dt_category_representative_color$t_id") ? get_option( "dt_category_representative_color$t_id"): '';
 	$category_sidebar_options 				= get_option( "category_sidebar_options$t_id") ? get_option( "category_sidebar_options$t_id"):'';
 	$category_feature_post_carousel_options = get_option( "category_feature_post_carousel_options$t_id") ? get_option( "category_feature_post_carousel_options$t_id"):'';
 	?>

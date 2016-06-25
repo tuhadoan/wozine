@@ -105,6 +105,11 @@ function dt_setup() {
 
 	add_image_size( 'wozine-related-post-thumbnails', 244, 162, true );
 	add_image_size( 'wozine-recent-posts-wg-thumb', 170, 115, true );
+	
+	// register thumbnail size for shortcodes
+	add_image_size( 'wozine-smart-content-box-big-thumb', 572, 492, true );
+	add_image_size( 'wozine-smart-content-box-type2-02', 298, 404, true );
+	add_image_size( 'wozine-smart-content-box-type2-03', 298, 201, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
