@@ -28,8 +28,9 @@ if(!defined('DT_ASSETS_URI'))
  */
 do_action('dawn_theme_includes');
 
-include_once (get_template_directory().'/includes/dt-functions.php');
-include_once (get_template_directory().'/includes/dt-hooks.php');
+include_once (get_template_directory() . '/includes/core/dawn-core.php');
+include_once (get_template_directory() . '/includes/dt-functions.php');
+include_once (get_template_directory() . '/includes/dt-hooks.php');
 
 include_once (get_template_directory().'/includes/walker.php');
 // Plugins Required - recommended
@@ -106,10 +107,18 @@ function dt_setup() {
 	add_image_size( 'wozine-related-post-thumbnails', 244, 162, true );
 	add_image_size( 'wozine-recent-posts-wg-thumb', 170, 115, true );
 	
-	// register thumbnail size for shortcodes
+	/*
+	 *  register thumbnail size for shortcodes
+	 */
 	add_image_size( 'wozine-smart-content-box-big-thumb', 572, 492, true );
 	add_image_size( 'wozine-smart-content-box-type2-02', 298, 404, true );
 	add_image_size( 'wozine-smart-content-box-type2-03', 298, 201, true );
+	add_image_size( 'wozine-posts-slider-thumb', 370, 250, true );
+	add_image_size( 'wozine-posts-slider-single_mode_thumb', 770, 487, true );
+	// Post category
+	add_image_size( 'wozine-post-category-big-thumb', 570, 385, true );
+	add_image_size( 'wozine-post-category-grid-thumb', 270, 182, true );
+	add_image_size( 'wozine-post-category-tpllist-big-thumb', 770, 347, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -373,8 +382,18 @@ function dt_scripts() {
 	wp_localize_script('dt', 'dtL10n', $dtL10n);
 	wp_enqueue_script('dt');
 }
-
 add_action( 'wp_enqueue_scripts', 'dt_scripts' );
+
+if ( ! function_exists( 'dt_renderurlajax' ) ) :
+function dt_renderurlajax() {
+?>
+	<script type="text/javascript">
+		var dt_ajaxurl = '<?php echo esc_js( admin_url('admin-ajax.php') ); ?>';
+	</script>
+	<?php
+}
+add_action('wp_head', 'dt_renderurlajax');
+endif;
 
 if ( ! function_exists( 'dt_the_attached_image' ) ) :
 /**
@@ -507,7 +526,8 @@ function dt_body_classes( $classes ) {
 	}
 
 	if ( is_archive() || is_search() || is_home() ) {
-		
+		wp_enqueue_style('slick');
+		wp_enqueue_script('slick');
 	}
 
 	if ( ( ! is_active_sidebar( 'sidebar-2' ) )

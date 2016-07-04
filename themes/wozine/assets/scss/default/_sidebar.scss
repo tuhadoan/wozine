@@ -325,7 +325,9 @@
 	 * 7.2 Content Sidebar - Content Sidebar Widgets
 	 * -----------------------------------------------------------------------------
 	 */
-	.content-sidebar &{
+	.content-sidebar &,
+	.content-container &
+	{
 		margin-bottom: 60px;
 		.widget-title{
 			color: #1f1f1f;
