@@ -363,16 +363,19 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 	}
 	
 	// Shortcode
-	class WPBakeryShortCode_DT_Blog extends DTWPBakeryShortcode {
-	}
-	
 	class WPBakeryShortCode_DT_Button extends DTWPBakeryShortcode {
 	}
 
 	class WPBakeryShortCode_DT_Instagram extends DTWPBakeryShortcode {
 	}
-
-	class WPBakeryShortCode_DT_Post extends DTWPBakeryShortcode {
+	
+	class WPBakeryShortCode_DT_Blog extends DTWPBakeryShortcode {
+	}
+	
+	class WPBakeryShortCode_DT_Post_Category extends DTWPBakeryShortcode {
+	}
+	
+	class WPBakeryShortCode_DT_Posts_Slider extends DTWPBakeryShortcode {
 	}
 
 	class WPBakeryShortCode_DT_Post_Grid extends DTWPBakeryShortcode {
@@ -392,7 +395,19 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 
 	class WPBakeryShortCode_DT_Client extends DTWPBakeryShortcode {
 	}
-
+	
+	
+	function dt_get_post_category(){
+		// Get all post category
+		$post_category = array();
+		$post_categories = get_categories();
+		$post_category[esc_html__('--Select--', 'wozine')] = '';
+		foreach ($post_categories as $p_cat){
+			$post_category[$p_cat->name] = $p_cat->slug;
+		}
+		return $post_category;
+	}
+	
 	class DT_VisualComposer {
 
 		public $param_holder = 'div';
@@ -451,10 +466,20 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 					'params' => array() ) );
 			vc_map( 
 				array( 
-					'base' => 'dt_post', 
-					'name' => __( 'Post', 'dawnthemes' ), 
-					'description' => __( 'Display post.', 'dawnthemes' ), 
-					"category" => __( "dawnthemes", 'dawnthemes' ), 
+					'base' => 'dt_post_category', 
+					'name' => __( 'Post Category', 'dawnthemes' ), 
+					'description' => __( 'Show mutiple posts in a category.', 'dawnthemes' ), 
+					"category" => __( "dawnthemes", 'dawnthemes' ),
+					'class' => 'dt-vc-element dt-vc-element-dt_post', 
+					'icon' => 'dt-vc-icon-dt_post', 
+					'show_settings_on_create' => true, 
+					'params' => array() ) );
+			vc_map( 
+				array( 
+					'base' => 'dt_posts_slider', 
+					'name' => __( 'Posts Slider', 'dawnthemes' ), 
+					'description' => __( 'Show mutiple posts in a slider.', 'dawnthemes' ), 
+					"category" => __( "dawnthemes", 'dawnthemes' ),
 					'class' => 'dt-vc-element dt-vc-element-dt_post', 
 					'icon' => 'dt-vc-icon-dt_post', 
 					'show_settings_on_create' => true, 
@@ -646,7 +671,8 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'value' => array( 
 							__( 'Default', 'dawnthemes' ) => 'default', 
 							__( 'Masonry', 'dawnthemes' ) => 'masonry', 
-							__( 'Center', 'dawnthemes' ) => 'center' ),
+							__( 'Center', 'dawnthemes' ) => 'center' ), 
+						'std' => 'default', 
 						'description' => __( 'Select the layout for the blog shortcode.', 'dawnthemes' ) ), 
 					array( 
 						'type' => 'dropdown', 
@@ -675,16 +701,128 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 							__( 'Older First', 'dawnthemes' ) => 'oldest', 
 							__( 'Title Alphabet', 'dawnthemes' ) => 'alphabet', 
 							__( 'Title Reversed Alphabet', 'dawnthemes' ) => 'ralphabet' ) ), 
-// 					array( 
-// 						'type' => 'post_category', 
-// 						'heading' => __( 'Categories', 'dawnthemes' ), 
-// 						'param_name' => 'categories', 
-// 						'admin_label' => true, 
-// 						'description' => __( 'Select a category or leave blank for all', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'post_category', 
+						'heading' => __( 'Categories', 'dawnthemes' ), 
+						'param_name' => 'categories', 
+						'admin_label' => true, 
+						'description' => __( 'Select a category or leave blank for all', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'post_category', 
+						'heading' => __( 'Exclude Categories', 'dawnthemes' ), 
+						'param_name' => 'exclude_categories', 
+						'description' => __( 'Select a category to exclude', 'dawnthemes' ) ), 
 					
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Post Title', 'dawnthemes' ), 
+						'param_name' => 'hide_post_title', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'description' => __( 'Hide the post title below the featured', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'dropdown', 
+						'heading' => __( 'Link Title To Post', 'dawnthemes' ), 
+						'param_name' => 'link_post_title', 
+						'std' => 'yes', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes', __( 'No', 'dawnthemes' ) => 'no' ), 
+						'description' => __( 
+							'Choose if the title should be a link to the single post page.', 
+							'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Thumbnail', 'dawnthemes' ), 
+						'param_name' => 'hide_thumbnail', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'description' => __( 'Hide the post featured', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Excerpt', 'dawnthemes' ), 
+						'param_name' => 'hide_excerpt', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'dependency' => array( 
+							'element' => "layout", 
+							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
+						'description' => __( 'Hide excerpt', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'textfield', 
+						'heading' => __( 'Number of words in Excerpt', 'dawnthemes' ), 
+						'param_name' => 'excerpt_length', 
+						'value' => 30, 
+						'dependency' => array( 'element' => 'hide_excerpt', 'is_empty' => true ), 
+						'description' => __( 'The number of words', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Date', 'dawnthemes' ), 
+						'param_name' => 'hide_date', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'description' => __( 'Hide date in post meta info', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Timeline Month', 'dawnthemes' ), 
+						'param_name' => 'hide_month', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'dependency' => array( 'element' => "layout", 'value' => array( 'timeline' ) ), 
+						'description' => __( 'Hide timeline month', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Comment', 'dawnthemes' ), 
+						'param_name' => 'hide_comment', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'description' => __( 'Hide comment in post meta info', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Category', 'dawnthemes' ), 
+						'param_name' => 'hide_category', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'description' => __( 'Hide category in post meta info', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Author', 'dawnthemes' ), 
+						'param_name' => 'hide_author', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'dependency' => array( 
+							'element' => "layout", 
+							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
+						'description' => __( 'Hide author in post meta info', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'checkbox', 
+						'heading' => __( 'Hide Read More Link', 'dawnthemes' ), 
+						'param_name' => 'hide_readmore', 
+						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
+						'dependency' => array( 
+							'element' => "layout", 
+							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
+						'description' => __( 'Choose to hide the link', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'dropdown', 
+						'heading' => __( 'Show Tags', 'dawnthemes' ), 
+						'param_name' => 'show_tag', 
+						'std' => 'no', 
+						'value' => array( __( 'No', 'dawnthemes' ) => 'no', __( 'Yes', 'dawnthemes' ) => 'yes' ), 
+						'dependency' => array( 
+							'element' => "layout", 
+							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
+						'description' => __( 'Choose to show the tags', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'dropdown', 
+						'std' => 'page_num', 
+						'heading' => __( 'Pagination', 'dawnthemes' ), 
+						'param_name' => 'pagination', 
+						'value' => array( 
+							__( 'Page Number', 'dawnthemes' ) => 'page_num', 
+							__( 'Load More Button', 'dawnthemes' ) => 'loadmore', 
+							__( 'Infinite Scrolling', 'dawnthemes' ) => 'infinite_scroll', 
+							__( 'No', 'dawnthemes' ) => 'no' ), 
+						'description' => __( 'Choose pagination type.', 'dawnthemes' ) ), 
+					array( 
+						'type' => 'textfield', 
+						'heading' => __( 'Load More Button Text', 'dawnthemes' ), 
+						'param_name' => 'loadmore_text', 
+						'dependency' => array( 'element' => "pagination", 'value' => array( 'loadmore' ) ), 
+						'value' => __( 'Load More', 'dawnthemes' ) )
 				),
 				
-				'dt_instagram' => array( 
+				'dt_instagram' => array(
 					array( 
 						'param_name' => 'username', 
 						'heading' => __( 'Instagram Username', 'dawnthemes' ), 
@@ -904,7 +1042,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'dependency' => array( 'element' => "tooltip", 'value' => array( 'tooltip', 'popover' ) ), 
 						'description' => __( 'Choose action to trigger the tooltip.', 'dawnthemes' ) ) ), 
 				
-				'dt_video' => array( 
+				'dt_video' => array(
 					array( 
 						'param_name' => 'type', 
 						'heading' => __( 'Video Type', 'dawnthemes' ), 
@@ -925,166 +1063,174 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'value' => '', 
 						'description' => __( 
 							'Used when you select Video format. Enter a Youtube, Vimeo, Soundcloud, etc URL. See supported services at <a href="http://codex.wordpress.org/Embeds" target="_blank">http://codex.wordpress.org/Embeds</a>.', 
-							'dawnthemes' ) ) ), 
-				'dt_post' => array( 
-					array( 
-						'type' => 'dropdown', 
-						'heading' => __( 'Layout', 'dawnthemes' ), 
-						'param_name' => 'layout', 
-						'std' => 'default', 
-						'admin_label' => true, 
-						'value' => array( 
-							__( 'Default', 'dawnthemes' ) => 'default', 
-							__( 'Masonry', 'dawnthemes' ) => 'masonry', 
-							__( 'Center', 'dawnthemes' ) => 'center' ), 
-						'std' => 'default', 
-						'description' => __( 'Select the layout for the blog shortcode.', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'heading' => __( 'Columns', 'dawnthemes' ), 
-						'param_name' => 'columns', 
-						'std' => 2, 
-						'value' => array( 
-							__( '2', 'dawnthemes' ) => '2', 
-							__( '3', 'dawnthemes' ) => '3', 
-							__( '4', 'dawnthemes' ) => '4' ), 
-						'dependency' => array( 'element' => "layout", 'value' => array( 'grid', 'masonry' ) ), 
-						'description' => __( 'Select whether to display the layout in 2, 3 or 4 column.', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'textfield', 
-						'heading' => __( 'Posts Per Page', 'dawnthemes' ), 
-						'param_name' => 'posts_per_page', 
-						'value' => 5, 
-						'description' => __( 'Select number of posts per page.Set "-1" to display all', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'heading' => __( 'Order by', 'dawnthemes' ), 
-						'param_name' => 'orderby', 
-						'std' => 'latest', 
-						'value' => array( 
-							__( 'Recent First', 'dawnthemes' ) => 'latest', 
-							__( 'Older First', 'dawnthemes' ) => 'oldest', 
-							__( 'Title Alphabet', 'dawnthemes' ) => 'alphabet', 
-							__( 'Title Reversed Alphabet', 'dawnthemes' ) => 'ralphabet' ) ), 
-					array( 
-						'type' => 'post_category', 
-						'heading' => __( 'Categories', 'dawnthemes' ), 
-						'param_name' => 'categories', 
-						'admin_label' => true, 
-						'description' => __( 'Select a category or leave blank for all', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'post_category', 
-						'heading' => __( 'Exclude Categories', 'dawnthemes' ), 
-						'param_name' => 'exclude_categories', 
-						'description' => __( 'Select a category to exclude', 'dawnthemes' ) ), 
-					
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Post Title', 'dawnthemes' ), 
-						'param_name' => 'hide_post_title', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide the post title below the featured', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'heading' => __( 'Link Title To Post', 'dawnthemes' ), 
-						'param_name' => 'link_post_title', 
-						'std' => 'yes', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes', __( 'No', 'dawnthemes' ) => 'no' ), 
-						'description' => __( 
-							'Choose if the title should be a link to the single post page.', 
-							'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Thumbnail', 'dawnthemes' ), 
-						'param_name' => 'hide_thumbnail', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide the post featured', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Excerpt', 'dawnthemes' ), 
-						'param_name' => 'hide_excerpt', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Hide excerpt', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'textfield', 
-						'heading' => __( 'Number of words in Excerpt', 'dawnthemes' ), 
-						'param_name' => 'excerpt_length', 
-						'value' => 30, 
-						'dependency' => array( 'element' => 'hide_excerpt', 'is_empty' => true ), 
-						'description' => __( 'The number of words', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Date', 'dawnthemes' ), 
-						'param_name' => 'hide_date', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide date in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Timeline Month', 'dawnthemes' ), 
-						'param_name' => 'hide_month', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 'element' => "layout", 'value' => array( 'timeline' ) ), 
-						'description' => __( 'Hide timeline month', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Comment', 'dawnthemes' ), 
-						'param_name' => 'hide_comment', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide comment in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Category', 'dawnthemes' ), 
-						'param_name' => 'hide_category', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide category in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Author', 'dawnthemes' ), 
-						'param_name' => 'hide_author', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Hide author in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Read More Link', 'dawnthemes' ), 
-						'param_name' => 'hide_readmore', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Choose to hide the link', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'heading' => __( 'Show Tags', 'dawnthemes' ), 
-						'param_name' => 'show_tag', 
-						'std' => 'no', 
-						'value' => array( __( 'No', 'dawnthemes' ) => 'no', __( 'Yes', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Choose to show the tags', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'std' => 'page_num', 
-						'heading' => __( 'Pagination', 'dawnthemes' ), 
-						'param_name' => 'pagination', 
-						'value' => array( 
-							__( 'Page Number', 'dawnthemes' ) => 'page_num', 
-							__( 'Load More Button', 'dawnthemes' ) => 'loadmore', 
-							__( 'Infinite Scrolling', 'dawnthemes' ) => 'infinite_scroll', 
-							__( 'No', 'dawnthemes' ) => 'no' ), 
-						'description' => __( 'Choose pagination type.', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'textfield', 
-						'heading' => __( 'Load More Button Text', 'dawnthemes' ), 
-						'param_name' => 'loadmore_text', 
-						'dependency' => array( 'element' => "pagination", 'value' => array( 'loadmore' ) ), 
-						'value' => __( 'Load More', 'dawnthemes' ) ) ),
+							'dawnthemes' ) ) ),
+				'dt_post_category' => array(
+						array(
+							'param_name' => 'title',
+							'heading' => __( 'Title', 'dawnthemes' ),
+							'description' => '',
+							'type' => 'textfield',
+							'value' => '',
+							'admin_label' => true ),
+						array(
+							'param_name' => 'sub_title',
+							'heading' => __( 'Sub Title', 'dawnthemes' ),
+							'description' => '',
+							'type' => 'textfield',
+							'value' => '',
+						),
+						array(
+							'param_name' => 'icon',
+							'heading' => __( 'Icon Font', 'dawnthemes' ),
+							'description' => 'ex: fa fa-fire',
+							'type' => 'textfield',
+							'value' => '',
+						),
+						array(
+							'type' => 'colorpicker',
+							'heading' => __( 'Icon Color', 'dawnthemes' ),
+							'param_name' => 'icon_color',
+							'description' => ''
+						),
+						array(
+							'param_name' => 'template',
+							'heading' => __( 'Template', 'dawnthemes' ),
+							'description' => '',
+							'type' => 'dropdown',
+							'value' => array(
+								__( 'Grid', 'dawnthemes' ) => 'grid',
+								__( 'List Big', 'dawnthemes' ) => 'list_big',
+								__( 'List Small', 'dawnthemes' ) => 'list_small',
+							),
+							'admin_label' => true
+						),
+						array(
+							"type" => "dropdown",
+							"heading" => esc_html__( "Category (required)", "dawnthemes" ),
+							"param_name" => "category",
+							"description" => '',
+							"value"		=> dt_get_post_category(),
+							'save_always' => true,
+						),
+						array(
+							'type' => 'dropdown',
+							'heading' => __( 'Order by', 'dawnthemes' ),
+							'param_name' => 'orderby',
+							'std' => 'latest',
+							'value' => array(
+								__( 'Recent First', 'dawnthemes' ) => 'latest',
+								__( 'Older First', 'dawnthemes' ) => 'oldest',
+								__( 'Title Alphabet', 'dawnthemes' ) => 'alphabet',
+								__( 'Title Reversed Alphabet', 'dawnthemes' ) => 'ralphabet' )
+						),
+						array(
+							'param_name' => 'posts_per_page',
+							'heading' => __( 'Posts per page', 'dawnthemes' ),
+							'description' => '',
+							'type' => 'textfield',
+							'value' => '',
+							'dependency' => array( 'element' => "template", 'value' => array( 'list_big', 'list_small') ),
+						),
+				),
+				'dt_posts_slider' => array(
+					array(
+						'type' => 'dropdown',
+						'heading' => __( 'Mode', 'dawnthemes' ),
+						'param_name' => 'mode',
+						'std' => 'def',
+						'value' => array(
+							__( 'Default (multiple items)', 'dawnthemes' ) => 'def',
+							__( 'Single (single item)', 'dawnthemes' ) => 'single_mode',
+						)
+					),
+					array(
+						'param_name' => 'title',
+						'heading' => __( 'Title', 'dawnthemes' ),
+						'description' => '',
+						'type' => 'textfield',
+						'value' => '',
+						'admin_label' => true ),
+					array(
+						'param_name' => 'sub_title',
+						'heading' => __( 'Sub Title', 'dawnthemes' ),
+						'description' => '',
+						'type' => 'textfield',
+						'value' => '',
+					),
+					array(
+						'param_name' => 'icon',
+						'heading' => __( 'Icon Font', 'dawnthemes' ),
+						'description' => 'ex: fa fa-fire',
+						'type' => 'textfield',
+						'value' => '',
+					),
+					array(
+						'type' => 'colorpicker',
+						'heading' => __( 'Icon Color', 'dawnthemes' ),
+						'param_name' => 'icon_color',
+						'description' => ''
+					),
+					array(
+						'type' => 'post_category',
+						'heading' => __( 'Categories', 'dawnthemes' ),
+						'param_name' => 'categories',
+						'admin_label' => true,
+						'description' => __( 'Select a category or leave blank for all', 'dawnthemes' )
+					),
+					array(
+						'type' => 'post_category',
+						'heading' => __( 'Exclude Categories', 'dawnthemes' ),
+						'param_name' => 'exclude_categories',
+						'description' => __( 'Select a category to exclude', 'dawnthemes' )
+					),
+					array(
+						'type' => 'dropdown',
+						'heading' => __( 'Order by', 'dawnthemes' ),
+						'param_name' => 'orderby',
+						'std' => 'latest',
+						'value' => array(
+							__( 'Recent First', 'dawnthemes' ) => 'latest',
+							__( 'Older First', 'dawnthemes' ) => 'oldest',
+							__( 'Title Alphabet', 'dawnthemes' ) => 'alphabet',
+							__( 'Title Reversed Alphabet', 'dawnthemes' ) => 'ralphabet' )
+					),
+					array(
+						'type' => 'textfield',
+						'heading' => __( 'Posts to show', 'dawnthemes' ),
+						'param_name' => 'posts_to_show',
+						'value' => 3,
+						'dependency' => array( 'element' => "mode", 'value' => array('def') ),
+						'description' => __( 'Select number of posts to show.', 'dawnthemes' ) ),
+					array(
+						'type' => 'textfield',
+						'heading' => __( 'Posts Per page', 'dawnthemes' ),
+						'param_name' => 'posts_per_page',
+						'value' => 10,
+						'description' => ''
+					),
+					array(
+						'type' => 'dropdown',
+						'heading' => __( 'Show Category', 'dawnthemes' ),
+						'param_name' => 'show_cat',
+						'std' => 'show',
+						'value' => array(
+							__( 'Show', 'dawnthemes' ) => 'show',
+							__( 'Hide', 'dawnthemes' ) => 'hide',
+						),
+						'dependency' => array( 'element' => "mode", 'value' => array('def') ),
+					),
+					array(
+						'type' => 'dropdown',
+						'heading' => __( 'Show Excerpt', 'dawnthemes' ),
+						'param_name' => 'show_excerpt',
+						'std' => 'show',
+						'value' => array(
+							__( 'Show', 'dawnthemes' ) => 'show',
+							__( 'Hide', 'dawnthemes' ) => 'hide',
+						),
+						'dependency' => array( 'element' => "mode", 'value' => array('def') ),
+					),
+				),
 				
 				'dt_post_grid' => array(
 					array( 
@@ -1334,7 +1480,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'type' => 'colorpicker', 
 						'heading' => __( 'Color', 'dawnthemes' ), 
 						'param_name' => 'color', 
-						'description' => __( 'Custom color.', 'dawnthemes' ) ), 
+						'description' => __( 'Custom color.', 'dawnthemes' ) ),
 					array( 
 						'type' => 'dropdown', 
 						'heading' => __( 'Columns', 'dawnthemes' ), 
@@ -1653,12 +1799,12 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 				'dt_blog', 
 				'dt_button', 
 				'dt_animation', 
-				'dt_post', 
+				'dt_post_category',
+				'dt_posts_slider',
 				'dt_post_grid', 
 				'dt_smart_content_box', 
 				'dt_instagram', 
-				'dt_slider', 
-				'dt_carousel', 
+				'dt_carousel',
 				'dt_testimonial', 
 				'dt_client', 
 				'dt_counter', 

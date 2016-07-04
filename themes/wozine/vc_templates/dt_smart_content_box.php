@@ -13,26 +13,7 @@ extract(shortcode_atts(array(
 ), $atts));
 
 $class = !empty($el_class) ?  ' '.esc_attr( $el_class ) : '';
-switch ($visibility) {
-	case 'hidden-phone':
-		$class .= ' hidden-xs';
-		break;
-	case 'hidden-tablet':
-		$class .= ' hidden-sm hidden-md';
-		break;
-	case 'hidden-pc':
-		$class .= ' hidden-lg';
-		break;
-	case 'visible-phone':
-		$class .= ' visible-xs-inline';
-		break;
-	case 'visible-tablet':
-		$class .= ' visible-sm-inline visible-md-inline';
-		break;
-	case 'visible-pc':
-		$class .= ' visible-lg-inline';
-		break;
-}
+$class .= dt_visibility_class($visibility);
 
 $order = 'DESC';
 switch ($orderby) {

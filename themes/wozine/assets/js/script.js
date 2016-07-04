@@ -192,6 +192,7 @@
 				var aspectRatio = $(this).height() / $(this).width();
 				$(this).attr('data-aspectRatio',aspectRatio).css({'height': $(this).width() *  aspectRatio + 'px', 'width': '100%'});
 			});
+			/*
 			el.mediaelementplayer({
 				// none: forces fallback view
 				mode: 'auto',
@@ -235,8 +236,8 @@
 				pauseOtherPlayers: true,
 				// array of keyboard commands
 				keyActions: [],
-				/*mode: 'shim'*/
-			});
+				/*mode: 'shim'/
+			});*/
 			window.setTimeout(function(){
 				$(el).closest('.video-embed-wrap').css({'height': '100%', 'width': '100%'});
 			},1000);
@@ -249,6 +250,9 @@
 			
 			init: function(){
 				var self = this;
+
+				// remove DT preload
+				$('.dt-post-category, .dt-posts-slider').removeClass('dt-preload');
 
 				// Smart Content Box shortcode
 				if( $('.dt-smart-content-box').length ){
@@ -306,7 +310,9 @@
 				//Media element player
 				this.mediaelementplayerInit();
 				// sticky-sidebar
-				this.sticky_sidebar();		
+				this.sticky_sidebar();
+				// ajax load next-prev content
+				this.ajax_nav_content();	
 			},
 			
 			menu_toggle: function(){
@@ -448,14 +454,86 @@
 					});
 				}
 
+				if( $('.dt-posts-slider').length ){
+					$('.dt-posts-slider').each(function(){
+						var $this = $(this);
+						var $mode, $infinite, $slidesToShow, $slidesToScroll, $dots, $arrows;
+
+						$mode = $(this).attr('data-mode');
+						$dots = $(this).attr('data-dots');
+						$arrows = $(this).attr('data-arrows');
+						$infinite = $(this).attr('data-infinite');
+						$slidesToShow = parseInt($(this).attr('data-visible'));
+						$slidesToScroll = parseInt($(this).attr('data-scroll'));
+
+						$($this).removeClass('dt-preload');
+
+						$dots = ($dots == '1' || $dots == 'true') ? true : false;
+						$arrows = ($arrows == '1' || $arrows == 'true') ? true : false;
+						$infinite = ($infinite == '1' || $infinite == 'true') ? true : false;
+
+						if($mode == 'single_mode'){
+							$($this).find('.posts-slider').slick({
+							  	dots: false,
+							  	infinite: true,
+							  	autoplay: false,
+							  	speed: 300,
+							  	fade: true,
+							  	cssEase: 'linear',
+							  	nextArrow: '<div class="navslider"><span class="next"><i class="fa fa-chevron-right"></i></span></div>',
+								prevArrow: '<div class="navslider"><span class="prev"><i class="fa fa-chevron-left"></i></span></div>',
+							});
+						}else{
+							$($this).find('.posts-slider').slick({
+								infinite: $infinite,
+								slidesToShow: $slidesToShow,
+								slidesToScroll: $slidesToScroll,
+								dots: $dots,
+								arrows: $arrows,
+								nextArrow: '<div class="navslider"><span class="next"><i class="fa fa-arrow-right"></i></span></div>',
+								prevArrow: '<div class="navslider"><span class="prev"><i class="fa fa-arrow-left"></i></span></div>',
+								responsive: [
+						             {
+						               breakpoint: 1024,
+						               settings: {
+						                 slidesToShow: $slidesToShow,
+						                 slidesToScroll: $slidesToScroll,
+						                 infinite: $infinite,
+						                 dots: $dots
+						               }
+						             },
+						             {
+						               breakpoint: 600,
+						               settings: {
+						                 slidesToShow: 2,
+						                 slidesToScroll: 2
+						               }
+						             },
+						             {
+						               breakpoint: 480,
+						               settings: {
+						                 slidesToShow: 1,
+						                 slidesToScroll: 1
+						               }
+						             }
+						             // You can unslick at a given breakpoint now by adding:
+						             // settings: "unslick"
+						             // instead of a settings object
+						           ]
+							});
+						}
+						
+					});
+				}
+
 				if( $('.related_posts-slider').length ){
 					$('.related_posts-slider').removeClass('dt-preload');
 					$('.related_posts-slider').slick({
 						infinite: true,
 						slidesToShow: 3,
 						slidesToScroll: 3,
-						nextArrow: '<div class="navslider"><span class="next"><i class="fa fa-long-arrow-right"></i></span></div>',
-						prevArrow: '<div class="navslider"><span class="prev"><i class="fa fa-long-arrow-left"></i></span></div>',
+						nextArrow: '<div class="navslider"><span class="next"><i class="fa fa-arrow-right"></i></span></div>',
+						prevArrow: '<div class="navslider"><span class="prev"><i class="fa fa-arrow-left"></i></span></div>',
 						responsive: [
 				             {
 				               breakpoint: 1024,
@@ -496,7 +574,7 @@
 							fixedContentPos: true,
 							callbacks : {
 							    open : function(){
-							    	$(this.content).find(".video-embed.video-embed-popup,.audio-embed.audio-embed-popup").dh_mediaelementplayer();
+							    	$(this.content).find(".video-embed.video-embed-popup,.audio-embed.audio-embed-popup").dt_mediaelementplayer();
 							    	$(this.content).find('iframe:visible').each(function(){
 										if(typeof $(this).attr('src') != 'undefined'){
 											if( $(this).attr('src').toLowerCase().indexOf("youtube") >= 0 || $(this).attr('src').toLowerCase().indexOf("vimeo") >= 0  || $(this).attr('src').toLowerCase().indexOf("twitch.tv") >= 0 || $(this).attr('src').toLowerCase().indexOf("kickstarter") >= 0 || $(this).attr('src').toLowerCase().indexOf("dailymotion") >= 0) {
@@ -728,6 +806,99 @@
 					});
 				});
 				
+			},
+			ajax_nav_content: function(){
+				var self = this;
+				$('.dt-next-prev-wrap').each(function(){
+					var $this = $(this);
+					$($this).find('a').on('click', function(e){
+						e.preventDefault();
+						var $_this = $(this);
+						var $wrap_id = $($_this).parents('.dt-next-prev-wrap').attr('data-target');
+						if( ! $(this).hasClass('ajax-page-disabled') ){
+							
+							jQuery('#'+$wrap_id+' .dt-content__wrap').addClass('dt-loading');
+
+							var cat 			= $($_this).parents('.dt-next-prev-wrap').attr('data-cat'),
+								orderby 		= $($_this).parents('.dt-next-prev-wrap').attr('data-orderby'),
+								order 			= $($_this).parents('.dt-next-prev-wrap').attr('data-order'),
+								hover_thumbnail = $($_this).parents('.dt-next-prev-wrap').attr('data-hover-thumbnail'),
+								offset			= $($_this).attr('data-offset'),
+								current_page	= $($_this).attr('data-current-page'),
+								posts_per_page  = $($_this).parents('.dt-next-prev-wrap').attr('data-posts-per-page'),
+								template  		= $($_this).parents('.dt-next-prev-wrap').attr('data-template');
+								
+							$.ajax({
+									url : dt_ajaxurl,
+									data:{
+										action			: 'dt_nav_content',
+										cat 			: cat,
+										orderby 		: orderby,
+										order 			: order,
+										hover_thumbnail : hover_thumbnail,
+										offset 			: offset,
+										current_page	: current_page,
+										posts_per_page  : posts_per_page,
+										template 		: template,
+									},
+									type: 'POST',
+									success: function(data){
+										if(data != ''){
+											setTimeout(function(){
+												$('#'+$wrap_id+' .dt-content__wrap').removeClass('dt-loading');
+												
+												$('#'+$wrap_id+' .dt-content__wrap .dt-content').html(data).hide();
+												$('#'+$wrap_id+' .dt-content__wrap .dt-content').fadeIn('slow');
+							                	
+							                	// uddate current page - offset
+							                	var current_page	= parseInt( $($_this).attr('data-current-page') );
+							                	var current_offset	= parseInt( $($_this).attr('data-offset') );
+
+							                	if( $($_this).hasClass('dt-ajax-next-page') ) {
+							                		$('#'+$wrap_id+' .dt-next-prev-wrap .dt-ajax-next-page').attr('data-current-page', current_page + 1);
+							                		var prev_page = parseInt( $($_this).attr('data-current-page') - 1 );
+							                		$('#'+$wrap_id+' .dt-next-prev-wrap .dt-ajax-prev-page').attr('data-current-page', prev_page);
+
+							                		$($_this).attr('data-offset', parseInt(offset) + parseInt(posts_per_page));
+
+							                		$('#'+$wrap_id+' .dt-ajax-prev-page').removeClass('ajax-page-disabled');
+							                		$('#'+$wrap_id+' .dt-ajax-prev-page').attr('data-offset', parseInt(offset) - parseInt(posts_per_page));
+
+							                	}else if( $($_this).hasClass('dt-ajax-prev-page') ){
+							                		$('#'+$wrap_id+' .dt-next-prev-wrap .dt-ajax-prev-page').attr('data-current-page', current_page - 1);
+							                		$('#'+$wrap_id+' .dt-next-prev-wrap .dt-ajax-next-page').attr('data-current-page', current_page);
+
+							                		if(current_offset <= 0){
+							                			$($_this).addClass('ajax-page-disabled');
+							                			$($_this).attr('data-offset', 0);
+							                			$('#'+$wrap_id+' .dt-ajax-next-page').attr('data-offset', parseInt(posts_per_page));
+							                			$('#'+$wrap_id+' .dt-next-prev-wrap .dt-ajax-next-page').attr('data-current-page', 1);
+
+							                		}else{
+							                			$($_this).attr('data-offset', parseInt(current_offset) - parseInt(posts_per_page));
+
+							                			$('#'+$wrap_id+' .dt-ajax-next-page').attr('data-offset', parseInt(current_offset) + parseInt(posts_per_page));
+							                		}
+							                		
+							                		$('#'+$wrap_id+' .dt-ajax-next-page').removeClass('ajax-page-disabled');
+							                		
+												}
+
+							                	// hidden action
+							                	if( $('#'+$wrap_id+' #dt-ajax-no-p').length > 0 ){
+							                		$_this.addClass('ajax-page-disabled');
+							                	}
+
+											},500);
+											
+										}else{
+
+										}
+									}
+							});
+						}
+					});
+				});
 			},
 			sticky_sidebar: function(){
 				var self = this;

@@ -1,4 +1,16 @@
 <?php
+function dt_sc_get_id(){
+	$chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+	$max = strlen($chars) - 1;
+	$token = '';
+	$id = session_id();
+	for ($i = 0; $i < 32; ++$i)
+	{
+		$token .= $chars[(rand(0, $max))];
+	}
+	return 'dt_sc_'.substr(md5($token.$id),0,10);
+}
+
 /*
  * Breadcrumbs
  */
