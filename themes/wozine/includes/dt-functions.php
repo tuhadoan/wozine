@@ -1037,6 +1037,7 @@ function dt_post_featured($post_id='',$post_format='',$is_shortcode = false,$is_
 	}
 	$thumb_size = apply_filters('dt_post_featured_thumbnail_size', $thumb_size,$post_id);
 	$featured_class = !empty($post_format) ? ' '.$post_format.'-featured' : '';
+	
 	if($is_related){
 		if(has_post_thumbnail()){
 			$thumb = get_the_post_thumbnail($post_id,$thumb_size,array('itemprop'=>'image'));
@@ -1115,13 +1116,22 @@ function dt_post_featured($post_id='',$post_format='',$is_shortcode = false,$is_
 						echo dt_echo($video);
 					echo '</div>';
 				elseif($embed = dt_get_post_meta('video_embed')):
-					if(!empty($embed)){
+					if(!empty($embed)):
 						echo '<div class="entry-featured '.$post_format.'-featured '.$entry_featured_class.'">';
 						echo '<div id="video-featured-'.$post_id.'" class="embed-wrap">';
 						echo apply_filters('dt_embed_video', $embed); 
 						echo '</div>';
 						echo '</div>';
+					endif;
+				elseif (has_post_thumbnail()):
+					$thumb = get_the_post_thumbnail($post_id,$thumb_size,array('data-itemprop'=>'image'));
+					echo '<div class="entry-featured post-thumbnail'.$featured_class.' '.$entry_featured_class.'">';
+					if(!is_singular() || $is_shortcode){
+						echo '<a class="dt-image-link" href="'.get_the_permalink().'" title="'.esc_attr(get_the_title(get_post_thumbnail_id($post_id))).'">'.$thumb.'</a>';
+					}else{
+						echo dt_echo($thumb);
 					}
+					echo '</div>';
 				endif;
 			}else{
 				if(has_post_thumbnail()){

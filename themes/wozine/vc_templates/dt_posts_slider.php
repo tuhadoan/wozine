@@ -108,7 +108,7 @@ if($mode == 'single_mode'){
 			<?php
 			switch ($mode){
 				case 'single_mode':
-					while ($r->have_posts()): $r->the_post(); global $post;
+					while ($r->have_posts()): $r->the_post();
 					?>
 						<div class="post-item-slide">
 							<article id="post-<?php the_ID(); ?>" class="post">

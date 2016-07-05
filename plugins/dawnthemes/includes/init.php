@@ -43,6 +43,9 @@ if (! class_exists ( 'DTInit' )) :
 			//Woocommerce
 			include_once (DTINC_DIR . '/woocommerce.php');
 			
+			if(!class_exists('SMK_Sidebar_Generator'))
+				include_once (DTINC_DIR . '/lib/smk-sidebar-generator/smk-sidebar-generator.php');
+			
 			// Admin
 			if (is_admin ()) {
 				include_once (DTINC_DIR . '/admin/functions.php');

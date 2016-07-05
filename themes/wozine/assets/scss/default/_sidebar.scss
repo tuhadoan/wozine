@@ -343,6 +343,41 @@
 		}
 	}
 
+	&.dt-post-slider-wg{
+		.dt-posts-slider{
+			.dt-posts-slider__wrap{
+				.posts-slider{
+					&.single_mode{
+						.navslider{
+							.prev,.next{
+								top: 2px;
+								bottom: auto;
+							}
+						}
+
+						.post-item-slide{
+							.post-content{
+								width: 80%;
+								max-width: 80%;
+								left: 50%;
+								bottom: 30px;
+								padding: 15px;
+								@include translate(-50%, 0);
+								.entry-title{
+									text-overflow: initial;
+									overflow: auto;
+									white-space: normal;
+									font-size: 1em;
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	&.widget_sp_image{
 		text-align: center;
 		.widget-title{
@@ -426,8 +461,8 @@
 	margin-bottom: 0;
 }
 
-/* Recent Posts Widget */
-.dt-recent-posts{
+/* DT Posts Widget */
+.dt-posts__wg{
 	ul{
 		@include ulclear();
 		li{

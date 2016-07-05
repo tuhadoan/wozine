@@ -170,10 +170,13 @@ if (! class_exists ( 'DTMetaboxes' )) :
 					'fields' => array (
 							array (
 									'label' => __ ( 'Featured', 'dawnthemes' ),
-									'description' => __ ( 'If checked. this post will show in highlighted block shortcode in Visual Composer', 'dawnthemes' ),
-									'name' => 'featured',
-									'cbvalue'=>'1',
-									'type' => 'checkbox',
+									'description' => __ ( 'Make this post featured. Featured posts will appear in DT Posts Wiget (orderby Featured).', 'dawnthemes' ),
+									'name' => 'post_meta_featured_post',
+									'type' => 'select',
+									'options'=>array(
+										'no'=>__('No','dawnthemes'),
+										'yes'=>__('Yes','dawnthemes')
+									)
 							),
 							array (
 									'label' => __ ( 'Masonry Item Sizing', 'dawnthemes' ),

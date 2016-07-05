@@ -4199,6 +4199,28 @@ blockquote cite a {
   background: #54af7d;
   border-color: #54af7d;
 }
+.widget.dt-post-slider-wg .dt-posts-slider .dt-posts-slider__wrap .posts-slider.single_mode .navslider .prev, .widget.dt-post-slider-wg .dt-posts-slider .dt-posts-slider__wrap .posts-slider.single_mode .navslider .next {
+  top: 2px;
+  bottom: auto;
+}
+.widget.dt-post-slider-wg .dt-posts-slider .dt-posts-slider__wrap .posts-slider.single_mode .post-item-slide .post-content {
+  width: 80%;
+  max-width: 80%;
+  left: 50%;
+  bottom: 30px;
+  padding: 15px;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.widget.dt-post-slider-wg .dt-posts-slider .dt-posts-slider__wrap .posts-slider.single_mode .post-item-slide .post-content .entry-title {
+  text-overflow: initial;
+  overflow: auto;
+  white-space: normal;
+  font-size: 1em;
+  font-weight: bold;
+}
 .widget.widget_sp_image {
   text-align: center;
 }
@@ -4270,37 +4292,37 @@ blockquote cite a {
   margin-bottom: 0;
 }
 
-/* Recent Posts Widget */
-.dt-recent-posts ul {
+/* DT Posts Widget */
+.dt-posts__wg ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.dt-recent-posts ul li {
+.dt-posts__wg ul li {
   margin-bottom: 35px;
   display: table;
   width: 100%;
 }
-.dt-recent-posts ul li:before, .dt-recent-posts ul li:after {
+.dt-posts__wg ul li:before, .dt-posts__wg ul li:after {
   content: " ";
   display: table;
 }
-.dt-recent-posts ul li:after {
+.dt-posts__wg ul li:after {
   clear: both;
 }
-.dt-recent-posts ul li:last-child {
+.dt-posts__wg ul li:last-child {
   margin-bottom: 0px;
 }
-.dt-recent-posts ul li .post-img {
+.dt-posts__wg ul li .post-img {
   width: 170px;
   display: table-cell;
   vertical-align: top;
 }
-.dt-recent-posts ul li .post-content {
+.dt-posts__wg ul li .post-content {
   display: table-cell;
   vertical-align: top;
 }
-.dt-recent-posts ul li .post-content .post-title {
+.dt-posts__wg ul li .post-content .post-title {
   display: block;
   margin: 0;
   padding: 0;
@@ -4309,54 +4331,54 @@ blockquote cite a {
   text-transform: capitalize;
   font-weight: bold;
 }
-.dt-recent-posts ul li .post-content .post-title a:hover {
+.dt-posts__wg ul li .post-content .post-title a:hover {
   color: #54af7d;
 }
-.dt-recent-posts ul li .post-content .post-date {
+.dt-posts__wg ul li .post-content .post-date {
   display: block;
   margin-bottom: 5px;
   color: #828282;
   font-size: 0.857em;
 }
-.dt-recent-posts ul li .post-content .post-author {
+.dt-posts__wg ul li .post-content .post-author {
   text-transform: uppercase;
   color: #828282;
   font-size: 0.857em;
 }
-.dt-recent-posts ul li .post-img + .post-content {
+.dt-posts__wg ul li .post-img + .post-content {
   padding-left: 30px;
 }
-.main-content .dt-recent-posts ul li .post-img {
+.main-content .dt-posts__wg ul li .post-img {
   width: 170px;
 }
-.main-content .dt-recent-posts ul li .post-content .post-title a {
+.main-content .dt-posts__wg ul li .post-content .post-title a {
   color: #1f1f1f;
 }
-.main-content .dt-recent-posts ul li .post-content .post-title a:hover {
+.main-content .dt-posts__wg ul li .post-content .post-title a:hover {
   color: #54af7d;
 }
-.main-content .dt-recent-posts ul li:hover .post-content .post-title a {
+.main-content .dt-posts__wg ul li:hover .post-content .post-title a {
   color: #54af7d;
 }
-.site-footer .dt-recent-posts ul li .post-img {
+.site-footer .dt-posts__wg ul li .post-img {
   width: 140px;
 }
-.site-footer .dt-recent-posts ul li .post-content .post-title a {
+.site-footer .dt-posts__wg ul li .post-content .post-title a {
   color: #828282;
 }
-.site-footer .dt-recent-posts ul li .post-content .post-title a:hover {
+.site-footer .dt-posts__wg ul li .post-content .post-title a:hover {
   color: #ffffff;
 }
-.site-footer .dt-recent-posts ul li .post-content .post-author {
+.site-footer .dt-posts__wg ul li .post-content .post-author {
   color: #3f3f3f;
 }
-.site-footer .dt-recent-posts ul li .post-content .post-author a {
+.site-footer .dt-posts__wg ul li .post-content .post-author a {
   color: #3f3f3f;
 }
-.site-footer .dt-recent-posts ul li .post-content .post-author a:hover {
+.site-footer .dt-posts__wg ul li .post-content .post-author a:hover {
   color: #ffffff;
 }
-.site-footer .dt-recent-posts ul li:hover .post-content .post-title a {
+.site-footer .dt-posts__wg ul li:hover .post-content .post-title a {
   color: #ffffff;
 }
 
