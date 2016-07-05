@@ -47,10 +47,8 @@ get_header(); ?>
 			dt_paging_nav();
 			?>
 		</div><!-- #primary -->
-
-<?php
-get_sidebar( 'content' );
-?>
+		<?php do_action('dt_left_sidebar');?>
+		<?php do_action('dt_right_sidebar') ?>
 	</div><!-- .row -->
 </div><!-- #container -->
 <?php

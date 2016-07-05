@@ -461,7 +461,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 					'description' => __( 'Display multiple blog layouts.', 'dawnthemes' ), 
 					"category" => __( "dawnthemes", 'dawnthemes' ), 
 					'class' => 'dt-vc-element dt-vc-element-dt_post', 
-					'icon' => 'dt-vc-icon-dt_blog', 
+					'icon' => 'dt-vc-icon-dt_post', 
 					'show_settings_on_create' => true, 
 					'params' => array() ) );
 			vc_map( 
@@ -661,7 +661,34 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						__( "In Container", 'dawnthemes' ) => "in_container" ) ) );
 			
 			$params = array( 
-				'dt_blog' => array( 
+				'dt_blog' => array(
+					array(
+						'param_name' => 'title',
+						'heading' => __( 'Title', 'dawnthemes' ),
+						'description' => '',
+						'type' => 'textfield',
+						'value' => '',
+						'admin_label' => true ),
+					array(
+						'param_name' => 'sub_title',
+						'heading' => __( 'Sub Title', 'dawnthemes' ),
+						'description' => '',
+						'type' => 'textfield',
+						'value' => '',
+					),
+					array(
+						'param_name' => 'icon',
+						'heading' => __( 'Icon Font', 'dawnthemes' ),
+						'description' => 'ex: fa fa-fire',
+						'type' => 'textfield',
+						'value' => '',
+					),
+					array(
+						'type' => 'colorpicker',
+						'heading' => __( 'Icon Color', 'dawnthemes' ),
+						'param_name' => 'icon_color',
+						'description' => ''
+					),
 					array( 
 						'type' => 'dropdown', 
 						'heading' => __( 'Layout', 'dawnthemes' ), 
@@ -670,8 +697,9 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'admin_label' => true, 
 						'value' => array( 
 							__( 'Default', 'dawnthemes' ) => 'default', 
-							__( 'Masonry', 'dawnthemes' ) => 'masonry', 
-							__( 'Center', 'dawnthemes' ) => 'center' ), 
+							__( 'Grid', 'dawnthemes' ) => 'grid', 
+							__( 'Classic', 'dawnthemes' ) => 'classic',
+							__( 'Masonry', 'dawnthemes' ) => 'masonry' ), 
 						'std' => 'default', 
 						'description' => __( 'Select the layout for the blog shortcode.', 'dawnthemes' ) ), 
 					array( 
@@ -689,7 +717,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'type' => 'textfield', 
 						'heading' => __( 'Posts Per Page', 'dawnthemes' ), 
 						'param_name' => 'posts_per_page', 
-						'value' => 5, 
+						'value' => 10, 
 						'description' => __( 'Select number of posts per page.Set "-1" to display all', 'dawnthemes' ) ), 
 					array( 
 						'type' => 'dropdown', 
@@ -711,108 +739,18 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'type' => 'post_category', 
 						'heading' => __( 'Exclude Categories', 'dawnthemes' ), 
 						'param_name' => 'exclude_categories', 
-						'description' => __( 'Select a category to exclude', 'dawnthemes' ) ), 
-					
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Post Title', 'dawnthemes' ), 
-						'param_name' => 'hide_post_title', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide the post title below the featured', 'dawnthemes' ) ), 
+						'description' => __( 'Select a category to exclude', 'dawnthemes' ) ),
 					array( 
 						'type' => 'dropdown', 
-						'heading' => __( 'Link Title To Post', 'dawnthemes' ), 
-						'param_name' => 'link_post_title', 
-						'std' => 'yes', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes', __( 'No', 'dawnthemes' ) => 'no' ), 
-						'description' => __( 
-							'Choose if the title should be a link to the single post page.', 
-							'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Thumbnail', 'dawnthemes' ), 
-						'param_name' => 'hide_thumbnail', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide the post featured', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Excerpt', 'dawnthemes' ), 
-						'param_name' => 'hide_excerpt', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Hide excerpt', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'textfield', 
-						'heading' => __( 'Number of words in Excerpt', 'dawnthemes' ), 
-						'param_name' => 'excerpt_length', 
-						'value' => 30, 
-						'dependency' => array( 'element' => 'hide_excerpt', 'is_empty' => true ), 
-						'description' => __( 'The number of words', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Date', 'dawnthemes' ), 
-						'param_name' => 'hide_date', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide date in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Timeline Month', 'dawnthemes' ), 
-						'param_name' => 'hide_month', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 'element' => "layout", 'value' => array( 'timeline' ) ), 
-						'description' => __( 'Hide timeline month', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Comment', 'dawnthemes' ), 
-						'param_name' => 'hide_comment', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide comment in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Category', 'dawnthemes' ), 
-						'param_name' => 'hide_category', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'description' => __( 'Hide category in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Author', 'dawnthemes' ), 
-						'param_name' => 'hide_author', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Hide author in post meta info', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'checkbox', 
-						'heading' => __( 'Hide Read More Link', 'dawnthemes' ), 
-						'param_name' => 'hide_readmore', 
-						'value' => array( __( 'Yes,please', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Choose to hide the link', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'heading' => __( 'Show Tags', 'dawnthemes' ), 
-						'param_name' => 'show_tag', 
-						'std' => 'no', 
-						'value' => array( __( 'No', 'dawnthemes' ) => 'no', __( 'Yes', 'dawnthemes' ) => 'yes' ), 
-						'dependency' => array( 
-							'element' => "layout", 
-							'value' => array( 'default', 'medium', 'grid', 'masonry', 'zigzag', 'center' ) ), 
-						'description' => __( 'Choose to show the tags', 'dawnthemes' ) ), 
-					array( 
-						'type' => 'dropdown', 
-						'std' => 'page_num', 
+						'std' => 'wp_pagenavi', 
 						'heading' => __( 'Pagination', 'dawnthemes' ), 
 						'param_name' => 'pagination', 
 						'value' => array( 
-							__( 'Page Number', 'dawnthemes' ) => 'page_num', 
-							__( 'Load More Button', 'dawnthemes' ) => 'loadmore', 
+							__( 'WP PageNavi', 'dawnthemes' ) => 'wp_pagenavi', 
+							__( 'Ajax Load More', 'dawnthemes' ) => 'loadmore', 
 							__( 'Infinite Scrolling', 'dawnthemes' ) => 'infinite_scroll', 
-							__( 'No', 'dawnthemes' ) => 'no' ), 
+							__( 'No', 'dawnthemes' ) => 'no' ),
+						'dependency' => array( 'element' => 'layout', 'value' => array( 'default', 'grid', 'masonry' ) ),
 						'description' => __( 'Choose pagination type.', 'dawnthemes' ) ), 
 					array( 
 						'type' => 'textfield', 

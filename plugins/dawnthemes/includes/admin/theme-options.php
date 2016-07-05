@@ -1431,8 +1431,8 @@ if ( ! class_exists( 'DTThemeOptions' ) ) :
 							'options' => array( 
 								'wp_pagenavi' => esc_html__( 'WP PageNavi', 'dawnthemes' ), 
 								'loadmore' => esc_html__( 'Ajax Load More', 'dawnthemes' ),
-								'infinite_scroll' => esc_html__( 'Infinite Scrolling', 'dawnthemes' ), 
-								'def' => esc_html__( 'Default WordPress', 'dawnthemes' ) ), 
+								'infinite_scroll' => esc_html__( 'Infinite Scrolling', 'dawnthemes' ),
+							), 
 							'value' => 'wp_pagenavi',
 							'dependency' => array( 'element' => 'blog_style', 'value' => array( 'default', 'grid', 'masonry' ) ),
 							'desc' => esc_html__( 'Choose pagination type.', 'dawnthemes' ) ), 
