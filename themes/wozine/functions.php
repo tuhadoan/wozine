@@ -119,6 +119,7 @@ function dt_setup() {
 	add_image_size( 'wozine-post-category-big-thumb', 570, 385, true );
 	add_image_size( 'wozine-post-category-grid-thumb', 270, 182, true );
 	add_image_size( 'wozine-post-category-tpllist-big-thumb', 770, 347, true );
+	add_image_size( 'wozine-post-slider-widget', 340, 460, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(

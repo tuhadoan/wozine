@@ -457,7 +457,7 @@
 				if( $('.dt-posts-slider').length ){
 					$('.dt-posts-slider').each(function(){
 						var $this = $(this);
-						var $mode, $infinite, $slidesToShow, $slidesToScroll, $dots, $arrows;
+						var $mode, $infinite, $slidesToShow, $slidesToScroll, $dots, $arrows, $autoplay;
 
 						$mode = $(this).attr('data-mode');
 						$dots = $(this).attr('data-dots');
@@ -465,18 +465,20 @@
 						$infinite = $(this).attr('data-infinite');
 						$slidesToShow = parseInt($(this).attr('data-visible'));
 						$slidesToScroll = parseInt($(this).attr('data-scroll'));
+						$autoplay = $(this).attr('data-autoplay');
 
 						$($this).removeClass('dt-preload');
 
 						$dots = ($dots == '1' || $dots == 'true') ? true : false;
 						$arrows = ($arrows == '1' || $arrows == 'true') ? true : false;
 						$infinite = ($infinite == '1' || $infinite == 'true') ? true : false;
+						$autoplay = ($autoplay == '1' || $autoplay == 'true') ? true : false;
 
 						if($mode == 'single_mode'){
 							$($this).find('.posts-slider').slick({
 							  	dots: false,
 							  	infinite: true,
-							  	autoplay: false,
+							  	autoplay: $autoplay,
 							  	speed: 300,
 							  	fade: true,
 							  	cssEase: 'linear',

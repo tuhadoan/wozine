@@ -68,6 +68,30 @@ class DT_Widget extends WP_Widget {
 	}
 	
 	/**
+	 * Output the html at the start of a widget
+	 *
+	 * @param  array $args
+	 * @return string
+	 */
+	public function widget_start( $args, $instance ) {
+		echo $args['before_widget'];
+	
+		if ( $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base ) ) {
+			echo $args['before_title'] . $title . $args['after_title'];
+		}
+	}
+	
+	/**
+	 * Output the html at the end of a widget
+	 *
+	 * @param  array $args
+	 * @return string
+	 */
+	public function widget_end( $args ) {
+		echo $args['after_widget'];
+	}
+	
+	/**
 	 * update function.
 	 *
 	 * @see WP_Widget->update
@@ -287,11 +311,7 @@ class DT_Instagram_Widget extends DT_Widget{
 		$refresh_hour 	= isset($instance['refresh_hour']) ? absint($instance['refresh_hour']) : 5 ;
 		
 		if(!empty($username)){
-			echo wp_kses( $before_widget, array(
-				'aside' => array(
-					'class' => $this->widget_cssclass,
-				)
-			) );
+			echo $before_widget;
 			if ( $title )
 				echo $before_title . $title . $after_title;
 			?>
@@ -323,21 +343,19 @@ class DT_Instagram_Widget extends DT_Widget{
 				?>
 			</div>
 			<?php
-			echo wp_kses( $after_widget, array(
-                  		'aside' => array()
-          		) );
+			echo $after_widget;
 			$content = ob_get_clean();
 			echo $content;
 		}
 	}
 }
 
-class DT_Recent_Posts extends DT_Widget{
+class DT_Posts extends DT_Widget{
 	public function __construct(){
-		$this->widget_cssclass    = 'dt-recent-posts';
-		$this->widget_description = esc_html__( "Your site’s most recent Posts.", 'dawnthemes' );
-		$this->widget_id          = 'DT_Recent_Posts_Widget';
-		$this->widget_name        = esc_html__( 'DT Recent Posts', 'dawnthemes' );
+		$this->widget_cssclass    = 'dt-posts__wg';
+		$this->widget_description = esc_html__( "A list of Your site’s Posts.", 'dawnthemes' );
+		$this->widget_id          = 'DT_Posts_Widget';
+		$this->widget_name        = esc_html__( 'DT Posts', 'dawnthemes' );
 		
 		$this->settings           = array(
 			'title'  => array(
@@ -345,9 +363,19 @@ class DT_Recent_Posts extends DT_Widget{
 				'std'	=>'',
 				'label' => esc_html__( 'Title', 'dawnthemes' )
 			),
+			'orderby' => array(
+				'type'  => 'select',
+				'std'   => 'date',
+				'label' => esc_html__( 'Order by', 'dawnthemes' ),
+				'options' => array(
+					'date'   => esc_html__( 'Recent posts', 'dawnthemes' ),
+					'featured'   => esc_html__( 'Featured posts', 'dawnthemes' ),
+					'rand'  => esc_html__( 'Random', 'dawnthemes' ),
+				)
+			),
 			'number'  => array(
 				'type'  => 'number',
-				'std'	=> '3',
+				'std'	=> '4',
 				'label' => esc_html__( 'Number of posts to show:', 'dawnthemes' )
 			),
 			'show_date'  => array(
@@ -363,14 +391,11 @@ class DT_Recent_Posts extends DT_Widget{
 		ob_start();
 		extract( $args );
 		$title       = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
-		$number = isset($instance['number']) ? absint($instance['number']) : 3 ;
+		$orderby     	= sanitize_title( $instance['orderby'] );
+		$number = isset($instance['number']) ? absint($instance['number']) : 4 ;
 		$show_date = isset($instance['show_date']) ? $instance['show_date'] : '';
 		
-		echo wp_kses( $before_widget, array(
-			'aside' => array(
-				'class' => $this->widget_cssclass,
-			)
-		) );
+		echo $before_widget;
 		
 		if($title) {
 			echo wp_kses( $before_title . esc_html($title) . $after_title, array(
@@ -386,20 +411,44 @@ class DT_Recent_Posts extends DT_Widget{
 			) );
 		}
 		
+		switch ($orderby) {
+			case 'date':
+				$orderby = 'date';
+				break;
+		
+			case 'featured':
+				$orderby = 'meta_value';
+				break;
+				
+			case 'rand':
+				$orderby = 'rand';
+				break;
+		
+			default:
+				$orderby = 'date';
+				break;
+		}
+		
 		$args = array(
 			'post_type'      => 'post',
 			'posts_per_page' => $number ,
 			'order'          => 'DESC',
-			'orderby'        => 'date',
+			'orderby'        => "{$orderby}",
 			'ignore_sticky_posts' => true,
 			'post_status'    => 'publish'
 		);
-		$recent_posts = new WP_Query($args);
 		
-		if($recent_posts->have_posts()):
+		if( $orderby == 'meta_value' ){
+			$args['meta_key'] = '_dt_post_meta_featured_post';
+			$args['meta_value'] = 'yes';
+		}
+		
+		$posts = new WP_Query($args);
+		
+		if($posts->have_posts()):
 			?>
 	        <ul class="dt-recent-posts-wg">
-			<?php while($recent_posts->have_posts()): $recent_posts->the_post(); ?>
+			<?php while($posts->have_posts()): $posts->the_post(); ?>
 		        <li class="post-item">
 					<?php if(has_post_thumbnail()): ?>
 					<div class="post-img dt-effect1">
@@ -423,10 +472,165 @@ class DT_Recent_Posts extends DT_Widget{
 		<?php
 			wp_reset_postdata();
 			endif;
+		echo $after_widget;
+	}
+}
+
+class DT_Post_Slider extends DT_Widget{
+	public function __construct(){
+		$this->widget_cssclass    = 'dt-post-slider-wg';
+		$this->widget_description = esc_html__( "Your site’s most recent Posts.", 'dawnthemes' );
+		$this->widget_id          = 'DT_Post_Slider_Widget';
+		$this->widget_name        = esc_html__( 'DT Post Slider', 'dawnthemes' );
 		
-		echo wp_kses( $after_widget, array(
-                  		'aside' => array()
-          		) );
+		$this->settings           = array(
+			'title'  => array(
+				'type'  => 'text',
+				'std'	=>'',
+				'label' => esc_html__( 'Title', 'dawnthemes' )
+			),
+			'orderby' => array(
+				'type'  => 'select',
+				'std'   => 'date',
+				'label' => esc_html__( 'Order by', 'dawnthemes' ),
+				'options' => array(
+						'date'   => esc_html__( 'Recent First', 'dawnthemes' ),
+						'oldest'  => esc_html__( 'Older First', 'dawnthemes' ),
+						'alphabet'  => esc_html__( 'Title Alphabet', 'dawnthemes' ),
+						'ralphabet'  => esc_html__( 'Title Reversed Alphabet', 'dawnthemes' ),
+						'rand'  => esc_html__( 'Random', 'dawnthemes' ),
+				)
+			),
+			'posts_per_page' => array(
+				'type'  => 'number',
+				'step'  => 1,
+				'min'   => 1,
+				'max'   => '',
+				'std'   => 5,
+				'label' => esc_html__( 'Number posts to query', 'dawnthemes' )
+			),
+		);
+		parent::__construct();
+	}
+	
+	public function widget($args, $instance){
+		ob_start();
+		extract( $args );
+		$title       	= apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
+		$orderby     	= sanitize_title( $instance['orderby'] );
+		$posts_per_page = absint( $instance['posts_per_page'] );
+		
+		echo $before_widget;
+		
+		if($title) {
+			echo wp_kses( $before_title . esc_html($title) . $after_title, array(
+				'h3' => array(
+					'class' => array()
+				),
+				'h4' => array(
+					'class' => array()
+				),
+				'span' => array(
+					'class' => array()
+				),
+			) );
+		}
+		
+		switch ($orderby) {
+			case 'date':
+				$orderby = 'date';
+				break;
+		
+			case 'oldest':
+				$orderby = 'date';
+				$order = 'ASC';
+				break;
+		
+			case 'alphabet':
+				$orderby = 'title';
+				$orderby = 'ASC';
+				break;
+		
+			case 'ralphabet':
+				$orderby = 'title';
+				break;
+				
+			case 'rand':
+				$orderby = 'rand';
+				break;
+		
+			default:
+				$orderby = 'date';
+				break;
+		}
+		
+		$args = array(
+			'orderby'         => "{$orderby}",
+			'order'           => "DESC",
+			'post_type'       => "post",
+			'posts_per_page'  => $posts_per_page,
+		);
+		
+		if(is_single()){
+			$args['post__not_in'] = array(get_the_ID());
+		}
+		
+		$p = new WP_Query($args);
+		
+		if($p->have_posts()):
+		wp_enqueue_style('slick');
+		wp_enqueue_script('slick');
+			?>
+		<div class="dt-posts-slider dt-preload single_mode" data-mode="single_mode" data-visible="1" data-scroll="1" data-infinite="1" data-autoplay="1" data-arrows="1" data-dots="false">
+			<div class="dt-posts-slider__wrap">
+		        <div class="posts-slider single_mode">
+				<?php while($p->have_posts()): $p->the_post(); ?>
+			        <div class="post-item-slide">
+						<article id="post-<?php the_ID(); ?>" class="post">
+							<?php 
+							if( has_post_thumbnail() ):?>
+								<div class="post-thumbnail">
+									<a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title();?>">
+									<?php the_post_thumbnail('wozine-post-slider-widget');?>
+									</a>
+								</div>
+								<?php
+							endif;
+							?>
+							<div class="post-content">
+								<?php
+								$category = get_the_category();
+								$cat_ID = $category[0]->term_id;
+								if ($category) {
+									echo '<a class="dt-post-category" href="' . get_category_link( $cat_ID ) . '" title="' . sprintf( __( "View all posts in %s", "wozine" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a> ';
+								}
+								?>
+								<?php the_title( sprintf('<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink()) ), '</a></h3>' ); ?>
+								
+								<div class="entry-meta">
+									<?php
+									printf('<div class="byline"><span class="author vcard">%1$s <a class="url fn n" href="%2$s" rel="author">%3$s</a></span></div>',
+										esc_html__('By', 'wozine'),
+										esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+										get_the_author()
+									);
+									?>
+									<?php
+									dt_posted_on();
+									?>
+								</div>
+							</div>
+						</article>
+					</div>
+		        <?php endwhile; ?>
+		        </div>
+			</div>
+	    </div>
+		<?php
+			wp_reset_postdata();
+			endif;
+		
+		echo $after_widget;
 	}
 }
 
@@ -901,8 +1105,9 @@ add_action( 'widgets_init', 'dt_register_widget');
 function dt_register_widget(){
 	register_widget('DT_About_US');
 	register_widget('DT_Instagram_Widget');
-	register_widget('DT_Recent_Posts');
-	register_widget('DT_Post_Thumbnail_Widget');
+	register_widget('DT_Posts');
+	register_widget('DT_Post_Slider');
+	//register_widget('DT_Post_Thumbnail_Widget');
 	register_widget('DT_Social_Widget');
 	register_widget( 'DT_Tweets' );
 	register_widget( 'DT_Mailchimp_Widget' );
