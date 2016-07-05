@@ -183,17 +183,6 @@ a.post-thumbnail:hover {
 	}
 }
 
-.site-content .entry-header {
-	background-color: #fff;
-	padding-bottom: 22px;
-	margin-bottom: 28px;
-	border-bottom: 1px solid $border-color;
-}
-
-.site-content .has-post-thumbnail .entry-header {
-	padding-top: 14px;
-}
-
 
 /**
  * 6.3 Entry Meta
@@ -877,14 +866,17 @@ a.post-thumbnail:hover {
 
 .archive-header,
 .page-header {
-	margin: 24px auto;
+	margin: 0px auto 24px auto;
 }
 
 .archive-title,
 .page-title {
-	font-size: 16px;
+	font-size: 2em;
 	font-weight: bold;
 	margin: 0;
+	padding: 0;
+    margin-top: -5px;
+    text-transform: uppercase;
 }
 
 .taxonomy-description{
@@ -1438,6 +1430,7 @@ a.post-thumbnail:hover {
   }
 }
 .entry-featured{
+	margin-bottom: 16px;
 	&.video-featured,&.audio-embed{
 		.embed-wrap{
 			position: relative;
@@ -1588,6 +1581,7 @@ a.post-thumbnail:hover {
 			display: block;
 		}
 		.hentry-wrap{
+			margin-bottom: 16px;
 			.quote-content{
 				position: relative;
 				overflow: hidden;
@@ -1793,6 +1787,16 @@ a.post-thumbnail:hover {
  .single{
 	
 	.post{
+		.entry-header {
+			background-color: #fff;
+			padding-bottom: 22px;
+			margin-bottom: 28px;
+			border-bottom: 1px solid $border-color;
+		}
+
+		&.has-post-thumbnail .entry-header {
+			padding-top: 14px;
+		}
 		.post-content{
 			.share-links{
 				display: none;
@@ -1857,21 +1861,16 @@ a.post-thumbnail:hover {
 				}
 
 				.author-socials{
-					ul{
-						@include ulclear();
-						li{
-							display: inline-block;
-							padding-right: 20px;
-							a{
-								color: $text-color-2;
-								&:hover{
-									color: $main-color;
-								}
-							}
-							&:last-child{
-								padding-right: 0px;
-							} 
+					a{
+						display: inline-block;
+						padding-right: 20px;
+						color: $text-color-2;
+						&:hover{
+							color: $main-color;
 						}
+						&:last-child{
+							padding-right: 0px;
+						} 
 					}
 				}
 			}
@@ -1916,21 +1915,37 @@ a.post-thumbnail:hover {
 				padding: 0;
 				margin-bottom: 25px;
 				text-transform: uppercase;
-				font-size: 1.429em;
-				
+				position: relative;
+				display: block;
+				.related-posts__icon{
+					display: inline-block;
+					vertical-align: top;
+					float: left;
+					margin-right: 10px;
+					width: 46px;
+					height: 46px;
+					border: 3px solid #1f1f1f;
+					line-height: 40px;
+	    			text-align: center;
+	    			color: #1f1f1f;
+				}
 				.related-posts__title{
 					display: inline-block;
-					padding-bottom: 8px;
-					position: relative;
-					text-transform: uppercase;
-					&:after{
-						position: absolute;
-						content: '';
-						left: 0;
-						bottom: 0px;
-						width: 100%;
-						height: 2px;
-						background: $text-color;
+					vertical-align: top;
+					.dt-title{
+						display: block;
+						font-size: 1.429em;
+						line-height: 1.1;
+						padding: 0;
+						margin: 0;
+						font-weight: bold;
+						text-transform: uppercase;
+						color: #1f1f1f;
+					}
+					span{
+						text-transform: uppercase;
+						font-size: 0.857em;
+						color: #5f5f5f;
 					}
 				}
 			}
@@ -1988,5 +2003,18 @@ a.post-thumbnail:hover {
  */
 
  .page{
-
+		.entry-header {
+			margin: 0;
+			padding: 0;
+			margin-top: -5px;
+			margin-bottom: 24px;
+			.entry-title{
+				font-size: 2em;
+			    font-weight: bold;
+			    margin: 0;
+			    padding: 0;
+			    margin-top: -5px;
+			    text-transform: uppercase;
+			}
+		}
  }

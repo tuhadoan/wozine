@@ -8,7 +8,7 @@
 	<div class="content-container">
 		<div class="<?php dt_container_class() ?>">
 			<div class="row">
-				<div class="col-md-9 main-wrap" data-itemprop="mainContentOfPage" role="main">
+				<div class="col-md-8 main-wrap" data-itemprop="mainContentOfPage" role="main">
 					<div class="main-content">
 						<?php if ( have_posts() ) : ?>
 							<?php 

@@ -1,4 +1,7 @@
-<div id="content-sidebar" class="content-sidebar col-md-4 sidebar-wrap" role="complementary">
+<?php
+wp_enqueue_script('vendor-theia-sticky-sidebar'); 
+?>
+<div id="content-sidebar" class="content-sidebar col-md-4 sidebar-wrap sticky_sidebar" role="complementary" data-sticky-sidebar="sticky_sidebar" data-container-selector="#main.site-main .sticky_sidebar">
 	<div class="main-sidebar">
 		<?php 
 		$main_sidebar = dt_get_post_meta('main-sidebar');

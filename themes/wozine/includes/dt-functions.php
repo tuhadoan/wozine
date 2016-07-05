@@ -305,26 +305,11 @@ function dt_get_main_col_class($layout='',$body = false,$priority = 10){
 			$col_class = 'col-md-12';
 		}elseif ($layout == 'left-sidebar'){
 			$col_class = 'col-md-8';
-			add_action('dt_left_sidebar','dt_get_sidebar',$priority);
+			//add_action('dt_left_sidebar','dt_get_sidebar',$priority);
+			add_action('dt_right_sidebar','dt_get_sidebar',$priority);
 		}elseif ($layout == 'right-sidebar'){
 			$col_class = 'col-md-8';
 			add_action('dt_right_sidebar','dt_get_sidebar',$priority);
-		}elseif ($layout == 'left-right-sidebar'){
-			$col_class = 'col-md-6';
-			add_action('dt_right_sidebar','dt_get_sidebar',$priority);
-			add_action('dt_left_sidebar_extra','dt_get_extra_sidebar',$priority);
-		}elseif ($layout == 'two-left-sidebar'){
-			$col_class = 'col-md-7';
-			global $dt_extra_column;
-				$dt_extra_column=2;
-			add_action('dt_left_sidebar','dt_get_sidebar',$priority);
-			add_action('dt_left_sidebar_extra','dt_get_extra_sidebar',$priority);
-		}elseif ($layout == 'two-right-sidebar'){
-			$col_class = 'col-md-7';
-			global $dt_extra_column;
-				$dt_extra_column=2;
-			add_action('dt_right_sidebar','dt_get_sidebar',$priority);
-			add_action('dt_right_sidebar_extra','dt_get_extra_sidebar',$priority);
 		}
 	}
 	if($body){
@@ -1384,7 +1369,7 @@ function dt_paginate_links_short($args = array(), $query = null){
 
 function dt_paginate_links( $args = array(), $query = null ){
 	global $wp_rewrite, $wp_query;
-
+	$temp_query = $wp_query;
 	do_action( 'dt_pagination_start' );
 
 	if ( !empty($query)) {
@@ -1467,9 +1452,11 @@ function dt_paginate_links( $args = array(), $query = null ){
 	$page_links = apply_filters( 'dt_pagination', $page_links );
 
 	do_action( 'dt_pagination_end' );
-
+	
+	$wp_query = $temp_query;
+	
 	if ( $args['echo'] )
-		echo dt_echo($page_links);
+		echo dt_print_string($page_links);
 	else
 		return $page_links;
 
@@ -1808,9 +1795,14 @@ function dt_posted_on() {
 endif;
 
 if ( ! function_exists( 'dt_paging_nav_ajax' ) ) :
-function dt_paging_nav_ajax($loadmore_text = 'Load More'){
+function dt_paging_nav_ajax($loadmore_text = 'Load More', $query = null){
 	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+	global $wp_query;
+	$term_query = $wp_query;
+	if($query){
+		$wp_query = $query;
+	}
+	if ( $wp_query->max_num_pages < 2 ) {
 		return;
 	}
 	?>
@@ -1819,6 +1811,7 @@ function dt_paging_nav_ajax($loadmore_text = 'Load More'){
 		<button type="button" class="btn-loadmore"><?php echo esc_html($loadmore_text) ?></button>
 	</div>
 	<?php
+	$wp_query = $term_query;
 }
 endif;
 
@@ -1988,5 +1981,31 @@ function dt_print_social_share($id = false){
    		</ul>
    	</div>
 <?php
+}
+endif;
+
+if(!function_exists('dt_show_author_social_links')):
+/**
+ * Display Author social link
+ * @param String $field the field of the users record.
+ * @param int $user_id Optional. User ID.
+ * @param String $echo Optional. True.
+ */
+function dt_show_author_social_links($field = '', $user_id = false, $echo = true){
+	$dawn_author_links = array('facebook', 'twitter', 'google', 'flickr', 'instagram', 'pinterest', 'envelope');
+	$html = '';
+	foreach($dawn_author_links as $account){
+		$url = get_the_author_meta($account, $user_id);
+			
+		if($url != ''){
+			if($account == 'envelope') $url = 'mailto:' . $url;
+			$html .= '<a href="' . $url . '" target="_blank"><i class="fa fa-'.$account.'"></i></a>';
+		}
+	}
+	if($echo){
+		echo $html;
+	}else{
+		return $html;
+	}
 }
 endif;

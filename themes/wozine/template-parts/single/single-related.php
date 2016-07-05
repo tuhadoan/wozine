@@ -24,7 +24,13 @@
 	<div class="related_posts">
 		<div class="related_posts__wrapper">
 			<div class="related-posts__heading">
-				<h5 class="related-posts__title"><?php esc_html_e('Related Posts', 'wozine');?></h5>
+				<div class="related-posts__icon">
+					<i class="fa fa-file-text" aria-hidden="true"></i>
+				</div>
+				<div class="related-posts__title">
+					<h5 class="dt-title"><?php esc_html_e('Related Posts', 'wozine');?></h5>
+					<span><?php esc_html_e('Place for the subtitle', 'wozine');?></span>
+				</div>
 			</div>
 	      	<div class="related_posts-slider dt-preload">
 					<?php

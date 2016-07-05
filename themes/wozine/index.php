@@ -20,7 +20,6 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 	<div class="container">
 		<div class="row">
-			<?php do_action('dt_left_sidebar');?>
 			<section id="primary" class="content-area <?php echo esc_attr($main_class)?>">
 				<div id="content" class="site-content" role="main">
 					<div class="row">
@@ -76,9 +75,6 @@ get_header(); ?>
 									// this paging nav should be outside .posts-wrap
 									$paginate_args = array();
 									switch ($pagination){
-										case 'def':
-											dt_paging_nav_default();
-											break;
 										case 'loadmore':
 											dt_paging_nav_ajax($loadmore_text);
 											$paginate_args = array('show_all'=>true);
@@ -100,6 +96,7 @@ get_header(); ?>
 					</div><!-- /.row -->
 				</div><!-- #content -->
 			</section><!-- #primary -->
+		<?php do_action('dt_left_sidebar');?>
 		<?php do_action('dt_right_sidebar') ?>
 
 	</div><!-- .row -->

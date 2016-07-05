@@ -12,12 +12,18 @@ a.dt-image-link{
         }
       }
 }
+ .page-template-page-left-sliderbar,
  .page-layout-left-sidebar{
     @media (min-width: 992px){
       #main{}
     }
+    @media (min-width: 768px){
+      .main-wrap{
+        float: right;
+      }
+    }
  }
- .page-layout-right-sidebar{
+ .page-template-page-right-sidebar{
     @media (min-width: 992px){
       #main{
           position: relative;

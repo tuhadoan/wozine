@@ -30,14 +30,9 @@ get_header(); ?>
 									<h5 class="author-title">
 										<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );?>"><?php echo get_the_author(); ?></a>
 									</h5>
-									<span class="author-socials">
-										<ul>
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										</ul>
-									</span>
+									<div class="author-socials">
+										<?php dt_show_author_social_links('', get_the_author_meta( 'ID' ), 'echo'); ?>
+									</div>
 								</div>
 								<div class="author-desc"><?php echo get_the_author_meta('description'); ?></div>
 							</div>
@@ -55,10 +50,7 @@ get_header(); ?>
 				?>
 			</div><!-- #content -->
 	</div><!-- #primary -->
-
-<?php
-get_sidebar( 'content' );
-?>
+	<?php get_sidebar( 'content' ); ?>
 	</div><!-- .row -->
 </div><!-- #container -->
 <?php

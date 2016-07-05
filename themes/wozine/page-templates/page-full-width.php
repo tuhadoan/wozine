@@ -4,9 +4,7 @@
  *
  * @subpackage Dawn
  */
-
 get_header(); ?>
-
 <div id="main-content" class="main-content">
 	<div class="container-full">
 		<div class="row">
@@ -32,5 +30,4 @@ get_header(); ?>
 </div><!-- #main-content -->
 
 <?php
-
 get_footer();

@@ -310,8 +310,8 @@
 		margin: 0 0.1875em 0.4375em 0;
 		padding: 0.5625em 0.4375em 0.5em;
 		font-size: 1em !important;
-		font-weight: bold;
-		color: $main-color;
+		font-weight: normal;
+		color: $text-color;
 	}
 
 	.tagcloud a:hover,
@@ -319,6 +319,38 @@
 		border-color: $main-color;
 		color: $main-color;
 		outline: 0;
+	}
+
+	.dt-newsletter-wg{
+		input[type="email"]{
+			margin-bottom: 10px;
+			background: transparent;
+			border: 1px solid $border-color;
+			border-radius: 0px;
+		 		&::-moz-placeholder {font-style: italic;}
+			  	&:-ms-input-placeholder { font-style: italic; }
+			  	&::-webkit-input-placeholder  { font-style: italic; }
+		}
+		input[type="submit"]{
+			display: block;
+			width: 100%;
+			background: #1f1f1f;
+			color: #ffffff;
+			&:hover{
+				background: $main-color;
+				border-color: $main-color;
+			}
+		}
+	}
+
+	&.widget_sp_image{
+		text-align: center;
+		.widget-title{
+			text-align: initial;
+		}
+		.widget_sp_image-image-link{
+
+		}
 	}
 
 	/**
@@ -548,6 +580,9 @@
 .content-sidebar{
 	.main-sidebar{
 		position: relative;
+	}
+	@media (max-width: 991px){
+		margin-top: 60px;
 	}
 }
 
