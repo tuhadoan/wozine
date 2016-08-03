@@ -5,9 +5,9 @@
 .admin-bar{
 	// top 32px
 	.offcanvas{
-		top: 32px;
+		padding-top: 32px;
 		@media (max-width: 600px){
-			top: 64px;
+			padding-top: 64px;
 		}
 	}
 
@@ -55,6 +55,21 @@ a.main-color{
 			background: transparent;
 			color: $text-color;
 		}
+	}
+}
+
+/* Contact us form */
+.contact-us{
+	h5{
+		text-transform: uppercase;
+	    font-weight: bold;
+	    display: block;
+	    margin-bottom: 33px;
+	    span{
+	    	display: inline-block;
+		    padding-bottom: 6px;
+		    border-bottom: 2px solid #1f1f1f;
+	    }
 	}
 }
 

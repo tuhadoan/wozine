@@ -257,12 +257,12 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 						<?php woocommerce_catalog_ordering() ?>
 						<?php endif;?>
 						<div class="view-mode">
-							<a class="grid-mode<?php echo ($current_view_mode == 'grid' ? ' active' :'')?>" title="<?php esc_attr_e('Grid','sitesao')?>" <?php echo ($grid_mode_href)?>><i class="fa fa-th"></i></a>
-							<a class="list-mode<?php echo ($current_view_mode == 'list' ? ' active' :'')?>" title="<?php esc_attr_e('List','sitesao')?>" <?php echo ($list_mode_href) ?>><i class="fa fa-list"></i></a>							
+							<a class="grid-mode<?php echo ($current_view_mode == 'grid' ? ' active' :'')?>" title="<?php esc_attr_e('Grid','dawnthemes')?>" <?php echo ($grid_mode_href)?>><i class="fa fa-th"></i></a>
+							<a class="list-mode<?php echo ($current_view_mode == 'list' ? ' active' :'')?>" title="<?php esc_attr_e('List','dawnthemes')?>" <?php echo ($list_mode_href) ?>><i class="fa fa-list"></i></a>							
 						</div>
 						<?php if(dt_get_theme_option('woo-shop-filter',0)):?>
 							<div class="filter-toggle-button">
-								<a class="filter" title="<?php esc_attr_e('Filter','sitesao')?>" href="#"><i class="fa fa-filter"></i> <?php esc_html_e('Filter','sitesao')?></a>
+								<a class="filter" title="<?php esc_attr_e('Filter','dawnthemes')?>" href="#"><i class="fa fa-filter"></i> <?php esc_html_e('Filter','dawnthemes')?></a>
 							</div>
 						<?php endif;?>
 					</div>
@@ -374,11 +374,11 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			$product_item_text = "";
 			
 			if ( $count > 1 ) {
-				$product_item_text = str_replace( '%', number_format_i18n( $count ), __( '% items', 'sitesao' ) );
+				$product_item_text = str_replace( '%', number_format_i18n( $count ), __( '% items', 'dawnthemes' ) );
 			} elseif ( $count == 0 ) {
-				$product_item_text = __( '0 items', 'sitesao' );
+				$product_item_text = __( '0 items', 'dawnthemes' );
 			} else {
-				$product_item_text = __( '1 item', 'sitesao' );
+				$product_item_text = __( '1 item', 'dawnthemes' );
 			}
 			
 			return $product_item_text;
@@ -426,7 +426,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			global $woocommerce;
 			$cart_total = $woocommerce->cart->get_cart_total();
 			$cart_count = $woocommerce->cart->cart_contents_count;
-			$cart_output = '<a href="' . $woocommerce->cart->get_cart_url() . '" title="' . __( 'View Cart', 'sitesao' ) . '"  class="cart-icon-mobile">'.$this->_get_minicart_icon2().' '.( ! empty( $cart_count ) ? '<span>' . $cart_count . '</span>' : '' ) . '</a>';
+			$cart_output = '<a href="' . $woocommerce->cart->get_cart_url() . '" title="' . __( 'View Cart', 'dawnthemes' ) . '"  class="cart-icon-mobile">'.$this->_get_minicart_icon2().' '.( ! empty( $cart_count ) ? '<span>' . $cart_count . '</span>' : '' ) . '</a>';
 			return $cart_output;
 		}
 
@@ -451,7 +451,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 		}
 		
 		public function get_minicart_side(){
-			echo '<div class="minicart-side"><div class="minicart-side-title"><h4>'.esc_html__('Shopping Cart','sitesao').'</h4></div><div class="minicart-side-content">'.$this->_get_minicart(true,true).'</div></div>';
+			echo '<div class="minicart-side"><div class="minicart-side-title"><h4>'.esc_html__('Shopping Cart','dawnthemes').'</h4></div><div class="minicart-side-content">'.$this->_get_minicart(true,true).'</div></div>';
 			return;
 		}
 		
@@ -473,7 +473,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			}
 			$minicart = '';
 			if ( ! $content ) {
-				$minicart .= '<a class="minicart-link" href="' . $cart_url . '"><span class="minicart-icon '.$cart_has_item.'">'.$this->_get_minicart_icon2() . '<span>'.$cart_count.'</span></span>'.($topbar ? __('My Cart','sitesao'):'').'</a>';
+				$minicart .= '<a class="minicart-link" href="' . $cart_url . '"><span class="minicart-icon '.$cart_has_item.'">'.$this->_get_minicart_icon2() . '<span>'.$cart_count.'</span></span>'.($topbar ? __('My Cart','dawnthemes'):'').'</a>';
 				if(dt_get_theme_option('woo-minicart-style','side') == 'mini'){
 					$minicart .= '<div class="minicart" style="display:none">';
 				}
@@ -483,7 +483,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			}
 			if( ((dt_get_theme_option('woo-minicart-style','side') == 'mini') ||  $content)){
 				if (! empty( $cart_count ) ) {
-					$minicart .= '<div class="minicart-header">' . $cart_count_text . ' ' . __( 'in the shopping cart', 'sitesao' ) . '</div>';
+					$minicart .= '<div class="minicart-header">' . $cart_count_text . ' ' . __( 'in the shopping cart', 'dawnthemes' ) . '</div>';
 					$minicart .= '<div class="minicart-body">';
 					foreach ( $woocommerce->cart->cart_contents as $cart_item_key => $cart_item ) {
 						
@@ -497,31 +497,31 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 							$minicart .= '<div class="cart-product-details">';
 							$minicart .= '<div class="cart-product-title"><a href="' .get_permalink( $cart_item['product_id'] ) . '">' . apply_filters( 'woocommerce_cart_widget_product_title', $product_short_title, $cart_product ) . '</a></div>';
 							$minicart .= '<div class="cart-product-quantity-price">' . $cart_item['quantity'] . ' x ' .woocommerce_price( $cart_product->get_price() ) . '</div>';
-							// $minicart .= '<div class="cart-product-quantity">' . __('Quantity:', 'sitesao') . ' ' .
+							// $minicart .= '<div class="cart-product-quantity">' . __('Quantity:', 'dawnthemes') . ' ' .
 							// $cart_item['quantity'] . '</div>';
 							$minicart .= '</div>';
-							$minicart .= apply_filters( 'woocommerce_cart_item_remove_link',sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'sitesao' ) ), $cart_item_key );
+							$minicart .= apply_filters( 'woocommerce_cart_item_remove_link',sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'dawnthemes' ) ), $cart_item_key );
 							$minicart .= '</div>';
 						}
 					}
 					$minicart .= '</div>';
 					$minicart .= '<div class="minicart-footer">';
-					$minicart .= '<div class="minicart-total">' . __( 'Cart Subtotal', 'sitesao' ) . ' ' . $cart_total . '</div>';
+					$minicart .= '<div class="minicart-total">' . __( 'Cart Subtotal', 'dawnthemes' ) . ' ' . $cart_total . '</div>';
 					$minicart .= '<div class="minicart-actions clearfix">';
 					if ( version_compare( WOOCOMMERCE_VERSION, "2.1.0" ) >= 0 ) {
 	 					$cart_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_cart_url() );
 						$checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
 						
-						$minicart .= '<a class="viewcart-button button" href="' . esc_url( $cart_url ) . '"><span class="text">' . __( 'View Cart', 'sitesao' ) . '</span></a>';
-						$minicart .= '<a class="checkout-button button" href="' . esc_url( $checkout_url ) .'"><span class="text">' . __( 'Checkout', 'sitesao' ) . '</span></a>';
+						$minicart .= '<a class="viewcart-button button" href="' . esc_url( $cart_url ) . '"><span class="text">' . __( 'View Cart', 'dawnthemes' ) . '</span></a>';
+						$minicart .= '<a class="checkout-button button" href="' . esc_url( $checkout_url ) .'"><span class="text">' . __( 'Checkout', 'dawnthemes' ) . '</span></a>';
 					} else {
-						$minicart .= '<a class="viewcart-button button" href="' . esc_url( $woocommerce->cart->get_cart_url() ) . '"><span class="text">' . __( 'View Cart', 'sitesao' ) . '</span></a>';
-						$minicart .= '<a class="checkout-button button" href="' . esc_url( $woocommerce->cart->get_checkout_url() ) . '"><span class="text">' . __( 'Checkout', 'sitesao' ) . '</span></a>';
+						$minicart .= '<a class="viewcart-button button" href="' . esc_url( $woocommerce->cart->get_cart_url() ) . '"><span class="text">' . __( 'View Cart', 'dawnthemes' ) . '</span></a>';
+						$minicart .= '<a class="checkout-button button" href="' . esc_url( $woocommerce->cart->get_checkout_url() ) . '"><span class="text">' . __( 'Checkout', 'dawnthemes' ) . '</span></a>';
 					}
 					$minicart .= '</div>';
 					$minicart .= '</div>';
 				} else {
-					$minicart .= '<div class="minicart-header no-items show">' . __( 'Your shopping bag is empty.', 'sitesao' ) . '</div>';
+					$minicart .= '<div class="minicart-header no-items show">' . __( 'Your shopping bag is empty.', 'dawnthemes' ) . '</div>';
 					$shop_page_url = "";
 					if ( version_compare( WOOCOMMERCE_VERSION, "2.1.0" ) >= 0 ) {
 						$shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
@@ -531,7 +531,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 					
 					$minicart .= '<div class="minicart-footer">';
 					$minicart .= '<div class="minicart-actions clearfix">';
-					$minicart .= '<a class="button no-item-button" href="' . esc_url( $shop_page_url ) . '"><span class="text">' . __( 'Go to the shop', 'sitesao' ) . '</span></a>';
+					$minicart .= '<a class="button no-item-button" href="' . esc_url( $shop_page_url ) . '"><span class="text">' . __( 'Go to the shop', 'dawnthemes' ) . '</span></a>';
 					$minicart .= '</div>';
 					$minicart .= '</div>';
 				}
@@ -581,7 +581,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 		public function template_loop_quickview() {
 			global $product;
 			if(apply_filters('dt_woocommerce_quickview', true))
-				echo '<div class="shop-loop-quickview"><a data-product_id ="' . $product->id . '" title="' .esc_attr__( 'Quick view', 'sitesao' ) . '" href="' . esc_url( $product->get_permalink() ) . '">'. __( 'Quick view', 'sitesao' ) .'</a></div>';
+				echo '<div class="shop-loop-quickview"><a data-product_id ="' . $product->id . '" title="' .esc_attr__( 'Quick view', 'dawnthemes' ) . '" href="' . esc_url( $product->get_permalink() ) . '">'. __( 'Quick view', 'dawnthemes' ) .'</a></div>';
 		}
 
 		public function quickview() {
@@ -760,7 +760,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 				$identifier = '#' . $product->id;
 			}
 			
-			return sprintf( __( '%s &ndash; %s', 'sitesao' ), $identifier, $product->get_title() );
+			return sprintf( __( '%s &ndash; %s', 'dawnthemes' ), $identifier, $product->get_title() );
 		}
 		
 		public function _get_minicart_icon2(){
@@ -785,19 +785,19 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			if('product_cat' === $taxonomy):
 			?>
 			<div class="form-field">
-				<label for="product_cat_short_description"><?php _e('Short Description','sitesao')?></label>
+				<label for="product_cat_short_description"><?php _e('Short Description','dawnthemes')?></label>
 				<input id="product_cat_short_description" type="text" aria-required="true" size="40" value="" name="product_cat_short_description">
 			</div>
 			<?php endif;?>
 			<div class="form-field">
-				<label><?php _e( 'Heading Background', 'sitesao' ); ?></label>
+				<label><?php _e( 'Heading Background', 'dawnthemes' ); ?></label>
 				<div id="product_cat_heading_thumbnail" style="float:left;margin-right:10px;">
 					<img src="<?php echo woocommerce_placeholder_img_src(); ?>" width="60px" height="60px" />
 				</div>
 				<div style="line-height:60px;">
 					<input type="hidden" id="product_cat_heading_thumbnail_id" name="product_cat_heading_thumbnail_id" />
-					<button type="submit" class=" button product_cat_heding_upload"><?php _e('Upload/Add image', 'sitesao'); ?></button>
-					<button type="submit" class=" button product_cat_heding_remove"><?php _e('Remove image', 'sitesao'); ?></button>
+					<button type="submit" class=" button product_cat_heding_upload"><?php _e('Upload/Add image', 'dawnthemes'); ?></button>
+					<button type="submit" class=" button product_cat_heding_remove"><?php _e('Remove image', 'dawnthemes'); ?></button>
 				</div>
 				<script type="text/javascript">
 			
@@ -820,9 +820,9 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			
 						// Create the media frame.
 						product_cat_heading_file_frame = wp.media.frames.downloadable_file = wp.media({
-							title: '<?php _e( 'Choose an image', 'sitesao' ); ?>',
+							title: '<?php _e( 'Choose an image', 'dawnthemes' ); ?>',
 							button: {
-								text: '<?php _e( 'Use image', 'sitesao' ); ?>',
+								text: '<?php _e( 'Use image', 'dawnthemes' ); ?>',
 							},
 							multiple: false
 						});
@@ -851,19 +851,19 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 				<div class="clear"></div>
 			</div>
 			<div class="form-field">
-				<label for="product_cat_heading_title"><?php _e('Heading Title', 'sitesao')?></label>
+				<label for="product_cat_heading_title"><?php _e('Heading Title', 'dawnthemes')?></label>
 				<input id="product_cat_heading_title" type="text" aria-required="true" size="40" value="" name="product_cat_heading_title">
 			</div>
 			<div class="form-field">
-				<label for="product_cat_heading_sub_title"><?php _e('Heading Sub Title','sitesao')?></label>
+				<label for="product_cat_heading_sub_title"><?php _e('Heading Sub Title','dawnthemes')?></label>
 				<input id="product_cat_heading_sub_title" type="text" aria-required="true" size="40" value="" name="product_cat_heading_sub_title">
 			</div>
 			<div class="form-field">
-				<label for="product_cat_heading_button_text"><?php _e('Heading Button Text','sitesao')?></label>
+				<label for="product_cat_heading_button_text"><?php _e('Heading Button Text','dawnthemes')?></label>
 				<input id="product_cat_heading_button_text" type="text" aria-required="true" size="40" value="" name="product_cat_heading_button_text">
 			</div>
 			<div class="form-field">
-				<label for="product_cat_heading_button_link"><?php _e('Heading Sub Link','sitesao')?></label>
+				<label for="product_cat_heading_button_link"><?php _e('Heading Sub Link','dawnthemes')?></label>
 				<input id="product_cat_heading_button_link" type="text" aria-required="true" size="40" value="" name="product_cat_heading_button_link">
 			</div>
 			<?php
@@ -889,7 +889,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			?>
 			<tr class="form-field">
 				<th scope="row" valign="top">
-					<label for="product_cat_short_description"><?php _e('Short Description','sitesao')?></label>
+					<label for="product_cat_short_description"><?php _e('Short Description','dawnthemes')?></label>
 				</th>
 				<td>
 					<input id="product_cat_short_description" type="text" aria-required="true" size="40" value="<?php echo esc_attr($product_cat_short_description)?>" name="product_cat_short_description">
@@ -898,7 +898,7 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 			<?php endif;?>
 			<tr class="form-field">
 				<th scope="row" valign="top">
-					<label><?php _e( 'Heading Background', 'sitesao' ); ?></label>
+					<label><?php _e( 'Heading Background', 'dawnthemes' ); ?></label>
 				</th>
 				<td>
 					<div id="product_cat_heading_thumbnail" style="float:left;margin-right:10px;">
@@ -906,8 +906,8 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 					</div>
 					<div style="line-height:60px;">
 						<input type="hidden" value="<?php echo esc_attr($thumbnail_id)?>" id="product_cat_heading_thumbnail_id" name="product_cat_heading_thumbnail_id" />
-						<button type="submit" class="button product_cat_heding_upload"><?php _e('Upload/Add image', 'sitesao'); ?></button>
-						<button type="submit" class="button product_cat_heding_remove"><?php _e('Remove image', 'sitesao'); ?></button>
+						<button type="submit" class="button product_cat_heding_upload"><?php _e('Upload/Add image', 'dawnthemes'); ?></button>
+						<button type="submit" class="button product_cat_heding_remove"><?php _e('Remove image', 'dawnthemes'); ?></button>
 					</div>
 					<script type="text/javascript">
 				
@@ -930,9 +930,9 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 				
 							// Create the media frame.
 							product_cat_heading_file_frame = wp.media.frames.downloadable_file = wp.media({
-								title: '<?php _e( 'Choose an image', 'sitesao' ); ?>',
+								title: '<?php _e( 'Choose an image', 'dawnthemes' ); ?>',
 								button: {
-									text: '<?php _e( 'Use image', 'sitesao' ); ?>',
+									text: '<?php _e( 'Use image', 'dawnthemes' ); ?>',
 								},
 								multiple: false
 							});
@@ -961,19 +961,19 @@ if ( ! class_exists( 'DH_Woocommerce' ) ) :
 				</td>
 			</tr>
 			<tr class="form-field">
-				<th scope="row" valign="top"><label for="product_cat_heading_title"><?php _e('Heading Title','sitesao')?></label></th>
+				<th scope="row" valign="top"><label for="product_cat_heading_title"><?php _e('Heading Title','dawnthemes')?></label></th>
 				<td><input id="product_cat_heading_title" type="text" aria-required="true" size="40" value="<?php echo esc_attr($product_cat_heading_title)?>" name="product_cat_heading_title"></td>
 			</tr>
 			<tr class="form-field">
-				<th scope="row" valign="top"><label for="product_cat_heading_sub_title"><?php _e('Heading Sub Title','sitesao')?></label></th>
+				<th scope="row" valign="top"><label for="product_cat_heading_sub_title"><?php _e('Heading Sub Title','dawnthemes')?></label></th>
 				<td><input id="product_cat_heading_sub_title" type="text" aria-required="true" size="40" value="<?php echo esc_attr($product_cat_heading_sub_title)?>" name="product_cat_heading_sub_title"></td>
 			</tr>
 			<tr class="form-field">
-				<th scope="row" valign="top"><label for="product_cat_heading_button_text"><?php _e('Heading Button Text','sitesao')?></label></th>
+				<th scope="row" valign="top"><label for="product_cat_heading_button_text"><?php _e('Heading Button Text','dawnthemes')?></label></th>
 				<td><input id="product_cat_heading_button_text" type="text" aria-required="true" size="40" value="<?php echo esc_attr($product_cat_heading_button_text)?>" name="product_cat_heading_button_text"></td>
 			</tr>
 			<tr class="form-field">
-				<th scope="row" valign="top"><label for="product_cat_heading_button_link"><?php _e('Heading Sub Link','sitesao')?></label></th>
+				<th scope="row" valign="top"><label for="product_cat_heading_button_link"><?php _e('Heading Sub Link','dawnthemes')?></label></th>
 				<td><input id="product_cat_heading_button_link" type="text" aria-required="true" size="40" value="<?php echo esc_attr($product_cat_heading_button_link)?>" name="product_cat_heading_button_link"></td>
 			</tr>
 			<?php

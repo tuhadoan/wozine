@@ -167,7 +167,7 @@ if($r->have_posts()):
 
 								<?php if($layout_style == 'list') : ?>
 									<a class="read-more btn btn-outline" href="<?php the_permalink()?>" title="<?php echo esc_attr(get_the_title())?>">
-										<?php esc_html_e( 'Read more', 'woow'); ?> <i>+</i>
+										<?php esc_html_e( 'Read more', 'wozine'); ?> <i>+</i>
 									</a>
 								<?php endif; ?>
 

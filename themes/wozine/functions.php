@@ -100,8 +100,8 @@ function dt_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 770, 520, true );
 	add_image_size( 'wozine-post-thumbnails', 770, 520, true );
-
-	add_image_size( 'wozine-blog-classic', 770, 520, true );
+	
+	add_image_size( 'wozine-blog-grid', 370, 250, true ); //370, 250
 	add_image_size( 'wozine-blog-gallery', 750, 562, true ); //375, 281
 
 	add_image_size( 'wozine-related-post-thumbnails', 244, 162, true );

@@ -421,6 +421,7 @@
 .widget_recent_comments li,
 .widget_recent_entries li {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-color: rgba(0, 0, 0, 0.1);
     padding-bottom: 7px;
     margin-bottom: 7px;
 }
@@ -706,6 +707,14 @@
 	font-weight: 900;
 }
 
+.dt-facebook__widget{
+	.dt-facebook__widget_wrap{
+		.dt-facebook__content{
+
+		}
+	}
+}
+
 .dt-instagram__widget{
 	.dt-instagram__widget_wrap{
 		.dt-instagram__list{
@@ -741,6 +750,33 @@
 							@include opacity(1);
 						}
 					}
+				}
+			}
+		}
+	}
+}
+.tweets-widget{
+	a{
+		color: $main-color;
+	}
+	.recent-tweets{
+		ul{
+			li{
+				margin-bottom: 20px;
+				display: table;
+				width: 100%;
+				@include clearfix();
+				i{
+					display: table-cell;
+					vertical-align: top;
+					padding-right: 15px;
+					color: #3f3f3f;
+					padding-top: 4px;
+					font-size: 20px;
+				}
+				span{
+					display: table-cell;
+					vertical-align: top;
 				}
 			}
 		}

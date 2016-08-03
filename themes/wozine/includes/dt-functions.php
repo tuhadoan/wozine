@@ -1,4 +1,67 @@
 <?php
+if(!function_exists('dt_get_theme_option_name')){
+	function dt_get_theme_option_name(){
+		$lang = '';
+		$theme_name = 'dt_theme_'.basename(get_template_directory());
+		$theme_name = apply_filters('dt_get_theme_option_name', $theme_name);
+		return $theme_name;
+	}
+}
+
+if(!function_exists('dt_get_theme_option')){
+	function dt_get_theme_option($option,$default = null){
+		global $dt_theme_options;
+		if(empty($option))
+			return $default;
+
+
+		$_option_name = dt_get_theme_option_name();
+
+		if ( empty( $dt_theme_options ) ) {
+			$dt_theme_options = get_option($_option_name);
+		}
+
+		if(is_page() || (defined('WOOCOMMERCE_VERSION') && is_woocommerce())){
+			if($option == 'header-style'){
+				$page_value = dt_get_post_meta('header_style');
+				if( $page_value !== null && $page_value !== array() && $page_value !== false && $page_value != '-1'){
+					return apply_filters('dt_get_theme_option', $page_value, $option);
+				}
+			}
+			if($option == 'show-topbar'){
+				$page_value = dt_get_post_meta('show_topbar');
+				if($page_value !== null && $page_value !== array() && $page_value !== false && $page_value != '-1'){
+					return apply_filters('dt_get_theme_option', $page_value, $option);
+				}
+			}
+			if($option == 'menu-transparent'){
+				$page_value = dt_get_post_meta('menu_transparent');
+				if($page_value !== null && $page_value !== array() && $page_value !== false &&  $page_value != '-1'){
+					return apply_filters('dt_get_theme_option', $page_value, $option);
+				}
+			}
+			if($option == 'footer-area'){
+				$page_value = dt_get_post_meta('footer_area');
+				if($page_value !== null && $page_value !== array() && $page_value !== false &&  $page_value != '-1'){
+					return apply_filters('dt_get_theme_option', $page_value, $option);
+				}
+			}
+			if($option == 'footer-menu'){
+				$page_value = dt_get_post_meta('footer_menu');
+				if($page_value !== null && $page_value !== array() && $page_value !== false &&  $page_value != '-1'){
+					return apply_filters('dt_get_theme_option', $page_value, $option);
+				}
+			}
+		}
+		if(isset($dt_theme_options[$option]) && $dt_theme_options[$option] !== '' && $dt_theme_options[$option] !== null && $dt_theme_options[$option] !== array() && $dt_theme_options[$option] !== false){
+			$value = $dt_theme_options[$option];
+			return apply_filters('dt_get_theme_option', $value, $option);
+		}else{
+			return $default;
+		}
+	}
+}
+
 function dt_sc_get_id(){
 	$chars = '0123456789abcdefghijklmnopqrstuvwxyz';
 	$max = strlen($chars) - 1;
@@ -1030,11 +1093,22 @@ function dt_post_featured($post_id='',$post_format='',$is_shortcode = false,$is_
 	$post_id  = empty($post_id) ? get_the_ID() : $post_id;
 	$post_format = empty($post_format) ? get_post_format() : $post_format;
 	$thumb_size = !is_singular() || $is_shortcode || $is_related ? 'dt-thumbnail' : 'dt-full';
-	if($layout == 'masonry'){
-		$thumb_size = 'dt-full';
-	}elseif ($layout == 'classic'){
-		$thumb_size = 'wozine-post-thumbnails';
+	
+	switch ($layout){
+		case 'grid':
+			$thumb_size = 'wozine-blog-grid';
+			break;
+		case 'classic':
+			$thumb_size = 'wozine-post-thumbnails';
+			break;
+		case 'masonry':
+			$thumb_size = 'dt-full';
+			break;
+		default:
+			$thumb_size = 'wozine-post-thumbnails';
+			break;
 	}
+	
 	$thumb_size = apply_filters('dt_post_featured_thumbnail_size', $thumb_size,$post_id);
 	$featured_class = !empty($post_format) ? ' '.$post_format.'-featured' : '';
 	
@@ -1061,7 +1135,7 @@ function dt_post_featured($post_id='',$post_format='',$is_shortcode = false,$is_
 							<?php foreach ($gallery_ids as $id):?>
 								<?php if($id):?>
 								<?php 
-								$image = wp_get_attachment_image_src($id,'dt-full');
+								$image = wp_get_attachment_image_src($id,'wozine-blog-gallery');
 								?>
 								<div class="dt-slick-item">
 									<div class="dt-slide-img">
@@ -1140,7 +1214,7 @@ function dt_post_featured($post_id='',$post_format='',$is_shortcode = false,$is_
 					$thumb = '<img src="'.get_template_directory_uri().'/assets/images/no-thumb_700x350.png" alt="'.get_the_title().'">';
 				}
 				echo '<div class="entry-featured'.$featured_class.' '.$entry_featured_class.'">';
-				echo '<a href="'.get_the_permalink().'" title="'.esc_attr(get_the_title(get_post_thumbnail_id($post_id))).'">'.$thumb.'<i class="fa fa-play" aria-hidden="true"></i></a>';
+				echo '<a class="dt-image-link" href="'.get_the_permalink().'" title="'.esc_attr(get_the_title(get_post_thumbnail_id($post_id))).'">'.$thumb.'<i class="fa fa-play" aria-hidden="true"></i></a>';
 				echo '</div>';
 			}
 		}elseif ($post_format == 'audio'){
@@ -1837,15 +1911,15 @@ function dt_paging_nav_default() {
 
 	?>
 	<nav class="wp-paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'cactus' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'wozine' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Previous Posts', 'cactus' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Previous Posts', 'wozine' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Next Posts', 'cactus' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Next Posts', 'wozine' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->

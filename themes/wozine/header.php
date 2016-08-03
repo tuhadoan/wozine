@@ -29,60 +29,15 @@ $is_sticky_menu = dt_get_theme_option('sticky_menu','yes') == 'yes' ? ' is_stick
 ?>
 <body <?php body_class(); ?>>
 <div class="offcanvas">
-          <!-- BEGIN: Sidebar Offcanvas Header -->
-          <div class="sidebar-offcanvas-header">
-            <!-- BEGIN: User Panel -->
-            <div class="user-panel pull-left">
-              <div class="ava">
-                <i class="fa fa-user"></i>
-              </div>
-              <div class="user-welcome">Hello, <a href="#">Admin</a></div>
-            </div><!-- END: User Panel -->
-            <!-- BEGIN: Search Box -->
-            <form id="search-box" action="#" method="post" class="search-box" tabindex="-1">
-              <i class="fa fa-search search-icon"></i>
-              <input type="text" value="" placeholder="What do you want to find?" class="keywords">
-            </form><!-- END: Search Box -->            
-            <!-- BEGIN: Toggle Wrap -->
-            <div class="toggle-wrap pull-right">
-              <span class="toggle-icon search-toggle"><i class="fa fa-search"></i></span>
-            </div><!-- END: Toggle Wrap -->
-          </div><!-- END: Sidebar Offcanvas Header -->
-          <!-- BEGIN: User Menu -->
-          <div class="box-user-menu">
-            <ul class="user-menu">
-              <li><a href="#"><i class="fa fa-pencil-square-o menu-item-icon"></i> Profile <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#"><i class="fa fa-clock-o menu-item-icon"></i> Order History <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#"><i class="fa fa-ticket menu-item-icon"></i> My Tickets <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#"><i class="fa fa-money menu-item-icon"></i> Account Balance <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#"><i class="fa fa-cog menu-item-icon"></i> Setting <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-            </ul>
-          </div><!-- END: User Menu -->
-          <!-- BEGIN: Create an Event -->
-          <div class="box-create-event">
-            <button class="button-create-event" data-toggle="modal" data-target="#creat-event-modal"><i class="fa fa-plus-square"></i> Create an Event</button>
-          </div><!-- END: Create an Event-->
-          <!-- BEGIN: Cart -->
-          <div class="box-cart">
-            <h3 class="cart-title"><i class="fa fa-shopping-cart"></i> Cart</h3>
-            <a class="cart-view" href="#">
-              Have 1 item(s).  Total: <strong>$42.00</strong>
-            </a>
-          </div><!-- END: Cart -->
-          <!-- BEGIN: Categories -->
-          <div class="box-categories">
-            <h3 class="box-categories-title"><i class="fa fa-folder-o"></i> Categories</h3>
-            <ul class="cat-menu">
-              <li><a href="#">All <span class="count">18</span> <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Entertaiment <span class="count">08</span> <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Networking &amp; Meetup <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Education <span class="count">04</span> <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Community &amp; Charity <span class="count">03</span> <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Seminars &amp; Workshops <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Sport <span class="count">03</span> <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-              <li><a href="#">Exhibitions <i class="fa fa-angle-right menu-item-arrow"></i></a></li>
-            </ul>
-          </div><!-- END: Categories -->
+      <div class="dt-sidenav-wrapper">
+			<?php if( has_nav_menu('main-menu') ): ?>
+			<nav id="side-navigation" class="site-navigation side-navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu', 'menu_id' => 'main-menu' ) ); ?>
+			</nav>
+			<?php else :?>
+			<p class="dt-alert"><?php esc_html_e('Please sellect menu for Main navigation', 'wozine'); ?></p>
+			<?php endif; ?>
+		</div>
 </div>
 
 <div id="page" class="hfeed site">
@@ -93,7 +48,7 @@ $is_sticky_menu = dt_get_theme_option('sticky_menu','yes') == 'yes' ? ' is_stick
 				<div class="col-md-12">
 					<div class="menu-toggle"><i class="fa fa-bars"></i></div>
 					<div class="sticky-logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo dt_get_theme_option('logo', DT_ASSETS_URI . '/images/logo.png');?>"/></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo dt_get_theme_option('logo', DT_ASSETS_URI . '/images/logo.png');?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"/></a>
 					</div>
 					<div class="dt-sticky-mainnav-wrapper">
 						
@@ -110,7 +65,7 @@ $is_sticky_menu = dt_get_theme_option('sticky_menu','yes') == 'yes' ? ' is_stick
 					<div class="col-md-6 col-sm-12">
 						<div class="menu-toggle"><i class="fa fa-bars"></i></div>
 						<div class="logo-wrap">
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo dt_get_theme_option('logo', DT_ASSETS_URI . '/images/logo.png');?>"/></a></h1>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo dt_get_theme_option('logo', DT_ASSETS_URI . '/images/logo.png');?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"/></a></h1>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12">
@@ -141,7 +96,7 @@ $is_sticky_menu = dt_get_theme_option('sticky_menu','yes') == 'yes' ? ' is_stick
 						<div class="header-main">
 							<div class="menu-toggle"><i class="fa fa-bars"></i></div>
 							<div class="sticky-logo">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo dt_get_theme_option('logo', DT_ASSETS_URI . '/images/logo.png');?>"/></a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo dt_get_theme_option('logo', DT_ASSETS_URI . '/images/logo.png');?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"/></a>
 							</div>
 							<div class="dt-mainnav-wrapper">
 								<?php if( has_nav_menu('main-menu') ): ?>

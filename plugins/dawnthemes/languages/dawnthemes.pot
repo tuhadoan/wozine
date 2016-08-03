@@ -1,0 +1,4930 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: DawnThemes Core\n"
+"POT-Creation-Date: 2016-07-27 00:37+0700\n"
+"PO-Revision-Date: 2016-07-27 00:37+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: dawnthemes.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/admin/admin.php:77
+msgid "Tooltip Shortcode"
+msgstr ""
+
+#: includes/admin/admin.php:91 includes/admin/admin.php:92
+#: includes/visual-composer-root.php:2149
+#: includes/visual-composer-root.php:2787 includes/visual-composer.php:785
+#: includes/visual-composer.php:1461
+msgid "Text"
+msgstr ""
+
+#: includes/admin/admin.php:97
+msgid "URL"
+msgstr ""
+
+#: includes/admin/admin.php:98
+msgid "http://"
+msgstr ""
+
+#: includes/admin/admin.php:103
+msgid "Type"
+msgstr ""
+
+#: includes/admin/admin.php:105 includes/visual-composer-root.php:2314
+#: includes/visual-composer.php:950
+msgid "Tooltip"
+msgstr ""
+
+#: includes/admin/admin.php:106 includes/visual-composer-root.php:2315
+#: includes/visual-composer.php:951
+msgid "Popover"
+msgstr ""
+
+#: includes/admin/admin.php:112 includes/visual-composer-root.php:2319
+#: includes/visual-composer.php:955
+msgid "Tip position"
+msgstr ""
+
+#: includes/admin/admin.php:114 includes/visual-composer-root.php:2323
+#: includes/visual-composer-root.php:2910
+#: includes/visual-composer-root.php:2964 includes/visual-composer.php:959
+#: includes/visual-composer.php:1584 includes/visual-composer.php:1638
+msgid "Top"
+msgstr ""
+
+#: includes/admin/admin.php:115 includes/visual-composer-root.php:2324
+#: includes/visual-composer-root.php:2965 includes/visual-composer.php:960
+#: includes/visual-composer.php:1639
+msgid "Bottom"
+msgstr ""
+
+#: includes/admin/admin.php:116 includes/admin/category-metadata.php:19
+#: includes/visual-composer-root.php:2304
+#: includes/visual-composer-root.php:2325
+#: includes/visual-composer-root.php:2910
+#: includes/visual-composer-root.php:2966 includes/visual-composer.php:940
+#: includes/visual-composer.php:961 includes/visual-composer.php:1584
+#: includes/visual-composer.php:1640
+msgid "Left"
+msgstr ""
+
+#: includes/admin/admin.php:117 includes/admin/category-metadata.php:20
+#: includes/visual-composer-root.php:2306
+#: includes/visual-composer-root.php:2326
+#: includes/visual-composer-root.php:2967 includes/visual-composer.php:942
+#: includes/visual-composer.php:962 includes/visual-composer.php:1641
+msgid "Right"
+msgstr ""
+
+#: includes/admin/admin.php:123 includes/admin/admin.php:124
+#: includes/visual-composer-root.php:2624
+#: includes/visual-composer-root.php:2735
+#: includes/visual-composer-root.php:2781
+#: includes/visual-composer-root.php:2913
+#: includes/visual-composer-root.php:3010 includes/visual-composer.php:667
+#: includes/visual-composer.php:1009 includes/visual-composer.php:1087
+#: includes/visual-composer.php:1409 includes/visual-composer.php:1455
+#: includes/visual-composer.php:1587 includes/visual-composer.php:1684
+#: includes/widgets.php:211 includes/widgets.php:283 includes/widgets.php:362
+#: includes/widgets.php:443 includes/widgets.php:569 includes/widgets.php:727
+#: includes/widgets.php:949 includes/widgets.php:1041 includes/widgets.php:1162
+msgid "Title"
+msgstr ""
+
+#: includes/admin/admin.php:129 includes/admin/admin.php:130
+#: includes/widgets.php:216
+msgid "Content"
+msgstr ""
+
+#: includes/admin/admin.php:135
+msgid "Action to trigger"
+msgstr ""
+
+#: includes/admin/admin.php:137 includes/visual-composer-root.php:2344
+#: includes/visual-composer.php:980
+msgid "Hover"
+msgstr ""
+
+#: includes/admin/admin.php:138 includes/visual-composer-root.php:2344
+#: includes/visual-composer.php:980
+msgid "Click"
+msgstr ""
+
+#: includes/admin/admin.php:145
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/admin.php:148
+msgid "Add Tooltip"
+msgstr ""
+
+#: includes/admin/category-metadata.php:14
+msgid "Sidebar"
+msgstr ""
+
+#: includes/admin/category-metadata.php:18
+#: includes/admin/theme-options.php:1225 includes/admin/theme-options.php:1410
+#: includes/visual-composer-root.php:705 includes/visual-composer-root.php:814
+#: includes/visual-composer-root.php:2186
+#: includes/visual-composer-root.php:2246
+#: includes/visual-composer-root.php:2386
+#: includes/visual-composer-root.php:2963 includes/visual-composer.php:699
+#: includes/visual-composer.php:822 includes/visual-composer.php:882
+#: includes/visual-composer.php:1637
+msgid "Default"
+msgstr ""
+
+#: includes/admin/category-metadata.php:23
+msgid "Choose \"default\" to use Theme Options setting."
+msgstr ""
+
+#: includes/admin/category-metadata.php:28
+msgid "Representative Color"
+msgstr ""
+
+#: includes/admin/category-metadata.php:32
+msgid "Choose representative color for this category."
+msgstr ""
+
+#: includes/admin/functions.php:106
+msgid "Select a sidebar..."
+msgstr ""
+
+#: includes/admin/functions.php:181
+msgid "Add Images to Gallery"
+msgstr ""
+
+#: includes/admin/functions.php:183
+msgid "Add to Gallery"
+msgstr ""
+
+#: includes/admin/functions.php:201 includes/admin/functions.php:276
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/functions.php:201 includes/admin/functions.php:276
+msgid "x"
+msgstr ""
+
+#: includes/admin/functions.php:286
+msgid "Add Gallery Images"
+msgstr ""
+
+#: includes/admin/functions.php:300 includes/admin/functions.php:340
+msgid "Change Media"
+msgstr ""
+
+#: includes/admin/functions.php:300 includes/admin/functions.php:351
+msgid "Select Media"
+msgstr ""
+
+#: includes/admin/functions.php:305
+msgid "Clear"
+msgstr ""
+
+#: includes/admin/functions.php:327
+msgid "Select or Upload your Media"
+msgstr ""
+
+#: includes/admin/functions.php:329 includes/admin/functions.php:399
+#: includes/admin/theme-options.php:354 includes/admin/theme-options.php:665
+msgid "Select"
+msgstr ""
+
+#: includes/admin/functions.php:370 includes/admin/functions.php:424
+#: includes/admin/theme-options.php:323 includes/admin/theme-options.php:368
+#: includes/admin/theme-options.php:634 includes/admin/theme-options.php:679
+msgid "Change Image"
+msgstr ""
+
+#: includes/admin/functions.php:370 includes/admin/functions.php:435
+#: includes/admin/theme-options.php:324 includes/admin/theme-options.php:379
+#: includes/admin/theme-options.php:635 includes/admin/theme-options.php:690
+msgid "Select Image"
+msgstr ""
+
+#: includes/admin/functions.php:376 includes/admin/theme-options.php:334
+#: includes/admin/theme-options.php:645
+msgid "Clear Image"
+msgstr ""
+
+#: includes/admin/functions.php:397 includes/admin/theme-options.php:352
+#: includes/admin/theme-options.php:663
+msgid "Select or Upload your Image"
+msgstr ""
+
+#: includes/admin/import-demo.php:11
+msgid "Import Demo"
+msgstr ""
+
+#: includes/admin/import-demo.php:18
+msgid "Importing Demo Content..."
+msgstr ""
+
+#: includes/admin/import-demo.php:19
+msgid ""
+"Please be patient and do not navigate away from this page while the import "
+"is in&nbsp;progress. This can take a while if your server is slow "
+"(inexpensive hosting).<br>You will be notified via this page when the import "
+"is completed."
+msgstr ""
+
+#: includes/admin/import-demo.php:22
+msgid "Error has occured"
+msgstr ""
+
+#: includes/admin/import-demo.php:26
+msgid "Import completed successfully!"
+msgstr ""
+
+#: includes/admin/import-demo.php:27
+msgid "Now you can see the result at"
+msgstr ""
+
+#: includes/admin/import-demo.php:27
+msgid "your site"
+msgstr ""
+
+#: includes/admin/import-demo.php:27
+msgid "or start customize via"
+msgstr ""
+
+#: includes/admin/import-demo.php:27 includes/admin/theme-options.php:1889
+#: includes/admin/theme-options.php:1890 includes/admin/theme-options.php:1905
+msgid "Theme Options"
+msgstr ""
+
+#: includes/admin/import-demo.php:31 includes/admin/import-demo.php:41
+msgid "Import Demo Data"
+msgstr ""
+
+#: includes/admin/import-demo.php:45
+msgid "Important Notes:"
+msgstr ""
+
+#: includes/admin/import-demo.php:47
+msgid "We recommend to run Demo Import on a clean WordPress installation."
+msgstr ""
+
+#: includes/admin/import-demo.php:48
+#, php-format
+msgid "To reset your installation we recommend %s plugin."
+msgstr ""
+
+#: includes/admin/import-demo.php:49
+msgid ""
+"The Demo Import will not import the images we have used in our live demo, "
+"due to copyright/license reasons."
+msgstr ""
+
+#: includes/admin/import-demo.php:50
+msgid ""
+"Do not run the Demo Import multiple times one after another, it will result "
+"in double content."
+msgstr ""
+
+#: includes/admin/import-demo.php:54 includes/admin/theme-options.php:835
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:194
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:215
+msgid "Import"
+msgstr ""
+
+#: includes/admin/mega-menu.php:30
+msgid "Enable Mega Menu"
+msgstr ""
+
+#: includes/admin/mega-menu.php:36
+msgid "Full Width Mega Menu"
+msgstr ""
+
+#: includes/admin/mega-menu.php:41
+msgid "Mega Menu Columns"
+msgstr ""
+
+#: includes/admin/mega-menu.php:58
+msgid "Disable Mega Menu Column Title"
+msgstr ""
+
+#: includes/admin/mega-menu.php:63 includes/admin/mega-menu.php:82
+msgid "Display Sidebar in Menu"
+msgstr ""
+
+#: includes/admin/mega-menu.php:65
+msgid "Select Widget Area..."
+msgstr ""
+
+#: includes/admin/mega-menu.php:84
+msgid "Select Widget Area"
+msgstr ""
+
+#: includes/admin/mega-menu.php:101
+msgid ""
+"Menu Icon Class (Font Awesome Icon or Elegant Icon.ex: fa fa-home, "
+"elegant_icon_house_alt)"
+msgstr ""
+
+#: includes/admin/mega-menu.php:107 includes/visual-composer-root.php:819
+#: includes/visual-composer-root.php:3102 includes/visual-composer.php:1777
+msgid "Visibility"
+msgstr ""
+
+#: includes/admin/mega-menu.php:110 includes/visual-composer-root.php:823
+#: includes/visual-composer-root.php:3106 includes/visual-composer.php:1781
+msgid "All Devices"
+msgstr ""
+
+#: includes/admin/mega-menu.php:111 includes/visual-composer-root.php:824
+#: includes/visual-composer-root.php:3107 includes/visual-composer.php:1782
+msgid "Hidden Phone"
+msgstr ""
+
+#: includes/admin/mega-menu.php:112 includes/visual-composer-root.php:825
+#: includes/visual-composer-root.php:3108 includes/visual-composer.php:1783
+msgid "Hidden Tablet"
+msgstr ""
+
+#: includes/admin/mega-menu.php:113 includes/visual-composer-root.php:826
+#: includes/visual-composer-root.php:3109 includes/visual-composer.php:1784
+msgid "Hidden PC"
+msgstr ""
+
+#: includes/admin/mega-menu.php:114 includes/visual-composer-root.php:827
+#: includes/visual-composer-root.php:3110 includes/visual-composer.php:1785
+msgid "Visible Phone"
+msgstr ""
+
+#: includes/admin/mega-menu.php:115 includes/visual-composer-root.php:828
+#: includes/visual-composer-root.php:3111 includes/visual-composer.php:1786
+msgid "Visible Tablet"
+msgstr ""
+
+#: includes/admin/mega-menu.php:116 includes/visual-composer-root.php:829
+#: includes/visual-composer-root.php:3112 includes/visual-composer.php:1787
+msgid "Visible PC"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:19
+msgid "Gallery Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:26
+msgid "Gallery"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:37
+msgid "Quote Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:44
+msgid "Quote Content"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:45
+msgid "Please type the text for your quote here."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:50 includes/widgets.php:692
+msgid "By"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:61
+msgid "Link Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:68
+msgid "Link URL"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:69
+msgid "Please input the URL for your link. I.e. http://www.example.com"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:80
+msgid "Video Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:88
+msgid "Use service video"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:91 includes/visual-composer-root.php:2372
+#: includes/visual-composer.php:1000
+msgid "Embedded Code"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:92
+msgid ""
+"Used when you select Video format. Enter a Youtube, Vimeo, Soundcloud, etc "
+"URL. See supported services at <a href=\"http://codex.wordpress.org/Embeds"
+"\">http://codex.wordpress.org/Embeds</a>."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:99 includes/admin/meta-boxes.php:144
+msgid "Use hosted video"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:102
+msgid "MP4 File URL"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:103
+msgid "Please enter in the URL to the .m4v video file."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:108
+msgid "OGV/OGG File URL"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:109
+msgid "Please enter in the URL to the .ogv or .ogg video file."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:114
+msgid "WEBM File URL"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:115
+msgid "Please enter in the URL to the .webm video file."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:126
+msgid "Audio Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:134
+msgid "Use service audio"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:137
+msgid "Audio Embed"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:138
+msgid "URL or code embed."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:147
+msgid "MP3 File URL"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:148
+msgid "Please enter in the URL to the .mp3 file"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:153
+msgid "OGA File URL"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:154
+msgid "Please enter in the URL to the .ogg or .oga file"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:165
+msgid "Post Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:172
+msgid "Featured"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:173
+msgid ""
+"Make this post featured. Featured posts will appear in DT Posts Wiget "
+"(orderby Featured)."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:177 includes/visual-composer-root.php:1077
+#: includes/visual-composer-root.php:1107
+#: includes/visual-composer-root.php:1142
+#: includes/visual-composer-root.php:1224
+#: includes/visual-composer-root.php:2313
+#: includes/visual-composer-root.php:2441
+#: includes/visual-composer-root.php:2515
+#: includes/visual-composer-root.php:2529 includes/visual-composer.php:753
+#: includes/visual-composer.php:949
+msgid "No"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:178 includes/visual-composer-root.php:1077
+#: includes/visual-composer-root.php:1107
+#: includes/visual-composer-root.php:1142
+#: includes/visual-composer-root.php:1224
+#: includes/visual-composer-root.php:2515
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:182
+msgid "Masonry Item Sizing"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:183
+msgid ""
+"This will only be used if you choose to display your blog in the masonry/"
+"grid format."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:187 includes/visual-composer-root.php:3059
+#: includes/visual-composer.php:1733
+msgid "Normal"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:188
+msgid "Double"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:214
+msgid "No sliders found"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:218
+msgid "Default Menu..."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:224
+msgid "Page Settings"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:231
+msgid "Content Page no Padding"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:232
+msgid "If checked. content of page  with no padding top and padding bottom"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:237
+msgid "Main Navigation Menu"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:238
+msgid "Select which main menu displays on this page."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:245
+msgid "Main Sidebar"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:246
+msgid "Select sidebar for page with 2 or 3 colums."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:251 includes/admin/theme-options.php:1029
+msgid "Header Style"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:252 includes/admin/theme-options.php:1030
+msgid "Please select your header style here."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:256 includes/admin/meta-boxes.php:267
+#: includes/admin/meta-boxes.php:278 includes/admin/meta-boxes.php:345
+#: includes/admin/meta-boxes.php:356 includes/admin/meta-boxes.php:367
+msgid "Global"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:257 includes/admin/theme-options.php:1032
+#: includes/visual-composer-root.php:2305
+#: includes/visual-composer-root.php:2388 includes/visual-composer.php:941
+msgid "Center"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:258 includes/admin/theme-options.php:1033
+msgid "Below"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:262
+msgid "Topbar"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:263
+msgid "Enable or disable the top bar."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:268 includes/admin/meta-boxes.php:346
+#: includes/admin/meta-boxes.php:357 includes/admin/meta-boxes.php:368
+#: includes/admin/theme-options.php:913 includes/admin/theme-options.php:1042
+#: includes/admin/theme-options.php:1210 includes/admin/theme-options.php:1255
+#: includes/admin/theme-options.php:1279 includes/admin/theme-options.php:1317
+#: includes/admin/theme-options.php:1326 includes/admin/theme-options.php:1458
+#: includes/admin/theme-options.php:1466 includes/admin/theme-options.php:1480
+#: includes/admin/theme-options.php:1491 includes/admin/theme-options.php:1503
+#: includes/admin/theme-options.php:1539 includes/admin/theme-options.php:1547
+#: includes/admin/theme-options.php:1561 includes/admin/theme-options.php:1569
+#: includes/admin/theme-options.php:1579 includes/admin/theme-options.php:1589
+#: includes/admin/theme-options.php:1599 includes/admin/theme-options.php:1607
+#: includes/admin/theme-options.php:1668 includes/admin/theme-options.php:1676
+#: includes/admin/theme-options.php:1763 includes/visual-composer-root.php:922
+#: includes/visual-composer-root.php:1974 includes/visual-composer.php:1156
+#: includes/visual-composer.php:1167
+msgid "Show"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:269 includes/admin/meta-boxes.php:293
+#: includes/admin/meta-boxes.php:347 includes/admin/meta-boxes.php:358
+#: includes/admin/meta-boxes.php:369 includes/admin/theme-options.php:914
+#: includes/admin/theme-options.php:1043 includes/admin/theme-options.php:1211
+#: includes/admin/theme-options.php:1256 includes/admin/theme-options.php:1280
+#: includes/admin/theme-options.php:1318 includes/admin/theme-options.php:1327
+#: includes/admin/theme-options.php:1459 includes/admin/theme-options.php:1467
+#: includes/admin/theme-options.php:1481 includes/admin/theme-options.php:1492
+#: includes/admin/theme-options.php:1504 includes/admin/theme-options.php:1540
+#: includes/admin/theme-options.php:1548 includes/admin/theme-options.php:1562
+#: includes/admin/theme-options.php:1570 includes/admin/theme-options.php:1580
+#: includes/admin/theme-options.php:1590 includes/admin/theme-options.php:1600
+#: includes/admin/theme-options.php:1608 includes/admin/theme-options.php:1669
+#: includes/admin/theme-options.php:1677 includes/admin/theme-options.php:1764
+#: includes/visual-composer.php:1157 includes/visual-composer.php:1168
+msgid "Hide"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:273 includes/admin/theme-options.php:1190
+msgid "Transparent Main Menu"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:274
+msgid "Enable or disable main menu background transparency."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:279 includes/admin/theme-options.php:460
+msgid "On"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:280 includes/admin/theme-options.php:467
+msgid "Off"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:284
+msgid "Page Heading"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:285
+msgid "Enable/disable page heading or custom page heading"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:290
+msgid "Heading"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:292
+msgid "Use Revolution Slider"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:297
+msgid "Heading Menu Anchor "
+msgstr ""
+
+#: includes/admin/meta-boxes.php:298
+msgid "Add menu anchor for heading. You can use in One Page"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:315
+msgid "Revolution Slider"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:316
+msgid "Select your Revolution Slider."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:322
+msgid "Page Heading Background Image"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:323
+msgid "Custom heading background image."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:328
+msgid "Page Heading Title"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:329
+msgid "Custom heading title."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:334
+msgid "Page Heading Sub-title"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:335
+msgid "Custom heading sub-title."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:340 includes/admin/theme-options.php:1257
+msgid "Footer Widget Area"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:341 includes/admin/theme-options.php:1259
+msgid "Do you want use the main footer that contains all the widgets areas."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:351 includes/admin/theme-options.php:1249
+msgid "Footer"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:352
+msgid "Do you want show/hide footer."
+msgstr ""
+
+#: includes/admin/meta-boxes.php:362 includes/admin/theme-options.php:1328
+msgid "Footer Menu"
+msgstr ""
+
+#: includes/admin/meta-boxes.php:363 includes/admin/theme-options.php:1329
+msgid "Do you want use menu in main footer."
+msgstr ""
+
+#: includes/admin/theme-options.php:62 includes/admin/theme-options.php:68
+msgid "This is required to enable file writing"
+msgstr ""
+
+#: includes/admin/theme-options.php:160
+msgid "Online Document"
+msgstr ""
+
+#: includes/admin/theme-options.php:167 includes/admin/theme-options.php:232
+msgid "Save All Change"
+msgstr ""
+
+#: includes/admin/theme-options.php:235
+msgid "Reset Options"
+msgstr ""
+
+#: includes/admin/theme-options.php:569
+msgid "Background Repeat"
+msgstr ""
+
+#: includes/admin/theme-options.php:583
+msgid "Background Size"
+msgstr ""
+
+#: includes/admin/theme-options.php:597
+msgid "Background Attachment"
+msgstr ""
+
+#: includes/admin/theme-options.php:620
+msgid "Background Position"
+msgstr ""
+
+#: includes/admin/theme-options.php:723
+msgid "Select a font family"
+msgstr ""
+
+#: includes/admin/theme-options.php:736
+msgid "Font size"
+msgstr ""
+
+#: includes/admin/theme-options.php:749
+msgid "Font style"
+msgstr ""
+
+#: includes/admin/theme-options.php:771
+msgid "Subset"
+msgstr ""
+
+#: includes/admin/theme-options.php:837
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+
+#: includes/admin/theme-options.php:845
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:214
+msgid "Export"
+msgstr ""
+
+#: includes/admin/theme-options.php:856
+msgid "General"
+msgstr ""
+
+#: includes/admin/theme-options.php:858
+msgid ""
+"<p class=\"description\">Here you will set your site-wide preferences.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:865
+msgid "Logo"
+msgstr ""
+
+#: includes/admin/theme-options.php:866
+msgid "Upload your own logo."
+msgstr ""
+
+#: includes/admin/theme-options.php:871
+msgid "Fixed Menu Logo"
+msgstr ""
+
+#: includes/admin/theme-options.php:872
+msgid "Upload your own logo.This is optional use when fixed menu"
+msgstr ""
+
+#: includes/admin/theme-options.php:877
+msgid "Transparent Menu Logo"
+msgstr ""
+
+#: includes/admin/theme-options.php:879
+msgid "Upload your own logo.This is optional use for menu transparent"
+msgstr ""
+
+#: includes/admin/theme-options.php:885
+msgid "Mobile Version Logo"
+msgstr ""
+
+#: includes/admin/theme-options.php:887
+msgid ""
+"Use this option to change your logo for mobile devices if your logo width is "
+"quite long to fit in mobile device screen."
+msgstr ""
+
+#: includes/admin/theme-options.php:893
+msgid "Favicon"
+msgstr ""
+
+#: includes/admin/theme-options.php:894
+msgid "Image that will be used as favicon (32px32px)."
+msgstr ""
+
+#: includes/admin/theme-options.php:898
+msgid "Apple Iphone Icon"
+msgstr ""
+
+#: includes/admin/theme-options.php:899
+msgid "Apple Iphone Icon (57px 57px)."
+msgstr ""
+
+#: includes/admin/theme-options.php:903
+msgid "Apple iPad Icon"
+msgstr ""
+
+#: includes/admin/theme-options.php:904
+msgid "Apple Iphone Retina Icon (72px 72px)."
+msgstr ""
+
+#: includes/admin/theme-options.php:908
+msgid "Apple Retina Icon"
+msgstr ""
+
+#: includes/admin/theme-options.php:909
+msgid "Apple iPad Retina Icon (144px 144px)."
+msgstr ""
+
+#: includes/admin/theme-options.php:915
+msgid "Back To Top Button"
+msgstr ""
+
+#: includes/admin/theme-options.php:918
+msgid "Toggle whether or not to enable a back to top button on your pages."
+msgstr ""
+
+#: includes/admin/theme-options.php:923
+msgid "Design and Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:924
+msgid "<p class=\"description\">Customize Design and Layout.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:929
+msgid "Body background"
+msgstr ""
+
+#: includes/admin/theme-options.php:933
+msgid "Color and Typography"
+msgstr ""
+
+#: includes/admin/theme-options.php:934
+msgid "<p class=\"description\">Customize Color and Typography.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:939
+msgid "Brand primary"
+msgstr ""
+
+#: includes/admin/theme-options.php:944
+msgid "Brand success"
+msgstr ""
+
+#: includes/admin/theme-options.php:949
+msgid "Brand info"
+msgstr ""
+
+#: includes/admin/theme-options.php:954
+msgid "Brand warning"
+msgstr ""
+
+#: includes/admin/theme-options.php:959
+msgid "Brand danger"
+msgstr ""
+
+#: includes/admin/theme-options.php:964 includes/visual-composer-root.php:2977
+#: includes/visual-composer.php:1651
+msgid "Text color"
+msgstr ""
+
+#: includes/admin/theme-options.php:969
+msgid "Link color"
+msgstr ""
+
+#: includes/admin/theme-options.php:974
+msgid "Link hover color"
+msgstr ""
+
+#: includes/admin/theme-options.php:979
+msgid "Headings Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:984
+msgid "Body"
+msgstr ""
+
+#: includes/admin/theme-options.php:989 includes/admin/theme-options.php:1113
+msgid "Navigation"
+msgstr ""
+
+#: includes/admin/theme-options.php:994
+msgid "Heading H1"
+msgstr ""
+
+#: includes/admin/theme-options.php:999
+msgid "Heading H2"
+msgstr ""
+
+#: includes/admin/theme-options.php:1004
+msgid "Heading H3"
+msgstr ""
+
+#: includes/admin/theme-options.php:1009
+msgid "Heading H4"
+msgstr ""
+
+#: includes/admin/theme-options.php:1014
+msgid "Heading H5"
+msgstr ""
+
+#: includes/admin/theme-options.php:1019
+msgid "Heading H6"
+msgstr ""
+
+#: includes/admin/theme-options.php:1023
+msgid "Header"
+msgstr ""
+
+#: includes/admin/theme-options.php:1024
+msgid "<p class=\"description\">Customize Header.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:1038
+msgid "Topbar Settings"
+msgstr ""
+
+#: includes/admin/theme-options.php:1044
+msgid "Display top bar"
+msgstr ""
+
+#: includes/admin/theme-options.php:1046
+msgid ""
+"Enable or disable the top bar.<br> See Social icons tab to enable the social "
+"icons inside it.<br> Set a Top menu from  Appearance - Menus "
+msgstr ""
+
+#: includes/admin/theme-options.php:1053
+msgid "Left topbar content"
+msgstr ""
+
+#: includes/admin/theme-options.php:1055 includes/admin/theme-options.php:1112
+#: includes/data-functions.php:63
+msgid "None"
+msgstr ""
+
+#: includes/admin/theme-options.php:1056 includes/admin/theme-options.php:1114
+#: includes/widgets.php:222 includes/widgets.php:733
+msgid "Social"
+msgstr ""
+
+#: includes/admin/theme-options.php:1057
+msgid "Site Info"
+msgstr ""
+
+#: includes/admin/theme-options.php:1058 includes/admin/theme-options.php:1115
+msgid "Custom HTML"
+msgstr ""
+
+#: includes/admin/theme-options.php:1063 includes/admin/theme-options.php:1127
+msgid "Top Social Icon"
+msgstr ""
+
+#: includes/admin/theme-options.php:1086
+msgid "Phone number"
+msgstr ""
+
+#: includes/admin/theme-options.php:1092 includes/hook.php:316
+#: includes/hook.php:317
+msgid "Email"
+msgstr ""
+
+#: includes/admin/theme-options.php:1098
+msgid "Skype"
+msgstr ""
+
+#: includes/admin/theme-options.php:1104
+msgid "Left Topbar Content Custom HTML"
+msgstr ""
+
+#: includes/admin/theme-options.php:1110
+msgid "Right topbar content"
+msgstr ""
+
+#: includes/admin/theme-options.php:1120
+msgid "Use Account Url"
+msgstr ""
+
+#: includes/admin/theme-options.php:1122
+msgid "Use account url in right topbar menu"
+msgstr ""
+
+#: includes/admin/theme-options.php:1150
+msgid "Right Topbar Content Custom HTML"
+msgstr ""
+
+#: includes/admin/theme-options.php:1155
+msgid "Main Navbar Settings"
+msgstr ""
+
+#: includes/admin/theme-options.php:1159
+msgid "Sticky Top menu"
+msgstr ""
+
+#: includes/admin/theme-options.php:1160
+msgid "Enable or disable the sticky menu."
+msgstr ""
+
+#: includes/admin/theme-options.php:1165
+msgid "Custom Sticky Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1167
+msgid "Custom sticky menu color scheme ?"
+msgstr ""
+
+#: includes/admin/theme-options.php:1172
+msgid "Sticky menu background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1178
+msgid "Sticky menu color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1184
+msgid "Sticky menu hover color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1191
+msgid "Enable or disable main menu background transparency"
+msgstr ""
+
+#: includes/admin/theme-options.php:1196
+msgid "Ajax Search in menu"
+msgstr ""
+
+#: includes/admin/theme-options.php:1197
+msgid "Enable or disable ajax search in menu."
+msgstr ""
+
+#: includes/admin/theme-options.php:1205
+msgid "Change Heading background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1206
+msgid "Heading background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1212
+msgid "Show breadcrumb"
+msgstr ""
+
+#: includes/admin/theme-options.php:1213
+msgid "Enable or disable the site path under the page title."
+msgstr ""
+
+#: includes/admin/theme-options.php:1218 includes/admin/theme-options.php:1222
+msgid "Header Color Scheme"
+msgstr ""
+
+#: includes/admin/theme-options.php:1223
+msgid "Custom Topbar and Main menu color scheme ."
+msgstr ""
+
+#: includes/admin/theme-options.php:1226 includes/visual-composer-root.php:2254
+#: includes/visual-composer.php:890
+msgid "Custom"
+msgstr ""
+
+#: includes/admin/theme-options.php:1233
+msgid "Topbar Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1234
+msgid "Topbar Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1235
+msgid "Topbar Link Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1236
+msgid "Header Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1237
+msgid "Header Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1238
+msgid "Header Hover Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1239
+msgid "Navbar Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1240
+msgid "Navbar Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1241
+msgid "Navbar Color Hover"
+msgstr ""
+
+#: includes/admin/theme-options.php:1242
+msgid "Navbar Dropdown Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1243
+msgid "Navbar Dropdown Hover Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1244
+msgid "Navbar Dropdown Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1245
+msgid "Navbar Dropdown Color Hover"
+msgstr ""
+
+#: includes/admin/theme-options.php:1246
+msgid "Navbar Dropdown Mega Menu Title"
+msgstr ""
+
+#: includes/admin/theme-options.php:1250
+msgid "<p class=\"description\">Customize Footer.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:1265
+msgid "Footer Area Columns"
+msgstr ""
+
+#: includes/admin/theme-options.php:1267
+msgid "Please select the number of columns you would like for your footer."
+msgstr ""
+
+#: includes/admin/theme-options.php:1281
+msgid "Footer Featured"
+msgstr ""
+
+#: includes/admin/theme-options.php:1282
+msgid "Do you want show featured in footer."
+msgstr ""
+
+#: includes/admin/theme-options.php:1288
+msgid "Footer Featured Column 1"
+msgstr ""
+
+#: includes/admin/theme-options.php:1289
+msgid "Footer featured column 1 text."
+msgstr ""
+
+#: includes/admin/theme-options.php:1296
+msgid "Footer Featured Column 2"
+msgstr ""
+
+#: includes/admin/theme-options.php:1297
+msgid "Footer featured column 2 text."
+msgstr ""
+
+#: includes/admin/theme-options.php:1304
+msgid "Footer Featured Column 3"
+msgstr ""
+
+#: includes/admin/theme-options.php:1305
+msgid "Footer featured column 3 text."
+msgstr ""
+
+#: includes/admin/theme-options.php:1312
+msgid "Footer Logo"
+msgstr ""
+
+#: includes/admin/theme-options.php:1313
+msgid "Upload your footer logo."
+msgstr ""
+
+#: includes/admin/theme-options.php:1319
+msgid "Footer Info"
+msgstr ""
+
+#: includes/admin/theme-options.php:1334
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: includes/admin/theme-options.php:1335
+msgid "Please enter the copyright section text."
+msgstr ""
+
+#: includes/admin/theme-options.php:1340
+msgid "Footer Color Scheme"
+msgstr ""
+
+#: includes/admin/theme-options.php:1344
+msgid "Custom Footer Color Scheme"
+msgstr ""
+
+#: includes/admin/theme-options.php:1351
+msgid "Footer Widget Area Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1352
+msgid "Footer Widget Area Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1353
+msgid "Footer Widget Area Link"
+msgstr ""
+
+#: includes/admin/theme-options.php:1354
+msgid "Footer Widget Area Link Hover"
+msgstr ""
+
+#: includes/admin/theme-options.php:1355
+msgid "Footer Copyright Background"
+msgstr ""
+
+#: includes/admin/theme-options.php:1356
+msgid "Footer Copyright Color"
+msgstr ""
+
+#: includes/admin/theme-options.php:1357
+msgid "Footer Copyright Link"
+msgstr ""
+
+#: includes/admin/theme-options.php:1358
+msgid "Footer Copyright Link Hover"
+msgstr ""
+
+#: includes/admin/theme-options.php:1361
+msgid "Blog"
+msgstr ""
+
+#: includes/admin/theme-options.php:1362
+msgid "<p class=\"description\">Customize Blog.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:1367
+msgid "List Blog Settings"
+msgstr ""
+
+#: includes/admin/theme-options.php:1371
+msgid "Main Blog Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:1373
+msgid "Select main blog layout. Choose between 1, 2 or 3 column layout."
+msgstr ""
+
+#: includes/admin/theme-options.php:1389
+msgid "Archive Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:1391
+msgid "Select Archive layout. Choose between 1, 2 or 3 column layout."
+msgstr ""
+
+#: includes/admin/theme-options.php:1407 includes/visual-composer-root.php:1160
+#: includes/visual-composer-root.php:2175
+#: includes/visual-composer-root.php:2757
+#: includes/visual-composer-root.php:2933
+#: includes/visual-composer-root.php:2947 includes/visual-composer.php:811
+#: includes/visual-composer.php:1431 includes/visual-composer.php:1607
+#: includes/visual-composer.php:1621 includes/widgets.php:754
+msgid "Style"
+msgstr ""
+
+#: includes/admin/theme-options.php:1408
+msgid "How your blog posts will display."
+msgstr ""
+
+#: includes/admin/theme-options.php:1411 includes/admin/theme-options.php:1727
+#: includes/visual-composer-root.php:1811
+#: includes/visual-composer-root.php:2543 includes/visual-composer.php:700
+#: includes/visual-composer.php:1180 includes/woocommerce.php:261
+msgid "List"
+msgstr ""
+
+#: includes/admin/theme-options.php:1412 includes/admin/theme-options.php:1726
+#: includes/visual-composer-root.php:1164
+#: includes/visual-composer-root.php:2543 includes/visual-composer.php:701
+#: includes/visual-composer.php:1040 includes/visual-composer.php:1180
+#: includes/woocommerce.php:260
+msgid "Grid"
+msgstr ""
+
+#: includes/admin/theme-options.php:1413 includes/visual-composer.php:702
+msgid "Classic"
+msgstr ""
+
+#: includes/admin/theme-options.php:1414 includes/visual-composer-root.php:2387
+#: includes/visual-composer.php:703
+msgid "Masonry"
+msgstr ""
+
+#: includes/admin/theme-options.php:1420
+msgid "Blogs Columns"
+msgstr ""
+
+#: includes/admin/theme-options.php:1421
+msgid "Select blogs columns."
+msgstr ""
+
+#: includes/admin/theme-options.php:1430 includes/visual-composer-root.php:2523
+#: includes/visual-composer.php:747
+msgid "Pagination"
+msgstr ""
+
+#: includes/admin/theme-options.php:1433 includes/visual-composer.php:750
+msgid "WP PageNavi"
+msgstr ""
+
+#: includes/admin/theme-options.php:1434 includes/visual-composer.php:751
+msgid "Ajax Load More"
+msgstr ""
+
+#: includes/admin/theme-options.php:1435 includes/visual-composer-root.php:2528
+#: includes/visual-composer.php:752
+msgid "Infinite Scrolling"
+msgstr ""
+
+#: includes/admin/theme-options.php:1439 includes/visual-composer-root.php:2530
+#: includes/visual-composer.php:755
+msgid "Choose pagination type."
+msgstr ""
+
+#: includes/admin/theme-options.php:1442 includes/visual-composer-root.php:2533
+#: includes/visual-composer.php:758
+msgid "Load More Button Text"
+msgstr ""
+
+#: includes/admin/theme-options.php:1445 includes/visual-composer-root.php:2536
+#: includes/visual-composer.php:761
+msgid "Load More"
+msgstr ""
+
+#: includes/admin/theme-options.php:1449
+msgid "Excerpt Length"
+msgstr ""
+
+#: includes/admin/theme-options.php:1453
+msgid "In Archive Blog. Enter the number words excerpt"
+msgstr ""
+
+#: includes/admin/theme-options.php:1460 includes/admin/theme-options.php:1541
+msgid "Date Meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1461
+msgid "In Archive Blog. Show/Hide the date meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1468 includes/admin/theme-options.php:1549
+msgid "Comment Meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1469
+msgid "In Archive Blog. Show/Hide the comment meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1474 includes/admin/theme-options.php:1555
+msgid "Show/Hide Category"
+msgstr ""
+
+#: includes/admin/theme-options.php:1475
+msgid "In Archive Blog. Show/Hide the category meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1485 includes/admin/theme-options.php:1563
+msgid "Author Meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1486
+msgid "In Archive Blog. Show/Hide the author meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1496
+msgid "Tags"
+msgstr ""
+
+#: includes/admin/theme-options.php:1497
+msgid "In Archive Blog. If enabled it will show tag."
+msgstr ""
+
+#: includes/admin/theme-options.php:1508
+msgid "Show/Hide Readmore"
+msgstr ""
+
+#: includes/admin/theme-options.php:1509
+msgid "In Archive Blog. Show/Hide the post readmore"
+msgstr ""
+
+#: includes/admin/theme-options.php:1515
+msgid "Single Blog Settings"
+msgstr ""
+
+#: includes/admin/theme-options.php:1519
+msgid "Single Blog Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:1521
+msgid ""
+"Select single content and sidebar alignment. Choose between 1, 2 or 3 column "
+"layout."
+msgstr ""
+
+#: includes/admin/theme-options.php:1542
+msgid "In Single Blog. Show/Hide the date meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1550
+msgid "In Single Blog. Show/Hide the comment meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1556
+msgid "In Single Blog. Show/Hide the category"
+msgstr ""
+
+#: includes/admin/theme-options.php:1564
+msgid "In Single Blog. Show/Hide the author meta"
+msgstr ""
+
+#: includes/admin/theme-options.php:1571
+msgid "Show/Hide Tag"
+msgstr ""
+
+#: includes/admin/theme-options.php:1572
+msgid "In Single Blog. If enabled it will show tag."
+msgstr ""
+
+#: includes/admin/theme-options.php:1581
+msgid "Show Author Bio"
+msgstr ""
+
+#: includes/admin/theme-options.php:1583
+msgid "Display the author bio at the bottom of post on single post page ?"
+msgstr ""
+
+#: includes/admin/theme-options.php:1591
+msgid "Show Next/Prev Post Link On Single Post Page"
+msgstr ""
+
+#: includes/admin/theme-options.php:1593
+msgid ""
+"Using this will add a link at the bottom of every post page that leads to "
+"the next/prev post."
+msgstr ""
+
+#: includes/admin/theme-options.php:1601
+msgid "Show Related Post On Single Post Page"
+msgstr ""
+
+#: includes/admin/theme-options.php:1602
+msgid "Display related post the bottom of posts?"
+msgstr ""
+
+#: includes/admin/theme-options.php:1609 includes/admin/theme-options.php:1757
+msgid "Show Sharing Button"
+msgstr ""
+
+#: includes/admin/theme-options.php:1611
+msgid "Activate this to enable social sharing buttons on single post page."
+msgstr ""
+
+#: includes/admin/theme-options.php:1618 includes/admin/theme-options.php:1766
+msgid "Share on Facebook"
+msgstr ""
+
+#: includes/admin/theme-options.php:1624 includes/admin/theme-options.php:1772
+msgid "Share on Twitter"
+msgstr ""
+
+#: includes/admin/theme-options.php:1630 includes/admin/theme-options.php:1790
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: includes/admin/theme-options.php:1636
+msgid "Share on Tumblr"
+msgstr ""
+
+#: includes/admin/theme-options.php:1642 includes/admin/theme-options.php:1778
+msgid "Share on Google+"
+msgstr ""
+
+#: includes/admin/theme-options.php:1648 includes/admin/theme-options.php:1784
+msgid "Share on Pinterest"
+msgstr ""
+
+#: includes/admin/theme-options.php:1654
+msgid "Share on Email"
+msgstr ""
+
+#: includes/admin/theme-options.php:1662
+msgid "Woocommerce"
+msgstr ""
+
+#: includes/admin/theme-options.php:1663
+msgid "<p class=\"description\">Customize Woocommerce.</p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:1670
+msgid "Cart In header"
+msgstr ""
+
+#: includes/admin/theme-options.php:1671
+msgid "This will show cat in header."
+msgstr ""
+
+#: includes/admin/theme-options.php:1678
+msgid "Mobile Cart Icon"
+msgstr ""
+
+#: includes/admin/theme-options.php:1680
+msgid ""
+"This will show on mobile menu a shop icon with the number of cart items."
+msgstr ""
+
+#: includes/admin/theme-options.php:1686
+msgid "List Product Settings"
+msgstr ""
+
+#: includes/admin/theme-options.php:1690
+msgid "Shop Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:1691
+msgid "Select shop layout."
+msgstr ""
+
+#: includes/admin/theme-options.php:1706
+msgid "Product Category Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:1707
+msgid "Select product category layout."
+msgstr ""
+
+#: includes/admin/theme-options.php:1722
+msgid "Default View Mode"
+msgstr ""
+
+#: includes/admin/theme-options.php:1723
+msgid "Select default view mode"
+msgstr ""
+
+#: includes/admin/theme-options.php:1732
+msgid "Number of Products per Page"
+msgstr ""
+
+#: includes/admin/theme-options.php:1733
+msgid "Enter the products of posts to display per page."
+msgstr ""
+
+#: includes/admin/theme-options.php:1737
+msgid "Single Product Settings"
+msgstr ""
+
+#: includes/admin/theme-options.php:1741
+msgid "Single Product Layout"
+msgstr ""
+
+#: includes/admin/theme-options.php:1742
+msgid "Select single product layout."
+msgstr ""
+
+#: includes/admin/theme-options.php:1758
+msgid "Activate this to enable social sharing buttons."
+msgstr ""
+
+#: includes/admin/theme-options.php:1797
+msgid "Social Profile"
+msgstr ""
+
+#: includes/admin/theme-options.php:1799
+msgid ""
+"<p class=\"description\">Enter in your profile media locations here."
+"<br><strong>Remember to include the \"http://\" in all URLs!</strong></p>"
+msgstr ""
+
+#: includes/admin/theme-options.php:1802
+msgid "Facebook URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1803
+msgid "Twitter URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1807
+msgid "Google+ URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1811
+msgid "Pinterest URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1812
+msgid "LinkedIn URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1813
+msgid "RSS URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1817
+msgid "Instagram URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1818
+msgid "GitHub URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1819
+msgid "Behance URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1823
+msgid "Stack Exchange URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1824
+msgid "Tumblr URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1828
+msgid "SoundCloud URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1829
+msgid "Dribbble URL"
+msgstr ""
+
+#: includes/admin/theme-options.php:1832
+msgid "Import and Export"
+msgstr ""
+
+#: includes/admin/theme-options.php:1838
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+
+#: includes/admin/theme-options.php:1844
+msgid ""
+"Here you can download your current option settings.You can use it to restore "
+"your settings on this site (or any other site)."
+msgstr ""
+
+#: includes/admin/theme-options.php:1848
+msgid "Custom Code"
+msgstr ""
+
+#: includes/admin/theme-options.php:1853
+msgid "Custom Style"
+msgstr ""
+
+#: includes/admin/theme-options.php:1854
+msgid "Place you custom style here"
+msgstr ""
+
+#: includes/breadcrumb.php:14
+msgid "Home"
+msgstr ""
+
+#: includes/breadcrumb.php:113
+#, php-format
+msgid "Weekly Archive for: \"%s\""
+msgstr ""
+
+#: includes/breadcrumb.php:115
+#, php-format
+msgid "Daily Archive for: \"%s\""
+msgstr ""
+
+#: includes/breadcrumb.php:117
+#, php-format
+msgid "Monthly Archive for: \"%s\""
+msgstr ""
+
+#: includes/breadcrumb.php:119
+#, php-format
+msgid "Yearly Archive for: \"%s\""
+msgstr ""
+
+#: includes/breadcrumb.php:123
+#, php-format
+msgid "Author Archive for: \"%s\""
+msgstr ""
+
+#: includes/breadcrumb.php:128
+msgid "Search"
+msgstr ""
+
+#: includes/breadcrumb.php:132
+msgid "Page Not Found"
+msgstr ""
+
+#: includes/breadcrumb.php:177
+msgid "Split"
+msgstr ""
+
+#: includes/breadcrumb.php:180
+msgid "Merge"
+msgstr ""
+
+#: includes/breadcrumb.php:183 includes/breadcrumb.php:197
+#: includes/breadcrumb.php:217
+msgid "Edit"
+msgstr ""
+
+#: includes/controller.php:33
+msgid "Authenication required."
+msgstr ""
+
+#: includes/controller.php:41
+msgid "Please connect your facebook account."
+msgstr ""
+
+#: includes/controller.php:54
+msgid "Registration is not open at this time. Please come back later."
+msgstr ""
+
+#: includes/controller.php:57
+msgid ""
+"Registration using Facebook is not currently allowed. Please use our "
+"Register page"
+msgstr ""
+
+#: includes/controller.php:71
+msgid ""
+"Your facebook account is not verified. You have to verify your account "
+"before proceed login or registering on this site."
+msgstr ""
+
+#: includes/controller.php:76
+msgid ""
+"Please click again to login with Facebook and allow the application to use "
+"your email address"
+msgstr ""
+
+#: includes/controller.php:80
+msgid ""
+"We didn't find your name. Please complete your facebook account before "
+"proceeding."
+msgstr ""
+
+#: includes/controller.php:118 includes/controller.php:136
+msgid "Login successful, redirecting..."
+msgstr ""
+
+#: includes/controller.php:144
+msgid "Your session is expired or you submitted an invalid form."
+msgstr ""
+
+#: includes/controller.php:164
+msgid "Registration complete."
+msgstr ""
+
+#: includes/controller.php:171
+msgid "Not allow register in site."
+msgstr ""
+
+#: includes/controller.php:183
+msgid "Please enter a username."
+msgstr ""
+
+#: includes/controller.php:185
+msgid ""
+"This username is invalid because it uses illegal characters. Please enter a "
+"valid username."
+msgstr ""
+
+#: includes/controller.php:188
+msgid "This username is already registered. Please choose another one."
+msgstr ""
+
+#: includes/controller.php:193
+msgid "Please type your email address."
+msgstr ""
+
+#: includes/controller.php:195
+msgid "The email address isn't correct."
+msgstr ""
+
+#: includes/controller.php:198
+msgid "This email is already registered, please choose another one."
+msgstr ""
+
+#: includes/controller.php:206
+msgid "Password must be 6 character long."
+msgstr ""
+
+#: includes/controller.php:208
+msgid "Not see password confirmation field."
+msgstr ""
+
+#: includes/controller.php:210
+msgid "Passwords do not match."
+msgstr ""
+
+#: includes/controller.php:229
+msgid "Couldn't register you... please contact the site administrator"
+msgstr ""
+
+#: includes/controller.php:257
+#, php-format
+msgid "Welcome to [%1$s]"
+msgstr ""
+
+#: includes/controller.php:260
+#, php-format
+msgid ""
+"Hi %1$s,<br/><br/>\n"
+"You've just successfully registered an account on %2$s.<br/>\n"
+"Start reading now! %3$s\n"
+"<br/><br/>\n"
+"Best regards,<br/>\n"
+"%4$s"
+msgstr ""
+
+#: includes/controller.php:275 includes/controller.php:281
+#, php-format
+msgid ""
+"You are already logged in. Please <a href=\"#\" onclick=\"%s\">refresh</a> "
+"page"
+msgstr ""
+
+#: includes/controller.php:294
+msgid "<strong>ERROR</strong>: Enter a username or e-mail address."
+msgstr ""
+
+#: includes/controller.php:298
+msgid ""
+"<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr ""
+
+#: includes/controller.php:317
+msgid "<strong>ERROR</strong>: Invalid username or e-mail."
+msgstr ""
+
+#: includes/controller.php:356
+msgid "Password reset is not allowed for this user"
+msgstr ""
+
+#: includes/controller.php:385
+msgid "Someone requested that the password be reset for the following account:"
+msgstr ""
+
+#: includes/controller.php:387
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: includes/controller.php:388
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: includes/controller.php:389
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: includes/controller.php:401
+#, php-format
+msgid "[%s] Password Reset"
+msgstr ""
+
+#: includes/controller.php:423
+msgid "Failure!"
+msgstr ""
+
+#: includes/controller.php:424
+msgid "The e-mail could not be sent."
+msgstr ""
+
+#: includes/controller.php:428
+msgid "Email successfully sent!"
+msgstr ""
+
+#: includes/controller.php:450
+msgid "Verify Nonce Failed"
+msgstr ""
+
+#: includes/controller.php:453
+msgid "Invalid Email"
+msgstr ""
+
+#: includes/controller.php:520
+msgid "No results matched!"
+msgstr ""
+
+#: includes/controller.php:576
+msgid "View all results"
+msgstr ""
+
+#: includes/hook.php:49 includes/hook.php:52
+msgid "Theme options"
+msgstr ""
+
+#: includes/hook.php:240
+msgid "Sign in with Facebook"
+msgstr ""
+
+#: includes/hook.php:257
+msgid "Login to your account"
+msgstr ""
+
+#: includes/hook.php:264 includes/hook.php:309
+msgid "or"
+msgstr ""
+
+#: includes/hook.php:267 includes/hook.php:268 includes/hook.php:312
+#: includes/hook.php:313
+msgid "Username"
+msgstr ""
+
+#: includes/hook.php:271 includes/hook.php:272 includes/hook.php:320
+#: includes/hook.php:321
+msgid "Password"
+msgstr ""
+
+#: includes/hook.php:276
+msgid "Remember Me"
+msgstr ""
+
+#: includes/hook.php:279
+msgid "Lost your password?"
+msgstr ""
+
+#: includes/hook.php:287
+msgid "Not a Member yet?"
+msgstr ""
+
+#: includes/hook.php:289 includes/hook.php:359
+msgid "Sign in"
+msgstr ""
+
+#: includes/hook.php:302
+msgid "Register account"
+msgstr ""
+
+#: includes/hook.php:324 includes/hook.php:325
+msgid "Retype password"
+msgstr ""
+
+#: includes/hook.php:331 includes/hook.php:358
+msgid "Already have an account?"
+msgstr ""
+
+#: includes/hook.php:332
+msgid "Register"
+msgstr ""
+
+#: includes/hook.php:345
+msgid "Forgot your details?"
+msgstr ""
+
+#: includes/hook.php:351
+msgid "Username or E-mail:"
+msgstr ""
+
+#: includes/hook.php:352
+msgid "Username or E-mail"
+msgstr ""
+
+#: includes/lib/google-fonts.php:23
+msgid "100"
+msgstr ""
+
+#: includes/lib/google-fonts.php:24
+msgid "200"
+msgstr ""
+
+#: includes/lib/google-fonts.php:25
+msgid "200 Italic"
+msgstr ""
+
+#: includes/lib/google-fonts.php:26
+msgid "300"
+msgstr ""
+
+#: includes/lib/google-fonts.php:27
+msgid "300 Italic"
+msgstr ""
+
+#: includes/lib/google-fonts.php:28
+msgid "Regular"
+msgstr ""
+
+#: includes/lib/google-fonts.php:29
+msgid "Italic"
+msgstr ""
+
+#: includes/lib/google-fonts.php:30
+msgid "600"
+msgstr ""
+
+#: includes/lib/google-fonts.php:31
+msgid "600 Italic"
+msgstr ""
+
+#: includes/lib/google-fonts.php:32
+msgid "700"
+msgstr ""
+
+#: includes/lib/google-fonts.php:33
+msgid "700 Italic"
+msgstr ""
+
+#: includes/lib/google-fonts.php:34
+msgid "800"
+msgstr ""
+
+#: includes/lib/google-fonts.php:35
+msgid "800 Italic"
+msgstr ""
+
+#: includes/lib/google-fonts.php:36
+msgid "900"
+msgstr ""
+
+#: includes/lib/google-fonts.php:37
+msgid "900 Italic"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:35
+msgid "Sidebar Generator"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:162
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:193
+#: includes/visual-composer-root.php:3155
+#: includes/visual-composer-root.php:3456 includes/visual-composer.php:1830
+#: includes/visual-composer.php:2131
+msgid "Remove"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:163
+msgid "You've made changes, don't forget to save."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:164
+msgid "Changes were saved successfully."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:165
+msgid "An unexpected error ocurred."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:166
+msgid "The sidebar was successfully created."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:167
+msgid "The sidebar already exists. Please change the name."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:168
+msgid "Please enter a name for this sidebar."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:169
+msgid "Are you sure? If you remove this sidebar it can't be restored."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:170
+msgid "Sidebar Removed"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:171
+msgid "Data imported successfully."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:188
+msgid "Add new"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:189
+msgid "Save Changes"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:190
+msgid "Sidebar Name:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:191
+msgid "ID:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:192
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:304
+msgid "Shortcode:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:213
+msgid "Sidebars"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:216
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:303
+msgid "How to use?"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:284
+msgid "Copy text from textarea:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:293
+msgid "Paste exported data in textarea:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:305
+msgid ""
+"Paste the shortcode anywhere you want, in posts, pages etc. If the input "
+"accept shortcodes, then the sidebar will be displayed."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:307
+msgid "Function:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:308
+msgid ""
+"You can use the built-in function, but for this you should modify theme "
+"files and make sure to check if the function exists before use it."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:314
+msgid "WP Native function:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:315
+msgid ""
+"You can use the built-in function <em>smk_sidebar</em>, but anyways I "
+"recommend using WP native function to avoid conflicts."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:321
+msgid "For more info visit the following links:"
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:374
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:378
+msgid "Data is not valid."
+msgstr ""
+
+#: includes/lib/smk-sidebar-generator/smk-sidebar-generator.php:384
+msgid "Please enter data."
+msgstr ""
+
+#: includes/lib/wordpress-importer/parsers.php:42
+#: includes/lib/wordpress-importer/parsers.php:72
+#: includes/lib/wordpress-importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: includes/lib/wordpress-importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: includes/lib/wordpress-importer/parsers.php:84
+#: includes/lib/wordpress-importer/parsers.php:89
+#: includes/lib/wordpress-importer/parsers.php:279
+#: includes/lib/wordpress-importer/parsers.php:468
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:124
+#: includes/lib/wordpress-importer/wordpress-importer.php:133
+#: includes/lib/wordpress-importer/wordpress-importer.php:184
+#: includes/lib/wordpress-importer/wordpress-importer.php:188
+#: includes/lib/wordpress-importer/wordpress-importer.php:197
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:125
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:168
+msgid "All done."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:168
+msgid "Have fun!"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:169
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:189
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:205
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:230
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:256
+msgid "Assign Authors"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:257
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:259
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:269
+msgid "Import Attachments"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:272
+msgid "Download and import file attachments"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:276
+msgid "Submit"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:289
+msgid "Import author:"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:300
+msgid "or create new user with login name:"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:303
+msgid "as a new user:"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:311
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:313
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:314
+msgid "- Select -"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:364
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:415
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:455
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:501
+#: includes/lib/wordpress-importer/wordpress-importer.php:642
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:527
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:549
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:608
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:773
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:780
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:843
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:856
+msgid "Invalid file type"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:900
+msgid "Remote server did not respond"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:906
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:913
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:918
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:924
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:1023
+msgid "Import WordPress"
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:1030
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:1045
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: includes/lib/wordpress-importer/wordpress-importer.php:1046
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: includes/visual-composer-root.php:4 includes/visual-composer.php:4
+msgid "Add Item"
+msgstr ""
+
+#: includes/visual-composer-root.php:5 includes/visual-composer.php:5
+msgid "Item"
+msgstr ""
+
+#: includes/visual-composer-root.php:6 includes/visual-composer.php:6
+msgid "Move"
+msgstr ""
+
+#: includes/visual-composer-root.php:496 includes/visual-composer-root.php:2154
+#: includes/visual-composer.php:510 includes/visual-composer.php:790
+msgid "Button"
+msgstr ""
+
+#: includes/visual-composer-root.php:497 includes/visual-composer.php:511
+msgid "Eye catching button."
+msgstr ""
+
+#: includes/visual-composer-root.php:498 includes/visual-composer-root.php:508
+#: includes/visual-composer-root.php:518 includes/visual-composer-root.php:528
+#: includes/visual-composer-root.php:537 includes/visual-composer-root.php:547
+#: includes/visual-composer-root.php:557 includes/visual-composer-root.php:568
+#: includes/visual-composer-root.php:592 includes/visual-composer-root.php:602
+#: includes/visual-composer-root.php:628 includes/visual-composer-root.php:635
+#: includes/visual-composer-root.php:648 includes/visual-composer-root.php:658
+#: includes/visual-composer-root.php:668 includes/visual-composer.php:462
+#: includes/visual-composer.php:472 includes/visual-composer.php:482
+#: includes/visual-composer.php:492 includes/visual-composer.php:502
+#: includes/visual-composer.php:512 includes/visual-composer.php:520
+#: includes/visual-composer.php:531 includes/visual-composer.php:555
+#: includes/visual-composer.php:565 includes/visual-composer.php:591
+#: includes/visual-composer.php:598 includes/visual-composer.php:611
+#: includes/visual-composer.php:621 includes/visual-composer.php:631
+msgid "dawnthemes"
+msgstr ""
+
+#: includes/visual-composer-root.php:506
+msgid "Menu Anchor"
+msgstr ""
+
+#: includes/visual-composer-root.php:507
+msgid "Add a menu anchor points."
+msgstr ""
+
+#: includes/visual-composer-root.php:516
+msgid "Post"
+msgstr ""
+
+#: includes/visual-composer-root.php:517
+msgid "Display post."
+msgstr ""
+
+#: includes/visual-composer-root.php:526 includes/visual-composer.php:490
+msgid "Post Zigzag"
+msgstr ""
+
+#: includes/visual-composer-root.php:527 includes/visual-composer.php:491
+msgid "Display post with 2 styles."
+msgstr ""
+
+#: includes/visual-composer-root.php:538
+msgid "Mailchimp Subscribe"
+msgstr ""
+
+#: includes/visual-composer-root.php:539 includes/widgets.php:1154
+msgid "Widget Mailchimp Subscribe."
+msgstr ""
+
+#: includes/visual-composer-root.php:548
+msgid "Box Feature"
+msgstr ""
+
+#: includes/visual-composer-root.php:549
+msgid "Box Feature."
+msgstr ""
+
+#: includes/visual-composer-root.php:558 includes/visual-composer.php:521
+#: includes/widgets.php:361
+msgid "Instagram"
+msgstr ""
+
+#: includes/visual-composer-root.php:559 includes/visual-composer.php:522
+msgid "Instagram."
+msgstr ""
+
+#: includes/visual-composer-root.php:569 includes/visual-composer.php:532
+msgid "Carousel Content"
+msgstr ""
+
+#: includes/visual-composer-root.php:570 includes/visual-composer.php:533
+msgid "Animated carousel with carousel"
+msgstr ""
+
+#: includes/visual-composer-root.php:584 includes/visual-composer-root.php:617
+#: includes/visual-composer.php:547 includes/visual-composer.php:580
+msgid "Item 1"
+msgstr ""
+
+#: includes/visual-composer-root.php:585 includes/visual-composer-root.php:618
+#: includes/visual-composer.php:548 includes/visual-composer.php:581
+msgid "Item 2"
+msgstr ""
+
+#: includes/visual-composer-root.php:586 includes/visual-composer-root.php:619
+#: includes/visual-composer.php:549 includes/visual-composer.php:582
+msgid "Item 3"
+msgstr ""
+
+#: includes/visual-composer-root.php:590 includes/visual-composer.php:553
+msgid "Carousel Item"
+msgstr ""
+
+#: includes/visual-composer-root.php:601 includes/visual-composer.php:564
+msgid "Testimonial"
+msgstr ""
+
+#: includes/visual-composer-root.php:603 includes/visual-composer.php:566
+msgid "Animated Testimonial with slider"
+msgstr ""
+
+#: includes/visual-composer-root.php:623 includes/visual-composer.php:586
+msgid "Testimonial Item"
+msgstr ""
+
+#: includes/visual-composer-root.php:634 includes/visual-composer.php:597
+msgid "Video Player"
+msgstr ""
+
+#: includes/visual-composer-root.php:643 includes/visual-composer.php:606
+msgid "Counter"
+msgstr ""
+
+#: includes/visual-composer-root.php:644 includes/visual-composer.php:607
+msgid "Display Counter."
+msgstr ""
+
+#: includes/visual-composer-root.php:653 includes/visual-composer.php:616
+msgid "Coundown"
+msgstr ""
+
+#: includes/visual-composer-root.php:654 includes/visual-composer.php:617
+msgid "Display Countdown."
+msgstr ""
+
+#: includes/visual-composer-root.php:663 includes/visual-composer.php:626
+msgid "Client"
+msgstr ""
+
+#: includes/visual-composer-root.php:664 includes/visual-composer.php:627
+msgid "Display list clients."
+msgstr ""
+
+#: includes/visual-composer-root.php:680
+msgid "Product Slider"
+msgstr ""
+
+#: includes/visual-composer-root.php:681
+msgid "Animated products with carousel."
+msgstr ""
+
+#: includes/visual-composer-root.php:685 includes/visual-composer-root.php:841
+#: includes/visual-composer-root.php:856 includes/visual-composer-root.php:881
+#: includes/visual-composer-root.php:896 includes/visual-composer-root.php:962
+#: includes/visual-composer-root.php:1023
+#: includes/visual-composer-root.php:1082
+#: includes/visual-composer-root.php:1148
+#: includes/visual-composer-root.php:1171
+#: includes/visual-composer-root.php:1230
+#: includes/visual-composer-root.php:1245
+#: includes/visual-composer-root.php:1260
+#: includes/visual-composer-root.php:1276
+#: includes/visual-composer-root.php:1319
+#: includes/visual-composer-root.php:1375
+#: includes/visual-composer-root.php:1420
+#: includes/visual-composer-root.php:1465
+#: includes/visual-composer-root.php:1488
+#: includes/visual-composer-root.php:1533
+#: includes/visual-composer-root.php:1578
+#: includes/visual-composer-root.php:1632
+#: includes/visual-composer-root.php:1667
+#: includes/visual-composer-root.php:1677
+#: includes/visual-composer-root.php:1687
+#: includes/visual-composer-root.php:1698
+#: includes/visual-composer-root.php:1708
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/visual-composer-root.php:693 includes/visual-composer-root.php:2633
+#: includes/visual-composer.php:1307
+msgid "Carousel Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:696 includes/visual-composer-root.php:2627
+#: includes/visual-composer-root.php:2636 includes/visual-composer.php:1310
+msgid ""
+"Enter text which will be used as widget title. Leave blank if no title is "
+"needed."
+msgstr ""
+
+#: includes/visual-composer-root.php:700
+msgid "Title color"
+msgstr ""
+
+#: includes/visual-composer-root.php:706 includes/visual-composer-root.php:2247
+#: includes/visual-composer.php:883
+msgid "Primary"
+msgstr ""
+
+#: includes/visual-composer-root.php:707 includes/visual-composer-root.php:2248
+#: includes/visual-composer.php:884
+msgid "Success"
+msgstr ""
+
+#: includes/visual-composer-root.php:708 includes/visual-composer-root.php:2249
+#: includes/visual-composer.php:885
+msgid "Info"
+msgstr ""
+
+#: includes/visual-composer-root.php:709 includes/visual-composer-root.php:2250
+#: includes/visual-composer.php:886
+msgid "Warning"
+msgstr ""
+
+#: includes/visual-composer-root.php:710 includes/visual-composer-root.php:2251
+#: includes/visual-composer.php:887
+msgid "Danger"
+msgstr ""
+
+#: includes/visual-composer-root.php:713 includes/visual-composer-root.php:2640
+#: includes/visual-composer-root.php:2765 includes/visual-composer.php:1314
+#: includes/visual-composer.php:1439
+msgid "Transition"
+msgstr ""
+
+#: includes/visual-composer-root.php:725 includes/visual-composer-root.php:2652
+#: includes/visual-composer-root.php:2777 includes/visual-composer.php:1326
+#: includes/visual-composer.php:1451
+msgid "Indicates which effect to use for the transition."
+msgstr ""
+
+#: includes/visual-composer-root.php:738 includes/visual-composer-root.php:2662
+#: includes/visual-composer.php:1336
+msgid "Transition Scroll Speed (ms)"
+msgstr ""
+
+#: includes/visual-composer-root.php:747 includes/visual-composer-root.php:2671
+#: includes/visual-composer.php:1345
+msgid "Easing"
+msgstr ""
+
+#: includes/visual-composer-root.php:784 includes/visual-composer-root.php:2708
+#: includes/visual-composer.php:1382
+msgid ""
+"Select the animation easing you would like for slide transitions <a href="
+"\"http://jqueryui.com/resources/demos/effect/easing.html\" target=\"_blank"
+"\"> Click here </a> to see examples of these."
+msgstr ""
+
+#: includes/visual-composer-root.php:788 includes/visual-composer-root.php:2712
+#: includes/visual-composer.php:1386
+msgid "Item no Padding ?"
+msgstr ""
+
+#: includes/visual-composer-root.php:790 includes/visual-composer-root.php:2714
+#: includes/visual-composer.php:1388
+msgid "Item No Padding"
+msgstr ""
+
+#: includes/visual-composer-root.php:791 includes/visual-composer-root.php:796
+#: includes/visual-composer-root.php:801 includes/visual-composer-root.php:806
+#: includes/visual-composer-root.php:947 includes/visual-composer-root.php:952
+#: includes/visual-composer-root.php:957 includes/visual-composer-root.php:1744
+#: includes/visual-composer-root.php:1876
+#: includes/visual-composer-root.php:1881
+#: includes/visual-composer-root.php:1887
+#: includes/visual-composer-root.php:1892
+#: includes/visual-composer-root.php:1999
+#: includes/visual-composer-root.php:2004
+#: includes/visual-composer-root.php:2434
+#: includes/visual-composer-root.php:2441
+#: includes/visual-composer-root.php:2449
+#: includes/visual-composer-root.php:2455
+#: includes/visual-composer-root.php:2471
+#: includes/visual-composer-root.php:2477
+#: includes/visual-composer-root.php:2484
+#: includes/visual-composer-root.php:2490
+#: includes/visual-composer-root.php:2496
+#: includes/visual-composer-root.php:2505
+#: includes/visual-composer-root.php:2576
+#: includes/visual-composer-root.php:2582
+#: includes/visual-composer-root.php:2588
+#: includes/visual-composer-root.php:2594
+#: includes/visual-composer-root.php:2600
+#: includes/visual-composer-root.php:2606
+#: includes/visual-composer-root.php:2715
+#: includes/visual-composer-root.php:2720
+#: includes/visual-composer-root.php:2725
+#: includes/visual-composer-root.php:2730
+#: includes/visual-composer-root.php:2743
+#: includes/visual-composer-root.php:2823
+#: includes/visual-composer-root.php:2974
+#: includes/visual-composer-root.php:3048 includes/visual-composer.php:1213
+#: includes/visual-composer.php:1219 includes/visual-composer.php:1225
+#: includes/visual-composer.php:1231 includes/visual-composer.php:1237
+#: includes/visual-composer.php:1243 includes/visual-composer.php:1389
+#: includes/visual-composer.php:1394 includes/visual-composer.php:1399
+#: includes/visual-composer.php:1404 includes/visual-composer.php:1417
+#: includes/visual-composer.php:1497 includes/visual-composer.php:1648
+#: includes/visual-composer.php:1722
+msgid "Yes,please"
+msgstr ""
+
+#: includes/visual-composer-root.php:794 includes/visual-composer-root.php:2718
+#: includes/visual-composer.php:1392
+msgid "Autoplay ?"
+msgstr ""
+
+#: includes/visual-composer-root.php:799 includes/visual-composer-root.php:2723
+#: includes/visual-composer-root.php:3045 includes/visual-composer.php:1397
+#: includes/visual-composer.php:1719
+msgid "Hide Slide Pagination ?"
+msgstr ""
+
+#: includes/visual-composer-root.php:804 includes/visual-composer-root.php:2728
+#: includes/visual-composer.php:1402
+msgid "Hide Previous/Next Control ?"
+msgstr ""
+
+#: includes/visual-composer-root.php:809
+msgid "Previous/Next Control Position"
+msgstr ""
+
+#: includes/visual-composer-root.php:815
+msgid "Center with Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:816
+msgid "Right with Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:832 includes/visual-composer-root.php:3115
+#: includes/visual-composer.php:1790
+msgid "(Optional) Extra class name"
+msgstr ""
+
+#: includes/visual-composer-root.php:835 includes/visual-composer-root.php:1750
+#: includes/visual-composer-root.php:1774
+#: includes/visual-composer-root.php:1823
+#: includes/visual-composer-root.php:1847
+#: includes/visual-composer-root.php:1898
+#: includes/visual-composer-root.php:1923
+#: includes/visual-composer-root.php:1947
+#: includes/visual-composer-root.php:2010
+#: includes/visual-composer-root.php:2039
+#: includes/visual-composer-root.php:2068
+#: includes/visual-composer-root.php:2097
+#: includes/visual-composer-root.php:3119 includes/visual-composer.php:1794
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: includes/visual-composer-root.php:839
+msgid "Product"
+msgstr ""
+
+#: includes/visual-composer-root.php:844
+msgid "Display a single product."
+msgstr ""
+
+#: includes/visual-composer-root.php:848 includes/visual-composer-root.php:863
+#: includes/visual-composer-root.php:888 includes/visual-composer-root.php:1237
+#: includes/visual-composer-root.php:1252
+#: includes/visual-composer-root.php:1267
+msgid "Select product"
+msgstr ""
+
+#: includes/visual-composer-root.php:854
+msgid "Special Product"
+msgstr ""
+
+#: includes/visual-composer-root.php:859
+msgid "Display a single Special product."
+msgstr ""
+
+#: includes/visual-composer-root.php:869
+msgid "Product Image"
+msgstr ""
+
+#: includes/visual-composer-root.php:873
+msgid ""
+"Select image from media library. If blank will use default Product Image"
+msgstr ""
+
+#: includes/visual-composer-root.php:879
+msgid "Product Page"
+msgstr ""
+
+#: includes/visual-composer-root.php:884
+msgid "Show a single product page."
+msgstr ""
+
+#: includes/visual-composer-root.php:894
+msgid "Product Masonry"
+msgstr ""
+
+#: includes/visual-composer-root.php:899
+msgid "List products with Masonry layout."
+msgstr ""
+
+#: includes/visual-composer-root.php:903 includes/visual-composer-root.php:969
+#: includes/visual-composer-root.php:1030
+#: includes/visual-composer-root.php:1089
+#: includes/visual-composer-root.php:2420
+#: includes/visual-composer-root.php:2617 includes/visual-composer.php:735
+#: includes/visual-composer.php:1114 includes/visual-composer.php:1254
+#: includes/visual-composer.php:1273 includes/widgets.php:1064
+msgid "Categories"
+msgstr ""
+
+#: includes/visual-composer-root.php:908 includes/visual-composer-root.php:974
+#: includes/visual-composer-root.php:1345
+#: includes/visual-composer-root.php:1382
+#: includes/visual-composer-root.php:1427
+#: includes/visual-composer-root.php:1472
+#: includes/visual-composer-root.php:1495
+#: includes/visual-composer-root.php:1540
+#: includes/visual-composer-root.php:1595
+#: includes/visual-composer-root.php:1639
+msgid "Product Per Page"
+msgstr ""
+
+#: includes/visual-composer-root.php:914 includes/visual-composer-root.php:980
+#: includes/visual-composer-root.php:1044
+#: includes/visual-composer-root.php:1191
+#: includes/visual-composer-root.php:1288
+#: includes/visual-composer-root.php:1388
+#: includes/visual-composer-root.php:1433
+#: includes/visual-composer-root.php:1478
+#: includes/visual-composer-root.php:1501
+#: includes/visual-composer-root.php:1546
+#: includes/visual-composer-root.php:1601
+#: includes/visual-composer-root.php:1645
+#: includes/visual-composer-root.php:2393
+#: includes/visual-composer-root.php:2547
+#: includes/visual-composer-root.php:2751 includes/visual-composer.php:708
+#: includes/visual-composer.php:1184 includes/visual-composer.php:1425
+msgid "Columns"
+msgstr ""
+
+#: includes/visual-composer-root.php:924 includes/visual-composer-root.php:1976
+msgid "All Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:925 includes/visual-composer-root.php:1531
+#: includes/visual-composer-root.php:1977
+msgid "Featured Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:926 includes/visual-composer-root.php:1978
+msgid "On-sale Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:930 includes/visual-composer-root.php:1869
+#: includes/visual-composer-root.php:1983
+#: includes/visual-composer-root.php:2410
+#: includes/visual-composer-root.php:2565 includes/visual-composer.php:725
+#: includes/visual-composer.php:1056 includes/visual-composer.php:1127
+#: includes/visual-composer.php:1202 includes/visual-composer.php:1280
+#: includes/widgets.php:448 includes/widgets.php:574 includes/widgets.php:1054
+msgid "Order by"
+msgstr ""
+
+#: includes/visual-composer-root.php:933 includes/visual-composer-root.php:1985
+msgid "Date"
+msgstr ""
+
+#: includes/visual-composer-root.php:934 includes/visual-composer-root.php:998
+#: includes/visual-composer-root.php:1061
+#: includes/visual-composer-root.php:1208
+#: includes/visual-composer-root.php:1305
+#: includes/visual-composer-root.php:1361
+#: includes/visual-composer-root.php:1405
+#: includes/visual-composer-root.php:1450
+#: includes/visual-composer-root.php:1518
+#: includes/visual-composer-root.php:1563
+#: includes/visual-composer-root.php:1618
+#: includes/visual-composer-root.php:1662
+#: includes/visual-composer-root.php:1986
+msgid "Price"
+msgstr ""
+
+#: includes/visual-composer-root.php:935 includes/visual-composer-root.php:994
+#: includes/visual-composer-root.php:1057
+#: includes/visual-composer-root.php:1204
+#: includes/visual-composer-root.php:1301
+#: includes/visual-composer-root.php:1357
+#: includes/visual-composer-root.php:1401
+#: includes/visual-composer-root.php:1446
+#: includes/visual-composer-root.php:1514
+#: includes/visual-composer-root.php:1559
+#: includes/visual-composer-root.php:1614
+#: includes/visual-composer-root.php:1658
+#: includes/visual-composer-root.php:1987 includes/widgets.php:452
+#: includes/widgets.php:580
+msgid "Random"
+msgstr ""
+
+#: includes/visual-composer-root.php:936 includes/visual-composer-root.php:1988
+msgid "Sales"
+msgstr ""
+
+#: includes/visual-composer-root.php:940 includes/visual-composer-root.php:1993
+msgctxt "Sorting order"
+msgid "Order"
+msgstr ""
+
+#: includes/visual-composer-root.php:942 includes/visual-composer-root.php:1994
+msgid "ASC"
+msgstr ""
+
+#: includes/visual-composer-root.php:942 includes/visual-composer-root.php:1994
+msgid "DESC"
+msgstr ""
+
+#: includes/visual-composer-root.php:945
+msgid "Hide All Filter Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:950 includes/visual-composer-root.php:1997
+msgid "Hide free products"
+msgstr ""
+
+#: includes/visual-composer-root.php:955 includes/visual-composer-root.php:2002
+msgid "Show hidden products"
+msgstr ""
+
+#: includes/visual-composer-root.php:960
+msgid "Product Category"
+msgstr ""
+
+#: includes/visual-composer-root.php:965
+msgid "List products in a category shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:987 includes/visual-composer-root.php:1051
+#: includes/visual-composer-root.php:1118
+#: includes/visual-composer-root.php:1198
+#: includes/visual-composer-root.php:1295
+#: includes/visual-composer-root.php:1351
+#: includes/visual-composer-root.php:1395
+#: includes/visual-composer-root.php:1440
+#: includes/visual-composer-root.php:1508
+#: includes/visual-composer-root.php:1553
+#: includes/visual-composer-root.php:1608
+#: includes/visual-composer-root.php:1652
+msgid "Products Ordering"
+msgstr ""
+
+#: includes/visual-composer-root.php:992 includes/visual-composer-root.php:1055
+#: includes/visual-composer-root.php:1202
+#: includes/visual-composer-root.php:1299
+#: includes/visual-composer-root.php:1355
+#: includes/visual-composer-root.php:1399
+#: includes/visual-composer-root.php:1444
+#: includes/visual-composer-root.php:1512
+#: includes/visual-composer-root.php:1557
+#: includes/visual-composer-root.php:1612
+#: includes/visual-composer-root.php:1656
+msgid "Publish Date"
+msgstr ""
+
+#: includes/visual-composer-root.php:993 includes/visual-composer-root.php:1056
+#: includes/visual-composer-root.php:1203
+#: includes/visual-composer-root.php:1300
+#: includes/visual-composer-root.php:1356
+#: includes/visual-composer-root.php:1400
+#: includes/visual-composer-root.php:1445
+#: includes/visual-composer-root.php:1513
+#: includes/visual-composer-root.php:1558
+#: includes/visual-composer-root.php:1613
+#: includes/visual-composer-root.php:1657
+msgid "Modified Date"
+msgstr ""
+
+#: includes/visual-composer-root.php:995 includes/visual-composer-root.php:1058
+#: includes/visual-composer-root.php:1205
+#: includes/visual-composer-root.php:1302
+#: includes/visual-composer-root.php:1358
+#: includes/visual-composer-root.php:1402
+#: includes/visual-composer-root.php:1447
+#: includes/visual-composer-root.php:1515
+#: includes/visual-composer-root.php:1560
+#: includes/visual-composer-root.php:1615
+#: includes/visual-composer-root.php:1659
+msgid "Alphabetic"
+msgstr ""
+
+#: includes/visual-composer-root.php:996 includes/visual-composer-root.php:1059
+#: includes/visual-composer-root.php:1206
+#: includes/visual-composer-root.php:1303
+#: includes/visual-composer-root.php:1359
+#: includes/visual-composer-root.php:1403
+#: includes/visual-composer-root.php:1448
+#: includes/visual-composer-root.php:1516
+#: includes/visual-composer-root.php:1561
+#: includes/visual-composer-root.php:1616
+#: includes/visual-composer-root.php:1660
+msgid "Popularity"
+msgstr ""
+
+#: includes/visual-composer-root.php:997 includes/visual-composer-root.php:1060
+#: includes/visual-composer-root.php:1207
+#: includes/visual-composer-root.php:1304
+#: includes/visual-composer-root.php:1360
+#: includes/visual-composer-root.php:1404
+#: includes/visual-composer-root.php:1449
+#: includes/visual-composer-root.php:1517
+#: includes/visual-composer-root.php:1562
+#: includes/visual-composer-root.php:1617
+#: includes/visual-composer-root.php:1661
+msgid "Rate"
+msgstr ""
+
+#: includes/visual-composer-root.php:1003
+#: includes/visual-composer-root.php:1066
+#: includes/visual-composer-root.php:1131
+#: includes/visual-composer-root.php:1213
+#: includes/visual-composer-root.php:1310
+#: includes/visual-composer-root.php:1366
+#: includes/visual-composer-root.php:1410
+#: includes/visual-composer-root.php:1455
+#: includes/visual-composer-root.php:1523
+#: includes/visual-composer-root.php:1568
+#: includes/visual-composer-root.php:1623
+msgid "Ascending or Descending"
+msgstr ""
+
+#: includes/visual-composer-root.php:1006
+#: includes/visual-composer-root.php:1069
+#: includes/visual-composer-root.php:1134
+#: includes/visual-composer-root.php:1216
+#: includes/visual-composer-root.php:1313
+#: includes/visual-composer-root.php:1369
+#: includes/visual-composer-root.php:1413
+#: includes/visual-composer-root.php:1458
+#: includes/visual-composer-root.php:1526
+#: includes/visual-composer-root.php:1571
+#: includes/visual-composer-root.php:1626 includes/visual-composer.php:1297
+msgid "Ascending"
+msgstr ""
+
+#: includes/visual-composer-root.php:1007
+#: includes/visual-composer-root.php:1070
+#: includes/visual-composer-root.php:1135
+#: includes/visual-composer-root.php:1217
+#: includes/visual-composer-root.php:1314
+#: includes/visual-composer-root.php:1370
+#: includes/visual-composer-root.php:1414
+#: includes/visual-composer-root.php:1459
+#: includes/visual-composer-root.php:1527
+#: includes/visual-composer-root.php:1572
+#: includes/visual-composer-root.php:1627 includes/visual-composer.php:1298
+msgid "Descending"
+msgstr ""
+
+#: includes/visual-composer-root.php:1012
+#: includes/visual-composer-root.php:1815
+msgid "Query type"
+msgstr ""
+
+#: includes/visual-composer-root.php:1016
+msgid "IN"
+msgstr ""
+
+#: includes/visual-composer-root.php:1017
+#: includes/visual-composer-root.php:1817
+msgid "AND"
+msgstr ""
+
+#: includes/visual-composer-root.php:1018
+msgid "NOT IN"
+msgstr ""
+
+#: includes/visual-composer-root.php:1021
+#: includes/visual-composer-root.php:1860
+msgid "Product Categories"
+msgstr ""
+
+#: includes/visual-composer-root.php:1026
+msgid "List all (or limited) product categories."
+msgstr ""
+
+#: includes/visual-composer-root.php:1036
+#: includes/visual-composer-root.php:1110
+#: includes/visual-composer-root.php:1183
+#: includes/visual-composer-root.php:2815 includes/visual-composer.php:1489
+msgid "Number"
+msgstr ""
+
+#: includes/visual-composer-root.php:1040
+#: includes/visual-composer-root.php:1114
+msgid ""
+"You can specify the number of category to show (Leave blank to display all "
+"categories)."
+msgstr ""
+
+#: includes/visual-composer-root.php:1075
+#: includes/visual-composer-root.php:1140
+#: includes/visual-composer-root.php:1222
+msgid "Hide Empty"
+msgstr ""
+
+#: includes/visual-composer-root.php:1080
+msgid "Product Categories Grid"
+msgstr ""
+
+#: includes/visual-composer-root.php:1085
+msgid "Display categories with grid layout."
+msgstr ""
+
+#: includes/visual-composer-root.php:1097
+msgid "Grid Style"
+msgstr ""
+
+#: includes/visual-composer-root.php:1100
+#: includes/visual-composer-root.php:2761
+#: includes/visual-composer-root.php:2951 includes/visual-composer.php:1435
+#: includes/visual-composer.php:1625
+msgid "Style 1"
+msgstr ""
+
+#: includes/visual-composer-root.php:1100
+#: includes/visual-composer-root.php:2762
+#: includes/visual-composer-root.php:2952 includes/visual-composer.php:1436
+#: includes/visual-composer.php:1626
+msgid "Style 2"
+msgstr ""
+
+#: includes/visual-composer-root.php:1100
+#: includes/visual-composer-root.php:2953 includes/visual-composer.php:1627
+msgid "Style 3"
+msgstr ""
+
+#: includes/visual-composer-root.php:1105
+msgid "Grid Gutter"
+msgstr ""
+
+#: includes/visual-composer-root.php:1122
+#: includes/visual-composer-root.php:1871
+msgid "Category Order"
+msgstr ""
+
+#: includes/visual-composer-root.php:1123
+#: includes/visual-composer-root.php:1871
+msgid "Name"
+msgstr ""
+
+#: includes/visual-composer-root.php:1124
+msgid "Term ID"
+msgstr ""
+
+#: includes/visual-composer-root.php:1125
+msgid "Taxonomy Count"
+msgstr ""
+
+#: includes/visual-composer-root.php:1126
+msgid "ID"
+msgstr ""
+
+#: includes/visual-composer-root.php:1146
+msgid "Product Lookbooks"
+msgstr ""
+
+#: includes/visual-composer-root.php:1151
+msgid "List all products by lookbooks."
+msgstr ""
+
+#: includes/visual-composer-root.php:1155
+msgid "Lookbooks"
+msgstr ""
+
+#: includes/visual-composer-root.php:1164
+#: includes/visual-composer-root.php:3040 includes/visual-composer.php:1714
+msgid "Slider"
+msgstr ""
+
+#: includes/visual-composer-root.php:1169
+msgid "Product Brands"
+msgstr ""
+
+#: includes/visual-composer-root.php:1174
+msgid "List all (or limited) product brands."
+msgstr ""
+
+#: includes/visual-composer-root.php:1178
+msgid "Brands"
+msgstr ""
+
+#: includes/visual-composer-root.php:1187
+msgid ""
+"You can specify the number of brand to show (Leave blank to display all "
+"brands)."
+msgstr ""
+
+#: includes/visual-composer-root.php:1228
+msgid "Add To Cart"
+msgstr ""
+
+#: includes/visual-composer-root.php:1233
+msgid "Display a single product price + cart button."
+msgstr ""
+
+#: includes/visual-composer-root.php:1243
+#: includes/visual-composer-root.php:1258
+msgid "Add To Cart URL"
+msgstr ""
+
+#: includes/visual-composer-root.php:1248
+msgid "Show URL on the add to cart button."
+msgstr ""
+
+#: includes/visual-composer-root.php:1263
+msgid "Get the add to cart URL for a product."
+msgstr ""
+
+#: includes/visual-composer-root.php:1274
+#: includes/visual-composer-root.php:1960
+msgid "Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1279
+msgid "List multiple products shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1283
+#: includes/visual-composer-root.php:1340
+msgid "Select products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1317
+msgid "Products Grid"
+msgstr ""
+
+#: includes/visual-composer-root.php:1322
+msgid "List multiple products grid shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1327
+msgid "Text Description"
+msgstr ""
+
+#: includes/visual-composer-root.php:1330
+msgid ""
+"<p>I am text block. Click edit button to change this text. Lorem ipsum dolor "
+"sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec "
+"ullamcorper mattis, pulvinar dapibus leo.</p>"
+msgstr ""
+
+#: includes/visual-composer-root.php:1334
+msgid "Image Description"
+msgstr ""
+
+#: includes/visual-composer-root.php:1337
+msgid "Select image from media library."
+msgstr ""
+
+#: includes/visual-composer-root.php:1373
+msgid "Recent Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1378
+msgid "Recent Products shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1418
+msgid "Sale Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1423
+msgid "List all products on sale."
+msgstr ""
+
+#: includes/visual-composer-root.php:1463
+msgid "Best Selling Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1468
+msgid "List best selling products on sale."
+msgstr ""
+
+#: includes/visual-composer-root.php:1486
+#: includes/visual-composer-root.php:2081
+msgid "Top Rated Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1491
+msgid "List top rated products on sale."
+msgstr ""
+
+#: includes/visual-composer-root.php:1536
+msgid "Output featured products."
+msgstr ""
+
+#: includes/visual-composer-root.php:1576
+msgid "Product Attribute"
+msgstr ""
+
+#: includes/visual-composer-root.php:1581
+msgid "List products with an attribute shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1585
+#: includes/visual-composer-root.php:1804
+msgid "Attribute"
+msgstr ""
+
+#: includes/visual-composer-root.php:1590 includes/woocommerce.php:265
+msgid "Filter"
+msgstr ""
+
+#: includes/visual-composer-root.php:1630
+msgid "Related products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1635
+msgid "Output the related products."
+msgstr ""
+
+#: includes/visual-composer-root.php:1665
+msgid "Shop Messages"
+msgstr ""
+
+#: includes/visual-composer-root.php:1671
+msgid "Show messages."
+msgstr ""
+
+#: includes/visual-composer-root.php:1675
+msgid "Order Tracking"
+msgstr ""
+
+#: includes/visual-composer-root.php:1681
+msgid "Order tracking page shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1685
+msgid "Cart"
+msgstr ""
+
+#: includes/visual-composer-root.php:1691
+msgid "Cart page shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1696 includes/woocommerce.php:516
+#: includes/woocommerce.php:519
+msgid "Checkout"
+msgstr ""
+
+#: includes/visual-composer-root.php:1702
+msgid "Checkout page shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1706
+msgid "My Account"
+msgstr ""
+
+#: includes/visual-composer-root.php:1711
+msgid "My account shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:1715
+msgid "Number of orders"
+msgstr ""
+
+#: includes/visual-composer-root.php:1720
+msgid ""
+"You can specify the number of orders to show (use -1 to display all orders)."
+msgstr ""
+
+#: includes/visual-composer-root.php:1726
+msgid "WC Cart"
+msgstr ""
+
+#: includes/visual-composer-root.php:1728
+#: includes/visual-composer-root.php:1756
+#: includes/visual-composer-root.php:1788
+#: includes/visual-composer-root.php:1829
+#: includes/visual-composer-root.php:1853
+#: includes/visual-composer-root.php:1905
+#: includes/visual-composer-root.php:1929
+#: includes/visual-composer-root.php:1953
+#: includes/visual-composer-root.php:2016
+#: includes/visual-composer-root.php:2045
+#: includes/visual-composer-root.php:2074
+msgid "Woocommerce Widgets"
+msgstr ""
+
+#: includes/visual-composer-root.php:1731
+msgid "Woocommerce Widget Cart."
+msgstr ""
+
+#: includes/visual-composer-root.php:1735
+#: includes/visual-composer-root.php:1764
+#: includes/visual-composer-root.php:1796
+#: includes/visual-composer-root.php:1837
+#: includes/visual-composer-root.php:1861
+#: includes/visual-composer-root.php:1913
+#: includes/visual-composer-root.php:1937
+#: includes/visual-composer-root.php:1961
+#: includes/visual-composer-root.php:2024
+#: includes/visual-composer-root.php:2053
+#: includes/visual-composer-root.php:2082
+msgid "Widget title"
+msgstr ""
+
+#: includes/visual-composer-root.php:1738
+#: includes/visual-composer-root.php:1767
+#: includes/visual-composer-root.php:1799
+#: includes/visual-composer-root.php:1840
+#: includes/visual-composer-root.php:1864
+#: includes/visual-composer-root.php:1916
+#: includes/visual-composer-root.php:1940
+#: includes/visual-composer-root.php:1964
+#: includes/visual-composer-root.php:2027
+#: includes/visual-composer-root.php:2056
+#: includes/visual-composer-root.php:2085
+msgid ""
+"What text use as a widget title. Leave blank to use default widget title."
+msgstr ""
+
+#: includes/visual-composer-root.php:1742
+msgid "Hide if cart is empty"
+msgstr ""
+
+#: includes/visual-composer-root.php:1747
+#: includes/visual-composer-root.php:1771
+#: includes/visual-composer-root.php:1820
+#: includes/visual-composer-root.php:1844
+#: includes/visual-composer-root.php:1895
+#: includes/visual-composer-root.php:1920
+#: includes/visual-composer-root.php:1944
+#: includes/visual-composer-root.php:2007
+#: includes/visual-composer-root.php:2036
+#: includes/visual-composer-root.php:2065
+#: includes/visual-composer-root.php:2094
+msgid "Extra class name"
+msgstr ""
+
+#: includes/visual-composer-root.php:1754
+msgid "WC Layered Nav Filters"
+msgstr ""
+
+#: includes/visual-composer-root.php:1759
+msgid "Woocommerce Widget Layered Nav Filters."
+msgstr ""
+
+#: includes/visual-composer-root.php:1763
+msgid "Active Filters"
+msgstr ""
+
+#: includes/visual-composer-root.php:1786
+msgid "WC Layered Nav"
+msgstr ""
+
+#: includes/visual-composer-root.php:1791
+msgid "Woocommerce Widget Layered Nav."
+msgstr ""
+
+#: includes/visual-composer-root.php:1795
+msgid "Filter by"
+msgstr ""
+
+#: includes/visual-composer-root.php:1810
+#: includes/visual-composer-root.php:3037 includes/visual-composer.php:1711
+msgid "Display type"
+msgstr ""
+
+#: includes/visual-composer-root.php:1811
+msgid "Dropdown"
+msgstr ""
+
+#: includes/visual-composer-root.php:1817
+msgid "OR"
+msgstr ""
+
+#: includes/visual-composer-root.php:1827
+msgid "WC Price Filter"
+msgstr ""
+
+#: includes/visual-composer-root.php:1832
+msgid "Woocommerce Widget Price Filter."
+msgstr ""
+
+#: includes/visual-composer-root.php:1836
+msgid "Filter by price"
+msgstr ""
+
+#: includes/visual-composer-root.php:1851
+msgid "WC Product Categories"
+msgstr ""
+
+#: includes/visual-composer-root.php:1856
+msgid "Woocommerce Widget Product Categories."
+msgstr ""
+
+#: includes/visual-composer-root.php:1874
+msgid "Show as dropdown"
+msgstr ""
+
+#: includes/visual-composer-root.php:1879
+msgid "Show post counts"
+msgstr ""
+
+#: includes/visual-composer-root.php:1884
+msgid "Show hierarchy"
+msgstr ""
+
+#: includes/visual-composer-root.php:1890
+msgid "Only show children of the current category"
+msgstr ""
+
+#: includes/visual-composer-root.php:1903
+msgid "WC Product Search"
+msgstr ""
+
+#: includes/visual-composer-root.php:1908
+msgid "Woocommerce Widget Product Search."
+msgstr ""
+
+#: includes/visual-composer-root.php:1912
+msgid "Search Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1927
+msgid "WC Product Tags"
+msgstr ""
+
+#: includes/visual-composer-root.php:1932
+msgid "Woocommerce Widget Product Tags."
+msgstr ""
+
+#: includes/visual-composer-root.php:1936
+msgid "Product Tags"
+msgstr ""
+
+#: includes/visual-composer-root.php:1951
+msgid "WC Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:1956
+msgid "Woocommerce Widget Products."
+msgstr ""
+
+#: includes/visual-composer-root.php:1969
+#: includes/visual-composer-root.php:2032
+#: includes/visual-composer-root.php:2061
+#: includes/visual-composer-root.php:2090
+msgid "Number of products to show"
+msgstr ""
+
+#: includes/visual-composer-root.php:2014
+msgid "WC Recent Reviews"
+msgstr ""
+
+#: includes/visual-composer-root.php:2019
+msgid "Woocommerce Widget Recent Reviews."
+msgstr ""
+
+#: includes/visual-composer-root.php:2023
+msgid "Recent Reviews"
+msgstr ""
+
+#: includes/visual-composer-root.php:2043
+msgid "WC Recently Viewed"
+msgstr ""
+
+#: includes/visual-composer-root.php:2048
+msgid "Woocommerce Widget Recently Viewed."
+msgstr ""
+
+#: includes/visual-composer-root.php:2052
+msgid "Recently Viewed Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:2072
+msgid "WC Top Rated Products"
+msgstr ""
+
+#: includes/visual-composer-root.php:2077
+msgid "Woocommerce Widget Top Rated Products."
+msgstr ""
+
+#: includes/visual-composer-root.php:2106
+#: includes/visual-composer-root.php:2119 includes/visual-composer.php:641
+#: includes/visual-composer.php:654
+msgid "Row Type"
+msgstr ""
+
+#: includes/visual-composer-root.php:2112
+#: includes/visual-composer-root.php:2125 includes/visual-composer.php:647
+#: includes/visual-composer.php:660
+msgid "Full Width"
+msgstr ""
+
+#: includes/visual-composer-root.php:2113
+#: includes/visual-composer-root.php:2126 includes/visual-composer.php:648
+#: includes/visual-composer.php:661
+msgid "In Container"
+msgstr ""
+
+#: includes/visual-composer-root.php:2132 includes/visual-composer.php:767
+#: includes/widgets.php:367
+msgid "Instagram Username"
+msgstr ""
+
+#: includes/visual-composer-root.php:2138 includes/visual-composer.php:773
+#: includes/widgets.php:372
+msgid "Number of Images to Show"
+msgstr ""
+
+#: includes/visual-composer-root.php:2143 includes/visual-composer.php:778
+#: includes/widgets.php:377
+msgid "Check for new images on every (hours)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2155 includes/visual-composer.php:791
+msgid "Text on the button."
+msgstr ""
+
+#: includes/visual-composer-root.php:2158 includes/visual-composer.php:794
+msgid "URL (Link)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2160 includes/visual-composer.php:796
+msgid "Button link."
+msgstr ""
+
+#: includes/visual-composer-root.php:2163
+#: includes/visual-composer-root.php:2994 includes/visual-composer.php:799
+#: includes/visual-composer.php:1668
+msgid "Target"
+msgstr ""
+
+#: includes/visual-composer-root.php:2167
+#: includes/visual-composer-root.php:2998 includes/visual-composer.php:803
+#: includes/visual-composer.php:1672
+msgid "Same window"
+msgstr ""
+
+#: includes/visual-composer-root.php:2168
+#: includes/visual-composer-root.php:2999 includes/visual-composer.php:804
+#: includes/visual-composer.php:1673
+msgid "New window"
+msgstr ""
+
+#: includes/visual-composer-root.php:2179 includes/visual-composer.php:815
+msgid "Button style."
+msgstr ""
+
+#: includes/visual-composer-root.php:2182 includes/visual-composer.php:818
+msgid "Size"
+msgstr ""
+
+#: includes/visual-composer-root.php:2187 includes/visual-composer.php:823
+msgid "Large"
+msgstr ""
+
+#: includes/visual-composer-root.php:2188 includes/visual-composer.php:824
+msgid "Small"
+msgstr ""
+
+#: includes/visual-composer-root.php:2189 includes/visual-composer.php:825
+msgid "Extra small"
+msgstr ""
+
+#: includes/visual-composer-root.php:2190 includes/visual-composer.php:826
+msgid "Custom size"
+msgstr ""
+
+#: includes/visual-composer-root.php:2191 includes/visual-composer.php:827
+msgid "Button size."
+msgstr ""
+
+#: includes/visual-composer-root.php:2194 includes/visual-composer.php:830
+msgid "Font Size (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2202 includes/visual-composer.php:838
+msgid "Border Width (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2210 includes/visual-composer.php:846
+msgid "Padding Top (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2218
+#: includes/visual-composer-root.php:2234 includes/visual-composer.php:854
+#: includes/visual-composer.php:870
+msgid "Padding Right (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2226 includes/visual-composer.php:862
+msgid "Padding Bottom (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2242
+#: includes/visual-composer-root.php:2746 includes/visual-composer.php:878
+#: includes/visual-composer.php:1420
+msgid "Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2252
+#: includes/visual-composer-root.php:2936
+#: includes/visual-composer-root.php:2981 includes/visual-composer.php:888
+#: includes/visual-composer.php:1610 includes/visual-composer.php:1655
+msgid "White"
+msgstr ""
+
+#: includes/visual-composer-root.php:2253
+#: includes/visual-composer-root.php:2936
+#: includes/visual-composer-root.php:2981 includes/visual-composer.php:889
+#: includes/visual-composer.php:1610 includes/visual-composer.php:1655
+msgid "Black"
+msgstr ""
+
+#: includes/visual-composer-root.php:2255 includes/visual-composer.php:891
+msgid "Button color."
+msgstr ""
+
+#: includes/visual-composer-root.php:2258 includes/visual-composer.php:894
+msgid "Background Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2261 includes/visual-composer.php:897
+msgid "Select background color for button."
+msgstr ""
+
+#: includes/visual-composer-root.php:2264 includes/visual-composer.php:900
+msgid "Border Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2267 includes/visual-composer.php:903
+msgid "Select border color for button."
+msgstr ""
+
+#: includes/visual-composer-root.php:2270 includes/visual-composer.php:906
+msgid "Text Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2273 includes/visual-composer.php:909
+msgid "Select text color for button."
+msgstr ""
+
+#: includes/visual-composer-root.php:2276 includes/visual-composer.php:912
+msgid "Hover Background Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2279 includes/visual-composer.php:915
+msgid "Select background color for button when hover."
+msgstr ""
+
+#: includes/visual-composer-root.php:2282 includes/visual-composer.php:918
+msgid "Hover Border Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2285 includes/visual-composer.php:921
+msgid "Select border color for button when hover."
+msgstr ""
+
+#: includes/visual-composer-root.php:2288 includes/visual-composer.php:924
+msgid "Hover Text Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2291 includes/visual-composer.php:927
+msgid "Select text color for button when hover."
+msgstr ""
+
+#: includes/visual-composer-root.php:2294 includes/visual-composer.php:930
+msgid "Button Full Width"
+msgstr ""
+
+#: includes/visual-composer-root.php:2296 includes/visual-composer.php:932
+msgid "Yes, please"
+msgstr ""
+
+#: includes/visual-composer-root.php:2297 includes/visual-composer.php:933
+msgid "Button full width of a parent"
+msgstr ""
+
+#: includes/visual-composer-root.php:2300 includes/visual-composer.php:936
+msgid "Alignment"
+msgstr ""
+
+#: includes/visual-composer-root.php:2307 includes/visual-composer.php:943
+msgid "Button alignment (Not use for Button full width)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2310 includes/visual-composer.php:946
+msgid "Show Tooltip/Popover"
+msgstr ""
+
+#: includes/visual-composer-root.php:2316 includes/visual-composer.php:952
+msgid "Display a tooltip or popover with descriptive text."
+msgstr ""
+
+#: includes/visual-composer-root.php:2328 includes/visual-composer.php:964
+msgid "Choose the display position."
+msgstr ""
+
+#: includes/visual-composer-root.php:2331 includes/visual-composer.php:967
+msgid "Popover Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:2336 includes/visual-composer.php:972
+msgid "Tip/Popover Content"
+msgstr ""
+
+#: includes/visual-composer-root.php:2341 includes/visual-composer.php:977
+msgid "Tip/Popover trigger"
+msgstr ""
+
+#: includes/visual-composer-root.php:2346 includes/visual-composer.php:982
+msgid "Choose action to trigger the tooltip."
+msgstr ""
+
+#: includes/visual-composer-root.php:2350
+msgid "Name Of Menu Anchor"
+msgstr ""
+
+#: includes/visual-composer-root.php:2354
+msgid "This name will be the id you will have to use in your one page menu."
+msgstr ""
+
+#: includes/visual-composer-root.php:2359 includes/visual-composer.php:987
+msgid "Video Type"
+msgstr ""
+
+#: includes/visual-composer-root.php:2363 includes/visual-composer.php:991
+msgid "Iniline"
+msgstr ""
+
+#: includes/visual-composer-root.php:2363 includes/visual-composer.php:991
+msgid "Popup"
+msgstr ""
+
+#: includes/visual-composer-root.php:2366 includes/visual-composer.php:994
+msgid "Background"
+msgstr ""
+
+#: includes/visual-composer-root.php:2369 includes/visual-composer.php:997
+msgid "Video Background."
+msgstr ""
+
+#: includes/visual-composer-root.php:2376 includes/visual-composer.php:1004
+msgid ""
+"Used when you select Video format. Enter a Youtube, Vimeo, Soundcloud, etc "
+"URL. See supported services at <a href=\"http://codex.wordpress.org/Embeds\" "
+"target=\"_blank\">http://codex.wordpress.org/Embeds</a>."
+msgstr ""
+
+#: includes/visual-composer-root.php:2381 includes/visual-composer.php:694
+msgid "Layout"
+msgstr ""
+
+#: includes/visual-composer-root.php:2390 includes/visual-composer.php:705
+msgid "Select the layout for the blog shortcode."
+msgstr ""
+
+#: includes/visual-composer-root.php:2397
+#: includes/visual-composer-root.php:2551 includes/visual-composer.php:712
+#: includes/visual-composer.php:1188
+msgid "2"
+msgstr ""
+
+#: includes/visual-composer-root.php:2398
+#: includes/visual-composer-root.php:2552 includes/visual-composer.php:713
+#: includes/visual-composer.php:1189
+msgid "3"
+msgstr ""
+
+#: includes/visual-composer-root.php:2399
+#: includes/visual-composer-root.php:2553 includes/visual-composer.php:714
+#: includes/visual-composer.php:1190
+msgid "4"
+msgstr ""
+
+#: includes/visual-composer-root.php:2401 includes/visual-composer.php:716
+msgid "Select whether to display the layout in 2, 3 or 4 column."
+msgstr ""
+
+#: includes/visual-composer-root.php:2404
+#: includes/visual-composer-root.php:2559 includes/visual-composer.php:719
+#: includes/visual-composer.php:1196
+msgid "Posts Per Page"
+msgstr ""
+
+#: includes/visual-composer-root.php:2407
+#: includes/visual-composer-root.php:2562 includes/visual-composer.php:722
+#: includes/visual-composer.php:1199
+msgid "Select number of posts per page.Set \"-1\" to display all"
+msgstr ""
+
+#: includes/visual-composer-root.php:2414
+#: includes/visual-composer-root.php:2568 includes/visual-composer.php:729
+#: includes/visual-composer.php:1060 includes/visual-composer.php:1131
+#: includes/visual-composer.php:1205 includes/widgets.php:576
+msgid "Recent First"
+msgstr ""
+
+#: includes/visual-composer-root.php:2415
+#: includes/visual-composer-root.php:2569 includes/visual-composer.php:730
+#: includes/visual-composer.php:1061 includes/visual-composer.php:1132
+#: includes/visual-composer.php:1206 includes/widgets.php:577
+msgid "Older First"
+msgstr ""
+
+#: includes/visual-composer-root.php:2416
+#: includes/visual-composer-root.php:2570 includes/visual-composer.php:731
+#: includes/visual-composer.php:1062 includes/visual-composer.php:1133
+#: includes/visual-composer.php:1207 includes/widgets.php:578
+msgid "Title Alphabet"
+msgstr ""
+
+#: includes/visual-composer-root.php:2417
+#: includes/visual-composer-root.php:2571 includes/visual-composer.php:732
+#: includes/visual-composer.php:1063 includes/visual-composer.php:1134
+#: includes/visual-composer.php:1208 includes/widgets.php:579
+msgid "Title Reversed Alphabet"
+msgstr ""
+
+#: includes/visual-composer-root.php:2423
+#: includes/visual-composer-root.php:2620 includes/visual-composer.php:738
+#: includes/visual-composer.php:1117 includes/visual-composer.php:1257
+#: includes/visual-composer.php:1276 includes/widgets.php:1065
+msgid "Select a category or leave blank for all"
+msgstr ""
+
+#: includes/visual-composer-root.php:2426 includes/visual-composer.php:741
+#: includes/visual-composer.php:1121
+msgid "Exclude Categories"
+msgstr ""
+
+#: includes/visual-composer-root.php:2428 includes/visual-composer.php:743
+#: includes/visual-composer.php:1123
+msgid "Select a category to exclude"
+msgstr ""
+
+#: includes/visual-composer-root.php:2432
+msgid "Hide Post Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:2435
+msgid "Hide the post title below the featured"
+msgstr ""
+
+#: includes/visual-composer-root.php:2438
+msgid "Link Title To Post"
+msgstr ""
+
+#: includes/visual-composer-root.php:2443
+msgid "Choose if the title should be a link to the single post page."
+msgstr ""
+
+#: includes/visual-composer-root.php:2447
+msgid "Hide Thumbnail"
+msgstr ""
+
+#: includes/visual-composer-root.php:2450
+msgid "Hide the post featured"
+msgstr ""
+
+#: includes/visual-composer-root.php:2453
+#: includes/visual-composer-root.php:2604 includes/visual-composer.php:1241
+msgid "Hide Excerpt"
+msgstr ""
+
+#: includes/visual-composer-root.php:2459
+#: includes/visual-composer-root.php:2607 includes/visual-composer.php:1244
+msgid "Hide excerpt"
+msgstr ""
+
+#: includes/visual-composer-root.php:2462
+#: includes/visual-composer-root.php:2610 includes/visual-composer.php:1247
+msgid "Number of words in Excerpt"
+msgstr ""
+
+#: includes/visual-composer-root.php:2466
+#: includes/visual-composer-root.php:2614 includes/visual-composer.php:1251
+msgid "The number of words"
+msgstr ""
+
+#: includes/visual-composer-root.php:2469
+#: includes/visual-composer-root.php:2580 includes/visual-composer.php:1217
+msgid "Hide Date"
+msgstr ""
+
+#: includes/visual-composer-root.php:2472
+#: includes/visual-composer-root.php:2583 includes/visual-composer.php:1220
+#: includes/widgets.php:1071
+msgid "Hide date in post meta info"
+msgstr ""
+
+#: includes/visual-composer-root.php:2475
+msgid "Hide Timeline Month"
+msgstr ""
+
+#: includes/visual-composer-root.php:2479
+msgid "Hide timeline month"
+msgstr ""
+
+#: includes/visual-composer-root.php:2482
+#: includes/visual-composer-root.php:2592 includes/visual-composer.php:1229
+msgid "Hide Comment"
+msgstr ""
+
+#: includes/visual-composer-root.php:2485
+#: includes/visual-composer-root.php:2595 includes/visual-composer.php:1232
+#: includes/widgets.php:1076
+msgid "Hide comment in post meta info"
+msgstr ""
+
+#: includes/visual-composer-root.php:2488
+#: includes/visual-composer-root.php:2598 includes/visual-composer.php:1235
+msgid "Hide Category"
+msgstr ""
+
+#: includes/visual-composer-root.php:2491
+msgid "Hide category in post meta info"
+msgstr ""
+
+#: includes/visual-composer-root.php:2494
+#: includes/visual-composer-root.php:2586 includes/visual-composer.php:1223
+msgid "Hide Author"
+msgstr ""
+
+#: includes/visual-composer-root.php:2500
+#: includes/visual-composer-root.php:2589 includes/visual-composer.php:1226
+msgid "Hide author in post meta info"
+msgstr ""
+
+#: includes/visual-composer-root.php:2503
+msgid "Hide Read More Link"
+msgstr ""
+
+#: includes/visual-composer-root.php:2509
+msgid "Choose to hide the link"
+msgstr ""
+
+#: includes/visual-composer-root.php:2512
+msgid "Show Tags"
+msgstr ""
+
+#: includes/visual-composer-root.php:2519
+msgid "Choose to show the tags"
+msgstr ""
+
+#: includes/visual-composer-root.php:2526
+msgid "Page Number"
+msgstr ""
+
+#: includes/visual-composer-root.php:2527
+msgid "Load More Button"
+msgstr ""
+
+#: includes/visual-composer-root.php:2540 includes/visual-composer.php:1177
+#: includes/visual-composer.php:1262
+msgid "Layout Style"
+msgstr ""
+
+#: includes/visual-composer-root.php:2544 includes/visual-composer.php:1181
+msgid "Select style to display the latest posts."
+msgstr ""
+
+#: includes/visual-composer-root.php:2555 includes/visual-composer.php:1192
+msgid "Select whether to display the layout in 1, 2, 3 or 4 column."
+msgstr ""
+
+#: includes/visual-composer-root.php:2574 includes/visual-composer.php:1211
+msgid "Hide Pagination"
+msgstr ""
+
+#: includes/visual-composer-root.php:2577 includes/visual-composer.php:1214
+msgid "Hide pagination of slider"
+msgstr ""
+
+#: includes/visual-composer-root.php:2601 includes/visual-composer.php:1238
+msgid "Hide Category in post meta info"
+msgstr ""
+
+#: includes/visual-composer-root.php:2655 includes/visual-composer.php:1329
+msgid "The number of visible items"
+msgstr ""
+
+#: includes/visual-composer-root.php:2737
+#: includes/visual-composer-root.php:2783 includes/visual-composer.php:1411
+#: includes/visual-composer.php:1457
+msgid "Item title."
+msgstr ""
+
+#: includes/visual-composer-root.php:2741 includes/visual-composer.php:1415
+msgid "Background Transparent?"
+msgstr ""
+
+#: includes/visual-composer-root.php:2748 includes/visual-composer.php:1422
+msgid "Custom color."
+msgstr ""
+
+#: includes/visual-composer-root.php:2754 includes/visual-composer.php:1428
+msgid "1 Column"
+msgstr ""
+
+#: includes/visual-composer-root.php:2754 includes/visual-composer.php:1428
+msgid "2 Columns"
+msgstr ""
+
+#: includes/visual-composer-root.php:2790 includes/visual-composer.php:1464
+msgid ""
+"I am testimonial. Click edit button to change this text. Lorem ipsum dolor "
+"sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec "
+"ullamcorper mattis, pulvinar dapibus leo."
+msgstr ""
+
+#: includes/visual-composer-root.php:2794 includes/visual-composer.php:1468
+msgid "Author"
+msgstr ""
+
+#: includes/visual-composer-root.php:2796 includes/visual-composer.php:1470
+msgid "Testimonial author."
+msgstr ""
+
+#: includes/visual-composer-root.php:2799 includes/visual-composer.php:1473
+msgid "Company"
+msgstr ""
+
+#: includes/visual-composer-root.php:2801 includes/visual-composer.php:1475
+msgid "Author company."
+msgstr ""
+
+#: includes/visual-composer-root.php:2804 includes/visual-composer.php:1478
+msgid "Avatar"
+msgstr ""
+
+#: includes/visual-composer-root.php:2806 includes/visual-composer.php:1480
+msgid "Avatar author."
+msgstr ""
+
+#: includes/visual-composer-root.php:2810 includes/visual-composer.php:1484
+msgid "Counter Speed"
+msgstr ""
+
+#: includes/visual-composer-root.php:2817 includes/visual-composer.php:1491
+msgid "Enter the number."
+msgstr ""
+
+#: includes/visual-composer-root.php:2820 includes/visual-composer.php:1494
+msgid "Format number displayed ?"
+msgstr ""
+
+#: includes/visual-composer-root.php:2826 includes/visual-composer.php:1500
+msgid "Thousand Separator"
+msgstr ""
+
+#: includes/visual-composer-root.php:2830 includes/visual-composer.php:1504
+msgid "This sets the thousand separator of displayed number."
+msgstr ""
+
+#: includes/visual-composer-root.php:2833 includes/visual-composer.php:1507
+msgid "Decimal Separator"
+msgstr ""
+
+#: includes/visual-composer-root.php:2837 includes/visual-composer.php:1511
+msgid "This sets the decimal separator of displayed number."
+msgstr ""
+
+#: includes/visual-composer-root.php:2840 includes/visual-composer.php:1514
+msgid "Number of Decimals"
+msgstr ""
+
+#: includes/visual-composer-root.php:2845 includes/visual-composer.php:1519
+msgid "This sets the number of decimal points shown in displayed number."
+msgstr ""
+
+#: includes/visual-composer-root.php:2850 includes/visual-composer.php:1524
+msgid "Custom Number Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2853
+#: includes/visual-composer-root.php:2874 includes/visual-composer.php:1527
+#: includes/visual-composer.php:1548
+msgid "Select color for number."
+msgstr ""
+
+#: includes/visual-composer-root.php:2856 includes/visual-composer.php:1530
+msgid "Custom Number Font Size (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2864 includes/visual-composer.php:1538
+msgid "Units"
+msgstr ""
+
+#: includes/visual-composer-root.php:2867 includes/visual-composer.php:1541
+msgid ""
+"Enter measurement units (if needed) Eg. %, px, points, etc. Graph value and "
+"unit will be appended to the graph title."
+msgstr ""
+
+#: includes/visual-composer-root.php:2871 includes/visual-composer.php:1545
+msgid "Custom Units Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2877 includes/visual-composer.php:1551
+msgid "Custom Units Font Size (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2885 includes/visual-composer.php:1559
+msgid "Icon"
+msgstr ""
+
+#: includes/visual-composer-root.php:2889 includes/visual-composer.php:1563
+msgid "Button icon."
+msgstr ""
+
+#: includes/visual-composer-root.php:2892 includes/visual-composer.php:1566
+msgid "Custom Icon Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2895 includes/visual-composer.php:1569
+msgid "Select color for icon."
+msgstr ""
+
+#: includes/visual-composer-root.php:2898 includes/visual-composer.php:1572
+msgid "Custom Icon Size (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2907 includes/visual-composer.php:1581
+msgid "Icon Postiton"
+msgstr ""
+
+#: includes/visual-composer-root.php:2918 includes/visual-composer.php:1592
+msgid "Custom Title Color"
+msgstr ""
+
+#: includes/visual-composer-root.php:2921 includes/visual-composer.php:1595
+msgid "Select color for title."
+msgstr ""
+
+#: includes/visual-composer-root.php:2924 includes/visual-composer.php:1598
+msgid "Custom Title Font Size (px)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2937 includes/visual-composer.php:1611
+msgid "Select style."
+msgstr ""
+
+#: includes/visual-composer-root.php:2940 includes/visual-composer.php:1614
+msgid "Countdown end"
+msgstr ""
+
+#: includes/visual-composer-root.php:2942 includes/visual-composer.php:1616
+msgid "Please select day to end."
+msgstr ""
+
+#: includes/visual-composer-root.php:2954 includes/visual-composer.php:1628
+msgid "Style 4"
+msgstr ""
+
+#: includes/visual-composer-root.php:2955 includes/visual-composer.php:1629
+msgid "Style 5"
+msgstr ""
+
+#: includes/visual-composer-root.php:2958 includes/visual-composer.php:1632
+msgid "Content Position"
+msgstr ""
+
+#: includes/visual-composer-root.php:2968 includes/visual-composer.php:1642
+msgid "Full Box"
+msgstr ""
+
+#: includes/visual-composer-root.php:2971 includes/visual-composer.php:1645
+msgid "Full Box with Primary Soild Background ?"
+msgstr ""
+
+#: includes/visual-composer-root.php:2984 includes/visual-composer.php:1658
+msgid "Image Background"
+msgstr ""
+
+#: includes/visual-composer-root.php:2986 includes/visual-composer.php:1660
+msgid "Image Background."
+msgstr ""
+
+#: includes/visual-composer-root.php:2989 includes/visual-composer.php:1663
+msgid "Image URL (Link)"
+msgstr ""
+
+#: includes/visual-composer-root.php:2991 includes/visual-composer.php:1665
+msgid "Image Link."
+msgstr ""
+
+#: includes/visual-composer-root.php:3003 includes/visual-composer.php:1677
+msgid "Button Text"
+msgstr ""
+
+#: includes/visual-composer-root.php:3007 includes/visual-composer.php:1681
+msgid "Button link text"
+msgstr ""
+
+#: includes/visual-composer-root.php:3014 includes/visual-composer.php:1688
+msgid "Box Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:3017 includes/visual-composer.php:674
+#: includes/visual-composer.php:1016 includes/visual-composer.php:1094
+#: includes/visual-composer.php:1691
+msgid "Sub Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:3020 includes/visual-composer.php:1694
+msgid "Box Sub Title"
+msgstr ""
+
+#: includes/visual-composer-root.php:3024 includes/visual-composer.php:1698
+msgid "Images"
+msgstr ""
+
+#: includes/visual-composer-root.php:3027 includes/visual-composer.php:1701
+msgid "Select images from media library."
+msgstr ""
+
+#: includes/visual-composer-root.php:3030 includes/visual-composer.php:1704
+msgid "Custom links"
+msgstr ""
+
+#: includes/visual-composer-root.php:3033 includes/visual-composer.php:1707
+msgid ""
+"Enter links for each image here. Divide links with linebreaks (Enter) . "
+msgstr ""
+
+#: includes/visual-composer-root.php:3041 includes/visual-composer.php:1715
+msgid "Image grid"
+msgstr ""
+
+#: includes/visual-composer-root.php:3042 includes/visual-composer.php:1716
+msgid "Select display type."
+msgstr ""
+
+#: includes/visual-composer-root.php:3051 includes/visual-composer.php:1725
+msgid "The number of visible items on a slide or on a grid row"
+msgstr ""
+
+#: includes/visual-composer-root.php:3056 includes/visual-composer.php:1730
+msgid "Image style"
+msgstr ""
+
+#: includes/visual-composer-root.php:3060 includes/visual-composer.php:1734
+msgid "Grayscale and Color on hover"
+msgstr ""
+
+#: includes/visual-composer-root.php:3061 includes/visual-composer.php:1735
+msgid "Select image style."
+msgstr ""
+
+#: includes/visual-composer-root.php:3140 includes/visual-composer.php:1815
+msgid "Content (<em>Add Arbitrary text or HTML.</em>)"
+msgstr ""
+
+#: includes/visual-composer-root.php:3165 includes/visual-composer.php:1840
+msgid "Add"
+msgstr ""
+
+#: includes/visual-composer-root.php:3251 includes/visual-composer.php:1926
+msgid "Select Attibute"
+msgstr ""
+
+#: includes/visual-composer-root.php:3278 includes/visual-composer.php:1953
+msgid "Select Attibute Filter"
+msgstr ""
+
+#: includes/visual-composer-root.php:3314 includes/visual-composer.php:1989
+msgid "Select brands"
+msgstr ""
+
+#: includes/visual-composer-root.php:3339 includes/visual-composer.php:2014
+msgid "Select lookbooks"
+msgstr ""
+
+#: includes/visual-composer-root.php:3365 includes/visual-composer.php:2040
+msgid "Select categories"
+msgstr ""
+
+#: includes/visual-composer-root.php:3391 includes/visual-composer.php:2066
+msgid "Search for a product..."
+msgstr ""
+
+#: includes/visual-composer-root.php:3407 includes/visual-composer.php:2082
+#: includes/woocommerce.php:763
+#, php-format
+msgid "%s &ndash; %s"
+msgstr ""
+
+#: includes/visual-composer-root.php:3469 includes/visual-composer.php:2144
+msgid "Pricing Table element only support display 5 item"
+msgstr ""
+
+#: includes/visual-composer.php:404
+msgid "--Select--"
+msgstr ""
+
+#: includes/visual-composer.php:460
+msgid "Blog Layout"
+msgstr ""
+
+#: includes/visual-composer.php:461
+msgid "Display multiple blog layouts."
+msgstr ""
+
+#: includes/visual-composer.php:470
+msgid "Post Category"
+msgstr ""
+
+#: includes/visual-composer.php:471
+msgid "Show mutiple posts in a category."
+msgstr ""
+
+#: includes/visual-composer.php:480
+msgid "Posts Slider"
+msgstr ""
+
+#: includes/visual-composer.php:481
+msgid "Show mutiple posts in a slider."
+msgstr ""
+
+#: includes/visual-composer.php:500
+msgid "DT Smart Content Box"
+msgstr ""
+
+#: includes/visual-composer.php:681 includes/visual-composer.php:1023
+#: includes/visual-composer.php:1101
+msgid "Icon Font"
+msgstr ""
+
+#: includes/visual-composer.php:688 includes/visual-composer.php:1030
+#: includes/visual-composer.php:1108
+msgid "Icon Color"
+msgstr ""
+
+#: includes/visual-composer.php:1036
+msgid "Template"
+msgstr ""
+
+#: includes/visual-composer.php:1041
+msgid "List Big"
+msgstr ""
+
+#: includes/visual-composer.php:1042
+msgid "List Small"
+msgstr ""
+
+#: includes/visual-composer.php:1048
+msgid "Category (required)"
+msgstr ""
+
+#: includes/visual-composer.php:1067
+msgid "Posts per page"
+msgstr ""
+
+#: includes/visual-composer.php:1077
+msgid "Mode"
+msgstr ""
+
+#: includes/visual-composer.php:1081
+msgid "Default (multiple items)"
+msgstr ""
+
+#: includes/visual-composer.php:1082
+msgid "Single (single item)"
+msgstr ""
+
+#: includes/visual-composer.php:1138
+msgid "Posts to show"
+msgstr ""
+
+#: includes/visual-composer.php:1142
+msgid "Select number of posts to show."
+msgstr ""
+
+#: includes/visual-composer.php:1145
+msgid "Posts Per page"
+msgstr ""
+
+#: includes/visual-composer.php:1152
+msgid "Show Category"
+msgstr ""
+
+#: includes/visual-composer.php:1163
+msgid "Show Excerpt"
+msgstr ""
+
+#: includes/visual-composer.php:1266
+msgid "Layout 1 (standard grid)"
+msgstr ""
+
+#: includes/visual-composer.php:1267
+msgid "Layout 2 (grid with a big item)"
+msgstr ""
+
+#: includes/visual-composer.php:1268
+msgid "Choose Smart Content Box layout."
+msgstr ""
+
+#: includes/visual-composer.php:1283
+msgid "Order by published date"
+msgstr ""
+
+#: includes/visual-composer.php:1285
+msgid "Order randomly"
+msgstr ""
+
+#: includes/visual-composer.php:1286
+msgid "Order by Title Alphabet"
+msgstr ""
+
+#: includes/visual-composer.php:1287
+msgid "Order by Title Reversed Alphabet"
+msgstr ""
+
+#: includes/visual-composer.php:1289
+msgid "Condition to query items"
+msgstr ""
+
+#: includes/visual-composer.php:1294
+msgid "Order"
+msgstr ""
+
+#: includes/widgets.php:203
+msgid "Display About US widget which contains information and social accounts."
+msgstr ""
+
+#: includes/widgets.php:205
+msgid "DT About US"
+msgstr ""
+
+#: includes/widgets.php:210
+msgid "About us"
+msgstr ""
+
+#: includes/widgets.php:223 includes/widgets.php:734
+msgid "Select socials"
+msgstr ""
+
+#: includes/widgets.php:275
+msgid "Display Facebook fanpage like box."
+msgstr ""
+
+#: includes/widgets.php:277
+msgid "DT Facebook"
+msgstr ""
+
+#: includes/widgets.php:282
+msgid "Facebook Fanpage"
+msgstr ""
+
+#: includes/widgets.php:287 includes/widgets.php:366
+msgid "DawnThemes"
+msgstr ""
+
+#: includes/widgets.php:288
+msgid "Fanpage Name"
+msgstr ""
+
+#: includes/widgets.php:293
+msgid "Width (pixel)"
+msgstr ""
+
+#: includes/widgets.php:354
+msgid "Display Instagram photos."
+msgstr ""
+
+#: includes/widgets.php:356
+msgid "DT Instagram"
+msgstr ""
+
+#: includes/widgets.php:371
+msgid "8"
+msgstr ""
+
+#: includes/widgets.php:376
+msgid "5"
+msgstr ""
+
+#: includes/widgets.php:418
+msgid "Instagram did not return any images."
+msgstr ""
+
+#: includes/widgets.php:435
+msgid "A list of Your site’s Posts."
+msgstr ""
+
+#: includes/widgets.php:437
+msgid "DT Posts"
+msgstr ""
+
+#: includes/widgets.php:450
+msgid "Recent posts"
+msgstr ""
+
+#: includes/widgets.php:451
+msgid "Featured posts"
+msgstr ""
+
+#: includes/widgets.php:458
+msgid "Number of posts to show:"
+msgstr ""
+
+#: includes/widgets.php:463
+msgid "Display post date?"
+msgstr ""
+
+#: includes/widgets.php:546
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: includes/widgets.php:561
+msgid "Your site’s most recent Posts."
+msgstr ""
+
+#: includes/widgets.php:563
+msgid "DT Post Slider"
+msgstr ""
+
+#: includes/widgets.php:589
+msgid "Number posts to query"
+msgstr ""
+
+#: includes/widgets.php:684
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: includes/widgets.php:719
+msgid "Display Social Icon."
+msgstr ""
+
+#: includes/widgets.php:721
+msgid "DT Social"
+msgstr ""
+
+#: includes/widgets.php:756
+msgid "Square"
+msgstr ""
+
+#: includes/widgets.php:757
+msgid "Round"
+msgstr ""
+
+#: includes/widgets.php:758
+msgid "Outlined"
+msgstr ""
+
+#: includes/widgets.php:799
+msgid "Display recent tweets"
+msgstr ""
+
+#: includes/widgets.php:811
+msgid "Please fill all widget settings!"
+msgstr ""
+
+#: includes/widgets.php:823
+msgid "Couldn't find twitteroauth.php!"
+msgstr ""
+
+#: includes/widgets.php:837
+msgid ""
+"You'll need to regenerate it <a href=\"https://dev.twitter.com/apps\" target="
+"\"_blank\">here</a>!"
+msgstr ""
+
+#: includes/widgets.php:916
+#, php-format
+msgid "%s seconds ago"
+msgstr ""
+
+#: includes/widgets.php:918
+msgid "about 1 minute ago"
+msgstr ""
+
+#: includes/widgets.php:920
+#, php-format
+msgid "%s minutes ago"
+msgstr ""
+
+#: includes/widgets.php:922
+msgid "about 1 hour ago"
+msgstr ""
+
+#: includes/widgets.php:924
+#, php-format
+msgid "%s hours ago"
+msgstr ""
+
+#: includes/widgets.php:926
+msgid "yesterday"
+msgstr ""
+
+#: includes/widgets.php:928
+#, php-format
+msgid "%s days ago"
+msgstr ""
+
+#: includes/widgets.php:930
+msgid "over a year ago"
+msgstr ""
+
+#: includes/widgets.php:953
+msgid "Consumer Key"
+msgstr ""
+
+#: includes/widgets.php:957
+msgid "Consumer Secret"
+msgstr ""
+
+#: includes/widgets.php:961
+msgid "Access Token"
+msgstr ""
+
+#: includes/widgets.php:965
+msgid "Access Token Secret"
+msgstr ""
+
+#: includes/widgets.php:969
+msgid "Cache Tweets in every"
+msgstr ""
+
+#: includes/widgets.php:970
+msgid "hours"
+msgstr ""
+
+#: includes/widgets.php:973
+msgid "Twitter Username"
+msgstr ""
+
+#: includes/widgets.php:977
+msgid "Tweets to display"
+msgstr ""
+
+#: includes/widgets.php:991
+msgid "Exclude replies"
+msgstr ""
+
+#: includes/widgets.php:1025
+msgid "Widget post with thumbnail."
+msgstr ""
+
+#: includes/widgets.php:1027
+msgid "DT Post Thumbnail"
+msgstr ""
+
+#: includes/widgets.php:1049
+msgid "Number of posts to show"
+msgstr ""
+
+#: includes/widgets.php:1056
+msgid "Latest"
+msgstr ""
+
+#: includes/widgets.php:1057
+msgid "Most Commented"
+msgstr ""
+
+#: includes/widgets.php:1129
+msgid "% Comments"
+msgstr ""
+
+#: includes/widgets.php:1131
+msgid "0 Comments"
+msgstr ""
+
+#: includes/widgets.php:1133
+msgid "1 Comment"
+msgstr ""
+
+#: includes/widgets.php:1156
+msgid "DT Mailchimp Subscribe"
+msgstr ""
+
+#: includes/woocommerce.php:319
+#, php-format
+msgid "Reviews <span>%d</span>"
+msgstr ""
+
+#: includes/woocommerce.php:377
+msgid "% items"
+msgstr ""
+
+#: includes/woocommerce.php:379
+msgid "0 items"
+msgstr ""
+
+#: includes/woocommerce.php:381
+msgid "1 item"
+msgstr ""
+
+#: includes/woocommerce.php:429 includes/woocommerce.php:515
+#: includes/woocommerce.php:518
+msgid "View Cart"
+msgstr ""
+
+#: includes/woocommerce.php:454
+msgid "Shopping Cart"
+msgstr ""
+
+#: includes/woocommerce.php:476
+msgid "My Cart"
+msgstr ""
+
+#: includes/woocommerce.php:486
+msgid "in the shopping cart"
+msgstr ""
+
+#: includes/woocommerce.php:503
+msgid "Remove this item"
+msgstr ""
+
+#: includes/woocommerce.php:509
+msgid "Cart Subtotal"
+msgstr ""
+
+#: includes/woocommerce.php:524
+msgid "Your shopping bag is empty."
+msgstr ""
+
+#: includes/woocommerce.php:534
+msgid "Go to the shop"
+msgstr ""
+
+#: includes/woocommerce.php:584
+msgid "Quick view"
+msgstr ""
+
+#: includes/woocommerce.php:788 includes/woocommerce.php:892
+msgid "Short Description"
+msgstr ""
+
+#: includes/woocommerce.php:793 includes/woocommerce.php:901
+msgid "Heading Background"
+msgstr ""
+
+#: includes/woocommerce.php:799 includes/woocommerce.php:909
+msgid "Upload/Add image"
+msgstr ""
+
+#: includes/woocommerce.php:800 includes/woocommerce.php:910
+msgid "Remove image"
+msgstr ""
+
+#: includes/woocommerce.php:823 includes/woocommerce.php:933
+msgid "Choose an image"
+msgstr ""
+
+#: includes/woocommerce.php:825 includes/woocommerce.php:935
+msgid "Use image"
+msgstr ""
+
+#: includes/woocommerce.php:854 includes/woocommerce.php:964
+msgid "Heading Title"
+msgstr ""
+
+#: includes/woocommerce.php:858 includes/woocommerce.php:968
+msgid "Heading Sub Title"
+msgstr ""
+
+#: includes/woocommerce.php:862 includes/woocommerce.php:972
+msgid "Heading Button Text"
+msgstr ""
+
+#: includes/woocommerce.php:866 includes/woocommerce.php:976
+msgid "Heading Sub Link"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "DawnThemes Core"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://dawnthemes.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "DawnThemes Core Plugin for WOZINE theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DawnThemes Team"
+msgstr ""

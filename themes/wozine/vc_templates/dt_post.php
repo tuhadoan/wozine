@@ -20,7 +20,7 @@ extract(shortcode_atts(array(
 	'hide_readmore'		=>'',
 	'show_tag'			=>'no',
 	'pagination'		=>'page_num',
-	'loadmore_text'		=>__('Load More','woow'),
+	'loadmore_text'		=>__('Load More','wozine'),
 	'visibility'		=>'',
 	'el_class'			=>'',
 ), $atts));
@@ -213,7 +213,7 @@ if($r->have_posts()):
 						<?php endif;?>
 						<?php if(empty($hide_readmore)):?>
 						<div class="readmore-link">
-							<a href="<?php the_permalink()?>"><?php esc_html_e("Read More", 'woow');?></a>
+							<a href="<?php the_permalink()?>"><?php esc_html_e("Read More", 'wozine');?></a>
 						</div>
 						<?php endif;?>
 					</div>

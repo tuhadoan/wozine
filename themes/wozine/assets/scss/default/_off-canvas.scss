@@ -2,252 +2,72 @@
  * 8.0 Off Canvas
  * -----------------------------------------------------------------------------
  */
-
-/* Sidebar offcanvas header */
-.sidebar-offcanvas-header{
-	height: 80px;
-	background: #fff;
-	padding: 24px 20px 0;
-	color: #555;
-	margin-bottom: 30px;
-	box-shadow: 0 5px 6px rgba(0,0,0,0.05);
-}	
-/* User Panel */
-.user-panel .ava {
-	width: 32px;
-	height: 32px;
-	background: #c1c1c1;
-	float: left;
-	line-height: 32px;
-	text-align: center;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	margin-right: 10px;
-	color: #fff;
-	font-size: 12px;
-}
-.user-panel .ava img{
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	width: 32px;
-	height: 32px;
-	line-height: 32px;
-}
-
-.user-panel .user-welcome {
-	text-transform: uppercase;
-	font-size: 11px;
-	float: left;
-	line-height: 32px;
-	a{
-		color: $main-color;
-		text-decoration: none;
-		&:hover{
-			text-decoration: none;
-		}
-	}
-}
-/* Toggle Wrap */
-.toggle-wrap {
-	font-size: 15px;
-	line-height: 32px;
-}
-.toggle-wrap .toggle-icon {
-	display: inline-block;
-	margin: 0 5px;
-	cursor: pointer;
-}
-.toggle-wrap .toggle-icon:last-child {
-	margin-right: 0;
-}
-.toggle-wrap a{
-	color: #555
-}
-.toggle-wrap a:hover{
-	color: #497ab8;
-}
-
 .offcanvas{
-	/* Search Box */
-	.search-box {
-		position: relative;
-		display: none;
-		outline:0;
-	}
-	.search-box .search-icon {
-		font-size: 12px;
-		color:#d0d0d0;
-		position: absolute;
-		right: 12px;
-		top: 9px;
-	}
-	.search-box  .keywords{
-		border: 1px solid #d7d7d7;
-		background: #fff;
-		width: 100%;
-		padding: 6px 40px 5px 12px;
-	}
-	.search-box  .keywords:focus{
-		border-color: #bebebe;
-	}
-}
-
-/* Box User Menu */
-.box-user-menu {
-	background: #fff;
-	box-shadow: 0 0 1px rgba(0,0,0,0.3);
-	margin: 10px 20px 30px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	.user-menu{
-		padding: 0;
-		list-style: none;
-		li{
-			&:last-child a{
-				border-bottom: 0;
-			}
-			a{
-				text-decoration: none;
-				padding: 10px 25px 10px 30px;
-				line-height: 20px;
-				display: block;
-				border-bottom: 1px solid rgba(0,0,0,0.1);
-				color: #555;
-				position: relative;
-				line-height: 18px;
-				color: #7c7c7c;
-				transition: all 0.1s ease-in-out;
-				&:hover{
-					background: rgba(0,0,0,0.03);
-					color: #497ab8;
-					text-decoration: none;
+	padding: 0 20px 30px;
+	.site-navigation{
+		#main-menu, #main-menu > ul{
+			display: block;
+			margin: 0px;
+			line-height: 40px;
+			text-align: left;
+			@include ulclear();
+			// Leve 1
+			li{
+				padding: 5px 0px;
+				border-bottom: 1px solid #eaeaea;
+				&:last-child{
+					border-bottom: 0px;
 				}
-
-				.menu-item-icon {
-					position: absolute;
-					left: 10px;
-					top: 10px;
-					line-height: 18px;
-				}
-
-				.menu-item-arrow {
-					position: absolute;
-					right: 15px;
-					top: 10px;
-					line-height: 18px;
+				ul{
+					@include ulclear();
+					padding-left: 10px;
 				}
 			}
-		}
-	}
-}
 
-/* Box Create Event */
-.box-create-event {
-	margin: 10px 0 20px;
-	padding: 0 20px;
-}
-.button-create-event {
-	background: #73bb67;
-	color: #fff;
-	text-align: center;
-	border: 1px solid #58a04d;
-	font-size: 12px;
-	text-transform: uppercase;
-	display: block;
-	padding: 12px 20px 10px;
-	width: 100%;
-	letter-spacing: 1px;
-	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
-	border-radius: 2px;
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	transition: all 0.1s ease-in-out;
-
-	&:hover{
-		background: #58a04d;
-		border: 1px solid #58a04d;
-	}
-}
-/* Box Cart */
-.box-cart {
-	margin: 10px 0 30px;
-	.cart-title {
-		font-size: 14px;
-		color: #c3c3c3;
-		text-transform: uppercase;
-		margin: 0;
-		padding: 0 20px 15px;
-	}
-
-	.cart-view {
-		background: #4f8ad3 url(../images/cart-bg.png) right 50% no-repeat;
-		text-decoration: none;
-		padding: 16px 20px 14px;
-		color: #fff;
-		display: block;
-		line-height: 20px;
-		transition: all 0.1s ease-in-out;
-		&:hover{
-			background-color:#2c73ca;
-			text-decoration: none;
-		}
-	}
-}
-
-/* Box Categories */
-.box-categories {
-	margin-bottom: 30px;
-	.box-categories-title {
-		font-size: 14px;
-		color: #c3c3c3;
-		text-transform: uppercase;
-		margin: 0;
-		padding: 0 20px 15px;
-	}
-
-	.cat-menu{
-		list-style: none;
-		padding: 0;
-		border-top: 1px solid rgba(0,0,0,0.1);
-		li{
-			border-bottom: 1px solid rgba(0,0,0,0.1);
-			a{
-				display: block;
-				padding: 12px 40px 10px 20px;
-				color: #555;
-				position: relative;
-				line-height: 18px;
-				transition: all 0.1s ease-in-out;
-				text-decoration: none;
-				.menu-item-arrow{
-					position: absolute;
-					right: 20px;
-					top: 12px;
-					line-height: 18px;
+			li.menu-item-has-children{
+				> a{
+					display: block;
+					position: relative;
+					&:before{
+						content: '';
+					    position: absolute;
+					    width: 10px;
+					    height: 1px;
+					    background: #999;
+					    top: 50%;
+					    margin-top: -1px;
+					    -webkit-transition: all 0.25s ease;
+					    -o-transition: all 0.25s ease;
+					    transition: all 0.25s ease;
+					    right: 0;
+					}
+					&:after{
+						content: '';
+					    position: absolute;
+					    width: 10px;
+					    height: 1px;
+					    background: #999;
+					    top: 50%;
+					    margin-top: -1px;
+					    -webkit-transform: rotate(-90deg);
+					    -ms-transform: rotate(-90deg);
+					    -o-transform: rotate(-90deg);
+					    transform: rotate(-90deg);
+					    -webkit-transition: all 0.25s ease;
+					    -o-transition: all 0.25s ease;
+					    transition: all 0.25s ease;
+					    right: 0;
+					}
+				}
+				ul{
+					
 				}
 
-				.count {
-					font-size: 10px;
-					background: #c7c7c7;
-					color: #fff;
-					display: inline-block;
-					padding: 0 5px;
-					position: absolute;
-					right: 40px;
-					-webkit-border-radius: 1px;
-					-moz-border-radius: 1px;
-					border-radius: 1px;
-				}
-
-				&:hover{
-					background: #fff;
-					color: #4886d3;
-					text-decoration: none;
-					.count {
-						background: #4886d3;
+				&.active{
+					> a{
+						&:after{
+							display: none;
+						}
 					}
 				}
 			}

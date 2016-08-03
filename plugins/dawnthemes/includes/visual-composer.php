@@ -697,6 +697,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 						'admin_label' => true, 
 						'value' => array( 
 							__( 'Default', 'dawnthemes' ) => 'default', 
+							__( 'List', 'dawnthemes' ) => 'list', 
 							__( 'Grid', 'dawnthemes' ) => 'grid', 
 							__( 'Classic', 'dawnthemes' ) => 'classic',
 							__( 'Masonry', 'dawnthemes' ) => 'masonry' ), 
@@ -750,7 +751,7 @@ if ( ! class_exists( 'DT_VisualComposer' ) && defined( 'WPB_VC_VERSION' ) ) :
 							__( 'Ajax Load More', 'dawnthemes' ) => 'loadmore', 
 							__( 'Infinite Scrolling', 'dawnthemes' ) => 'infinite_scroll', 
 							__( 'No', 'dawnthemes' ) => 'no' ),
-						'dependency' => array( 'element' => 'layout', 'value' => array( 'default', 'grid', 'masonry' ) ),
+						'dependency' => array( 'element' => 'layout', 'value' => array( 'default', 'list', 'grid', 'masonry' ) ),
 						'description' => __( 'Choose pagination type.', 'dawnthemes' ) ), 
 					array( 
 						'type' => 'textfield', 

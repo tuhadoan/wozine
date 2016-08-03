@@ -78,6 +78,10 @@ blockquote{
 	background: transparent;
 	position: relative;
 	z-index: 0;
+	*{
+		backface-visibility: hidden;
+    	-webkit-backface-visibility: hidden;
+	}
 	span.entry-date{
 		position: absolute;
 	    width: 48px;
@@ -1560,6 +1564,7 @@ a.post-thumbnail:hover {
 	}
 }
 .posts-layout-default,
+.posts-layout-list,
 .posts-layout-grid,
 .posts-layout-classic,
 .posts-layout-masonry
@@ -1735,8 +1740,54 @@ a.post-thumbnail:hover {
 			float: none;
 			margin-right: -4px;
 		}
+		.content-grid{
+			.header-wrap{
+				position: relative;
+				margin-bottom: 30px;
+				.author-avatar{
+					position: absolute;
+					left: 15px;
+					bottom: -23px;
+					img{
+						border: 0px;
+						border-radius: 100%;
+					}
+				}
+			}
+		}
 	}
 }
+.posts-layout-list{
+	.post{
+		margin-bottom: 35px;
+		padding-bottom: 30px;
+		position: relative;
+		border-bottom: 1px solid $border-color;
+		&:last-child{
+			padding-bottom: 0px;
+			border-bottom: 0px;
+		}
+		&.post_classic{
+			display: table;
+			width: 100%;
+			.post-thumbnail, .hentry-wrap, .entry-featured{
+				display: table-cell;
+				vertical-align: top;
+				width: 50%;
+				padding-right: 30px;
+			}
+			.post-content{
+				display: table-cell;
+				vertical-align: top;
+			}
+		}
+
+		.post-content{
+			margin-bottom: 0px;
+		}
+	}
+}
+
 .posts-layout-classic{
 	.post{
 		margin-bottom: 35px;
@@ -1760,17 +1811,23 @@ a.post-thumbnail:hover {
 			}
 		}
 		&.post_classic{
-			display: table;
-			width: 100%;
 			.post-thumbnail, .hentry-wrap, .entry-featured{
-				display: table-cell;
-				vertical-align: top;
-				width: 400px;
-				padding-right: 30px;
+				margin-bottom: 16px;
 			}
-			.post-content{
-				display: table-cell;
-				vertical-align: top;
+			@media(min-width: 640px){
+				display: table;
+				width: 100%;
+				.post-thumbnail, .hentry-wrap, .entry-featured{
+					display: table-cell;
+					vertical-align: top;
+					width: 400px;
+					padding-right: 30px;
+					margin-bottom: 0px;
+				}
+				.post-content{
+					display: table-cell;
+					vertical-align: top;
+				}
 			}
 		}
 

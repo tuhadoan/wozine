@@ -5,6 +5,9 @@
  * @subpackage Dawn
  */
 ?>
+<?php
+$show_readmore = dt_get_theme_option('blog_show_readmore','') == '1' ? 'yes':'';
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($post_class . $layout_class); ?> itemscope="">
 	<?php
 	if(get_post_format() == 'link'):
@@ -91,5 +94,10 @@
 			?>
 		</div><!-- .entry-meta -->
 		<?php the_tags( '<footer class="tags-list"><span class="tag-title"><i class="fa fa-tags"></i> '.esc_html__('Tags:', 'wozine').' </span><span class="tag-links">', ' , ', '</span></footer>' ); ?>
+		<?php if($show_readmore == 'yes'):?>
+		<div class="readmore-link">
+			<a href="<?php the_permalink()?>" class="more-link"><?php esc_html_e("Continue Reading", 'wozine');?><span class="meta-nav"></span></a>
+		</div>
+		<?php endif;?>
 	</div>
 </article><!-- #post-## -->

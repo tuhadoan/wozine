@@ -36,7 +36,7 @@
 			<?php
 			if ( comments_open() && get_comments_number() ) :
 			?>
-				<span class="comments-link"><i class="fa fa-comments"></i><?php comments_popup_link( esc_html__( '', 'wozine' ), esc_html__( '1', 'wozine' ), __( '%', 'wozine' ) ); ?></span>
+				<span class="comments-link"><i class="fa fa-comments"></i><?php comments_popup_link( esc_html__( '0', 'wozine' ), esc_html__( '1', 'wozine' ), __( '%', 'wozine' ) ); ?></span>
 			<?php
 			endif;
 			?>

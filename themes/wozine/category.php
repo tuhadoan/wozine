@@ -42,17 +42,12 @@ get_header(); ?>
 							<?php
 							if( have_posts() ):
 								?>
-								<header class="archive-header">
-									<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'wozine' ), single_cat_title( '', false ) ); ?></h1>
-				
+								<header class="page-header">
 									<?php
-										// Show an optional term description.
-										$term_description = term_description();
-										if ( ! empty( $term_description ) ) :
-											printf( '<div class="taxonomy-description">%s</div>', $term_description );
-										endif;
+										the_archive_title( '<h1 class="page-title">', '</h1>' );
+										the_archive_description( '<div class="taxonomy-description">', '</div>' );
 									?>
-								</header><!-- .archive-header -->
+								</header><!-- .page-header -->
 								<div data-itemselector="<?php echo esc_attr($itemSelector)  ?>"  class="posts <?php echo (($pagination === 'loadmore') ? ' loadmore':''); ?><?php echo (($pagination === 'infinite_scroll') ? ' infinite-scroll':'') ?><?php echo (($layout === 'masonry') ? ' masonry':'') ?>" data-paginate="<?php echo esc_attr($pagination) ?>" data-layout="<?php echo esc_attr($layout) ?>"<?php echo ($layout === 'masonry') ? ' data-masonry-column="'.$columns.'"':''?>>
 									<div class="posts-wrap<?php echo (($pagination === 'loadmore') ? ' loadmore-wrap':'') ?><?php echo (($pagination === 'infinite_scroll') ? ' infinite-scroll-wrap':'') ?><?php echo (($layout === 'masonry') ? ' masonry-wrap':'') ?> posts-layout-<?php echo esc_attr($layout)?><?php if( $layout == 'default' || $layout == 'grid' || $layout == 'masonry') echo' row' ?>">
 									<?php
