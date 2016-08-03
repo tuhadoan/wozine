@@ -22,11 +22,14 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 	<div class="container">
 		<div class="row">
-			<?php do_action('dt_left_sidebar');?>
 			<section id="primary" class="content-area <?php echo esc_attr($main_class)?>">
 				<div id="content" class="site-content" role="main">
 					<div class="row">
 						<div class="col-md-12">
+							<header class="page-header">
+								<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wozine' ), get_search_query() ); ?></h1>
+							</header><!-- .page-header -->
+							<?php get_search_form();?>
 							<?php 
 							$itemSelector = '';
 							$itemSelector .= (($pagination === 'infinite_scroll') ? '.post.infinite-scroll-item':'');
@@ -35,10 +38,6 @@ get_header(); ?>
 							<?php
 							if ( have_posts() ) :
 								?>
-								<header class="page-header">
-									<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'wozine' ), get_search_query() ); ?></h1>
-								</header><!-- .page-header -->
-								
 								<div data-itemselector="<?php echo esc_attr($itemSelector)  ?>"  class="posts <?php echo (($pagination === 'loadmore') ? ' loadmore':''); ?><?php echo (($pagination === 'infinite_scroll') ? ' infinite-scroll':'') ?><?php echo (($layout === 'masonry') ? ' masonry':'') ?>" data-paginate="<?php echo esc_attr($pagination) ?>" data-layout="<?php echo esc_attr($layout) ?>"<?php echo ($layout === 'masonry') ? ' data-masonry-column="'.$columns.'"':''?>>
 									<div class="posts-wrap<?php echo (($pagination === 'loadmore') ? ' loadmore-wrap':'') ?><?php echo (($pagination === 'infinite_scroll') ? ' infinite-scroll-wrap':'') ?><?php echo (($layout === 'masonry') ? ' masonry-wrap':'') ?> posts-layout-<?php echo esc_attr($layout)?><?php if( $layout == 'default' || $layout == 'grid' || $layout == 'masonry') echo' row' ?>">
 									<?php
@@ -82,9 +81,6 @@ get_header(); ?>
 									// this paging nav should be outside .posts-wrap
 									$paginate_args = array();
 									switch ($pagination){
-										case 'def':
-											dt_paging_nav_default();
-											break;
 										case 'loadmore':
 											dt_paging_nav_ajax($loadmore_text);
 											$paginate_args = array('show_all'=>true);
@@ -106,6 +102,7 @@ get_header(); ?>
 					</div><!-- /.row -->
 				</div><!-- #content -->
 			</section><!-- #primary -->
+		<?php do_action('dt_left_sidebar');?>
 		<?php do_action('dt_right_sidebar') ?>
 
 	</div><!-- .row -->

@@ -19,9 +19,9 @@ get_header(); ?>
 						
 						if ( 'post' === get_post_type() ) :?>
 						<div class="author-info">
-						<?php
+							<?php
 							$author_avatar_size = apply_filters( 'dt_author_avatar_size', 340 );
-						?>
+							?>
 							<div class="author-avatar">
 								<?php echo get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ); ?>
 							</div>

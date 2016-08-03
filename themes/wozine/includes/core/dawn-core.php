@@ -24,12 +24,12 @@ if( ! class_exists('dawn_core') ){
 	 		$dawn_author_links = array('facebook', 'twitter', 'google', 'flickr', 'instagram', 'pinterest', 'envelope');
 		 	?>
 		 	<h3><?php esc_html_e('DT - Social informations','wozine') ?></h3>
-		 	<table class="form-table cactus-social-info">
+		 	<table class="form-table wozine-social-info">
 		 		<?php foreach( $dawn_author_links as $account ): ?>
 					<tr>
 						<th><label for="<?php echo $account; ?>"><?php echo $account == 'envelope' ? 'Email' : $account ; ?></label></th>
 						<td>
-							<span class="description"><?php esc_html_e('Account URL','cactus')?></span>
+							<span class="description"><?php esc_html_e('Account URL','wozine')?></span>
 							<input type="text" name="<?php echo $account; ?>" id="<?php echo $account; ?>" value="<?php echo esc_attr( get_the_author_meta( $account, $user->ID ) ); ?>" class="regular-text" />
 						</td>
 					</tr>

@@ -151,7 +151,7 @@ if($mode == 'single_mode'){
 					break;
 				default:
 					while ($r->have_posts()): $r->the_post(); global $post;
-					$featured_class = !empty(get_post_format()) ? ' '.get_post_format().'-featured' : '';
+					$featured_class = (get_post_format() != '') ? ' '.get_post_format().'-featured' : '';
 					?>
 						<div class="post-item-slide">
 							<article id="post-<?php the_ID(); ?>" class="post">

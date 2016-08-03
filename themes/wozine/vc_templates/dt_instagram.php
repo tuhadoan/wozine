@@ -37,7 +37,7 @@ ob_start();
 			if(is_wp_error($images_data)){
 				echo implode($images_data->get_error_messages());
 			}else{
-				echo esc_html__( 'Instagram did not return any images.', 'woow' );
+				echo esc_html__( 'Instagram did not return any images.', 'wozine' );
 			}
 			echo '</div>';
 		};

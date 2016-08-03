@@ -5,7 +5,7 @@ if (! function_exists ( 'theme_register_plugin' )) :
 				array (
 					'name' => 'DawmThemes Core',
 					'slug' => 'dawnthemes',
-					'source' => get_template_directory_uri () . '/include/plugins/dawnthemes.zip',
+					'source' => get_template_directory_uri () . '/includes/plugins/dawnthemes.zip',
 					'required' =>true,
 					'version' => '1.0',
 					'force_activation' => false,
@@ -15,23 +15,13 @@ if (! function_exists ( 'theme_register_plugin' )) :
 				array (
 					'name' => 'Visual Composer',
 					'slug' => 'js_composer',
-					'source' => get_template_directory_uri () . '/include/plugins/js_composer.zip',
+					'source' => get_template_directory_uri () . '/includes/plugins/js_composer.zip',
 					'required' =>true,
 					'version' => '4.8.0.1',
 					'force_activation' => false,
 					'force_deactivation' => false,
 					'external_url' => ''
 				),
-// 				array (
-// 					'name' => 'Revolution Slider',
-// 					'slug' => 'revslider',
-// 					'source' => get_template_directory_uri () . '/include/plugins/revslider.zip',
-// 					'required' =>false,
-// 					'version' => '4.6.8',
-// 					'force_activation' => false,
-// 					'force_deactivation' => false,
-// 					'external_url' => ''
-// 				),
 				array (
 						'name' => 'Contact Form 7',
 						'slug' => 'contact-form-7',

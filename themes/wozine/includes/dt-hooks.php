@@ -42,15 +42,13 @@ function dt_nav_content(){
 	switch ($template){
 		case 'ajax_nav':
 			while ( $p->have_posts() ) : $p->the_post(); $limit = $p->found_posts;
-			?>
-						
-				<?php
-				if($offset + $posts_per_page >= $limit){
-		    		// there are no more product
-		    		// print a flag to detect
-		    		echo '<div id="dt-ajax-no-p" class=""><!-- --></div>';
-		    	}
+				
 	    	endwhile;
+	    	if($offset + $posts_per_page >= $limit){
+	    		// there are no more product
+	    		// print a flag to detect
+	    		echo '<div id="dt-ajax-no-p" class=""><!-- --></div>';
+	    	}
 	    break;
 		case 'post-category':
 				$i = 0;
@@ -63,13 +61,12 @@ function dt_nav_content(){
 						),
 						'vc_templates/tpl', 'vc_templates/tpl'
 					);
-					
-					if($offset + $posts_per_page >= $limit){
-						// there are no more product
-						// print a flag to detect
-						echo '<div id="dt-ajax-no-p" class=""><!-- --></div>';
-					}
 		    	endwhile;
+		    	if($offset + $posts_per_page >= $limit){
+					// there are no more product
+					// print a flag to detect
+					echo '<div id="dt-ajax-no-p" class=""><!-- --></div>';
+				}
 			break;
 		default: break;
 	}

@@ -29,6 +29,7 @@
 			height: 60px;
 			line-height: 60px;
 			> a{
+				position: relative;
 				color: #1f1f1f;
 				font-weight: bold;
 				font-size: 13px;
@@ -41,49 +42,90 @@
 					text-decoration: none;
 				}
 			}
+
+			&:hover{
+				> a{
+					color: $main-color;
+				}
+			}
+
 			&.current-menu-item{
 				> a{
-					position: relative;
 					color: $main-color;
+				}
+			}
+
+			&.menu-item-has-children{
+				&:hover{
+					> a{
+						color: $main-color;
+					}
+					> ul{
+						@include effect-block-show();
+					}
 				}
 			}
 
 			/* level 2 */
 			ul{
-				background: rgba(255,255,255,0.9);
+				background: #ffffff;
 				border: 1px solid rgba(0,0,0,0.1);
 				box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-				display: none;
 				position: absolute;
-				top: 100%;
+				min-width: 300px;
+				@include ulclear();
+				@include effect-block-hide();
 				li{
-					font-size: 12px;
+					font-size: 13px;
 				    text-transform: capitalize;
 				    margin: 0;
 				    padding: 0;
-				    border-bottom: 1px solid rgba(0,0,0,0.1);
 				    position: relative;
 				    line-height: 1.2;
 				    min-width: 200px;
 				    a{
-				    	color: #444;
-	    				padding: 8px 15px;
+				    	color: #1f1f1f;
+	    				padding: 12px 15px;
+	    				font-weight: bold;
 	    				&:hover{
 	    					background: #fff;
-	    					color: #333;
+	    					color: $main-color;
 	    					text-decoration: none;
 	    				}
 				    }
+					&.menu-item-has-children{
+						> a{
+							position: relative;
+							&:after{
+								@include font-awesome('\f067', 13px);
+								position: absolute;
+								right: 10px;
+								@include transition(all 0.3s ease-in-out);
+							}
+						}
+						&:hover{
+							> a{
+								&:after{
+									content: "\f068";
+									color: $main-color;
+									@include transition(all 0.3s ease-in-out);
+								}
+							}
+					    	> ul{
+					    		@include effect-block-show();
+					    		top: 0;
+					    	}
+					    }
+					}
 
 				    /* level n */
 				    ul{
-				    	background: rgba(255,255,255,0.9);
+				    	background: #ffffff;
 						border: 1px solid rgba(0,0,0,0.1);
-						box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-						display: none;
 						position: absolute;
+						@include box-shadow(1px 1px 1px rgba(0,0,0,0.1));
+						@include effect-block-hide();
 						left: 100%;
-						top: -1px;
 				    }
 				}
 			}

@@ -269,6 +269,85 @@ class DT_About_US extends DT_Widget{
 	}
 }
 
+class DT_Facebook_Widget extends DT_Widget{
+	public function __construct(){
+		$this->widget_cssclass		= 'dt-facebook__widget';
+		$this->widget_description	= esc_html__( 'Display Facebook fanpage like box.', 'dawnthemes' );
+		$this->widget_id			= 'DT_Facebook_Widget';
+		$this->widget_name        	= esc_html__( 'DT Facebook', 'dawnthemes' );
+		
+		$this->settings				= array(
+			'title'		=> array(
+					'type'	=> 'text',
+					'std'	=> esc_html__( 'Facebook Fanpage', 'dawnthemes' ),
+					'label' => esc_html__( 'Title', 'dawnthemes' )
+			),
+			'fanpage'		=> array(
+					'type'	=> 'text',
+					'std'	=> esc_html__( 'DawnThemes', 'dawnthemes' ),
+					'label' => esc_html__( 'Fanpage Name', 'dawnthemes' )
+			),
+			'width'		=> array(
+				'type'	=> 'text',
+				'std'	=> '370',
+				'label' => esc_html__( 'Width (pixel)', 'dawnthemes' )
+			),
+		);
+		
+		parent::__construct();
+	}
+	
+	public function widget($args, $instance){
+		ob_start();
+		extract( $args );
+		$title      	= apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
+		$fanpage		= !empty($instance['fanpage']) ? esc_html($instance['fanpage']) : 'DawnThemes' ;
+		$width			= !empty($instance['width']) ? absint($instance['width']) : 370 ;
+		
+		if(!empty($fanpage)){
+			echo $before_widget;
+			if ( $title )
+				echo $before_title . $title . $after_title;
+			
+			?>
+			<div class="dt-facebook__widget_wrap">
+				<div class="dt-facebook__content">
+					<div id="fb-root"></div>
+					<script>
+						(function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0];
+							if (d.getElementById(id)) return;
+							js = d.createElement(s); js.id = id;
+							js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+							fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+					</script>
+					<div class="fb-page" 
+					data-href="https://www.facebook.com/<?php echo esc_html($fanpage); ?>"
+					data-width="<?php echo absint($width);?>"
+					data-height="215"
+					data-tabs="timeline" 
+					data-small-header="false" 
+					data-adapt-container-width="true" 
+					data-hide-cover="false" 
+					data-show-facepile="true" 
+					data-show-posts="false">
+						<div class="fb-xfbml-parse-ignore">
+							<blockquote cite="https://www.facebook.com/<?php echo esc_html($fanpage); ?>">
+								<a href="https://www.facebook.com/<?php echo esc_html($fanpage); ?>"><?php echo esc_html($fanpage); ?></a>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php
+			echo $after_widget;
+			$content = ob_get_clean();
+			echo $content;
+		}
+	}
+}
+
 class DT_Instagram_Widget extends DT_Widget{
 	public function __construct(){
 		$this->widget_cssclass		= 'dt-instagram__widget';
@@ -336,7 +415,7 @@ class DT_Instagram_Widget extends DT_Widget{
 					if(is_wp_error($images_data)){
 						echo implode($images_data->get_error_messages());
 					}else{
-						echo esc_html__( 'Instagram did not return any images.', 'woow' );
+						echo esc_html__( 'Instagram did not return any images.', 'dawnthemes' );
 					}
 					echo '</div>';
 				};
@@ -788,7 +867,7 @@ class DT_Tweets extends WP_Widget {
 					if(empty($tweet['status_id'])){ $tweet['status_id'] = ''; }
 					if(empty($tweet['created_at'])){ $tweet['created_at'] = ''; }
 						
-					echo '<li><span>'.$this->_convert_links($tweet['text']).'</span><a class="twitter_time" target="_blank" href="http://twitter.com/'.$instance['username'].'/statuses/'.$tweet['status_id'].'">'.ucfirst($this->_relative_time($tweet['created_at'])).'</a></li>';
+					echo '<li><i class="fa fa-twitter" aria-hidden="true"></i><span>'.$this->_convert_links($tweet['text']).'</span></li>';
 					if($i == $instance['tweetstoshow']){ break; }
 					$i++;
 				}
@@ -860,7 +939,7 @@ class DT_Tweets extends WP_Widget {
 			'accesstoken' => '',
 			'accesstokensecret' => '',
 			'cachetime' => '',
-			'username' => '',
+			'username' => 'DawnThemes',
 			'tweetstoshow' => ''
 		);
 		$instance = wp_parse_args ( ( array ) $instance, $defaults );
@@ -1104,6 +1183,7 @@ class DT_Mailchimp_Widget extends DT_Widget {
 add_action( 'widgets_init', 'dt_register_widget');
 function dt_register_widget(){
 	register_widget('DT_About_US');
+	register_widget('DT_Facebook_Widget');
 	register_widget('DT_Instagram_Widget');
 	register_widget('DT_Posts');
 	register_widget('DT_Post_Slider');

@@ -1,6 +1,6 @@
 /**
 Theme Name: WOZINE
-Description: Wozine is a clean and well organized theme for Magazine Blog & Video.
+Description: Wozine - Responsive WordPress Theme
 */
 
 /**
@@ -45,8 +45,8 @@ Description: Wozine is a clean and well organized theme for Magazine Blog & Vide
 
 
 // Theme: Variables and Mixins
-@import "_variables";
-@import "_mixin";
+@import "variables";
+@import "mixin";
 
 @import 'default/_reset';
 

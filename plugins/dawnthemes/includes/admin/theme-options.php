@@ -1408,6 +1408,7 @@ if ( ! class_exists( 'DTThemeOptions' ) ) :
 							'desc' => esc_html__( 'How your blog posts will display.', 'dawnthemes' ), 
 							'options' => array( 
 								'default' => esc_html__( 'Default', 'dawnthemes' ), 
+								'list' => esc_html__( 'List', 'dawnthemes' ),
 								'grid' => esc_html__( 'Grid', 'dawnthemes' ),
 								'classic' => esc_html__( 'Classic', 'dawnthemes' ),
 								'masonry' => esc_html__( 'Masonry', 'dawnthemes' ),
@@ -1434,7 +1435,7 @@ if ( ! class_exists( 'DTThemeOptions' ) ) :
 								'infinite_scroll' => esc_html__( 'Infinite Scrolling', 'dawnthemes' ),
 							), 
 							'value' => 'wp_pagenavi',
-							'dependency' => array( 'element' => 'blog_style', 'value' => array( 'default', 'grid', 'masonry' ) ),
+							'dependency' => array( 'element' => 'blog_style', 'value' => array( 'default', 'list', 'grid', 'masonry' ) ),
 							'desc' => esc_html__( 'Choose pagination type.', 'dawnthemes' ) ), 
 						array( 
 							'type' => 'text', 
@@ -1448,7 +1449,7 @@ if ( ! class_exists( 'DTThemeOptions' ) ) :
 							'label' => esc_html__( 'Excerpt Length', 'dawnthemes' ), 
 							'dependency' => array( 
 								'element' => "blog_style", 
-								'value' => array( 'default', 'medium', 'grid', 'masonry' ) ), 
+								'value' => array( 'default', 'list', 'grid', 'masonry' ) ), 
 							'desc' => esc_html__( 'In Archive Blog. Enter the number words excerpt', 'dawnthemes' ), 
 							'value' => 55 ), 
 						array( 

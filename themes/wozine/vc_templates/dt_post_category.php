@@ -89,7 +89,7 @@ if($p->have_posts()):
 			</div>
 			<?php endif;?>
 			<?php if($template == 'grid'):?>
-			<div class="dt-next-prev-wrap" data-cat="<?php esc_attr_e($category)?>" data-orderby="<?php esc_attr_e($orderby)?>" data-order="<?php esc_attr_e($order)?>" data-posts-per-page="5" data-target="<?php echo esc_attr($sc_id);?>" data-template="post-category">
+			<div class="dt-next-prev-wrap" data-cat="<?php echo esc_attr($category)?>" data-orderby="<?php echo esc_attr($orderby)?>" data-order="<?php echo esc_attr($order)?>" data-posts-per-page="5" data-target="<?php echo esc_attr($sc_id);?>" data-template="post-category">
 				<a href="#" class="dt-ajax-prev-page ajax-page-disabled" data-offset="0" data-current-page="1"><i class="fa fa-chevron-left"></i></a>
 				<a href="#" class="dt-ajax-next-page <?php echo ($p->found_posts <= 5) ? 'ajax-page-disabled' : '';?>" data-offset="5" data-current-page="1"><i class="fa fa-chevron-right"></i></a>
 			</div>

@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: 1 Colum - No Slidebar
+* Template Name: 1 Column - No Slidebar
 * @subpackage Dawn
 */
 ?>
