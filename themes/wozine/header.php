@@ -101,7 +101,9 @@ $is_sticky_menu = dt_get_theme_option('sticky_menu','yes') == 'yes' ? ' is_stick
 							<div class="dt-mainnav-wrapper">
 								<?php if( has_nav_menu('main-menu') ): ?>
 								<nav id="primary-navigation" class="site-navigation primary-navigation">
-									<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu', 'menu_id' => 'main-menu' ) ); ?>
+									<?php
+										wp_nav_menu(array( 'theme_location'  => 'main-menu','is_megamenu' => true));
+									?>
 								</nav>
 								<?php else :?>
 								<p class="dt-alert"><?php esc_html_e('Please sellect menu for Main navigation', 'wozine'); ?></p>

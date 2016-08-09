@@ -22,14 +22,22 @@
 	    }
 
 	    .dt-sticky-mainnav-wrapper{
+	    	#primary-navigation{
+	    		.megamenu{
+	    			position: static;
+	    		}
+	    	}
 	    	@media(min-width: 992px){
 	    		display: inline-block !important;
 	    	}
 	    	
-	    	#main-menu{
+	    	#main-menu, ul.main-menu{
 	    		> li{
 	    			> a{
 	    				color: #ffffff;
+	    				&:hover{
+	    					color: $main-color;
+	    				}
 	    			}
 	    		}
 	    	}
@@ -103,7 +111,7 @@ body{
 	min-height: 32px;
 }
 
-#header{
+.site-header{
 	position: relative;
     z-index: 888;
     width: 100%;

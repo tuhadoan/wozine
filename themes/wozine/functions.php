@@ -29,10 +29,11 @@ if(!defined('DT_ASSETS_URI'))
 do_action('dawn_theme_includes');
 
 include_once (get_template_directory() . '/includes/core/dawn-core.php');
+include_once (get_template_directory()	.'/includes/megamenu/megamenu.php');
 include_once (get_template_directory() . '/includes/dt-functions.php');
 include_once (get_template_directory() . '/includes/dt-hooks.php');
 
-include_once (get_template_directory().'/includes/walker.php');
+//include_once (get_template_directory().'/includes/walker.php');
 // Plugins Required - recommended
 $plugin_path = get_template_directory() . '/includes/plugins';
 if ( file_exists( $plugin_path . '/tgmpa_register.php' ) ) {
@@ -100,13 +101,14 @@ function dt_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 770, 520, true );
 	add_image_size( 'wozine-post-thumbnails', 770, 520, true );
+	add_image_size( 'wozine-megamenu-preview-thumbnail', 270, 182, true );
 	
 	add_image_size( 'wozine-blog-grid', 370, 250, true ); //370, 250
 	add_image_size( 'wozine-blog-gallery', 750, 562, true ); //375, 281
 
 	add_image_size( 'wozine-related-post-thumbnails', 244, 162, true );
 	add_image_size( 'wozine-recent-posts-wg-thumb', 170, 115, true );
-	
+
 	/*
 	 *  register thumbnail size for shortcodes
 	 */
