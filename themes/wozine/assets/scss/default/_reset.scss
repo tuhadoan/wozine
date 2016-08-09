@@ -46,7 +46,8 @@ body {
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-.font-2, blockquote
+.font-2, blockquote,
+#primary-navigation li
 {
 	font-family: 'Poppins';
 }
@@ -228,12 +229,12 @@ body {
 		margin:0; padding:0; line-height:1.3; color: #1f1f1f; display:block; font-weight:bold;
 	}  /*.heading-font*/
 	
-	h1, .h1 { padding-top:7px; padding-bottom:5px; font-size:36px;} /*36px*/
-	h2, .h2 { padding-top:3px; padding-bottom:2px; font-size:32px;} /*32px*/
-	h3, .h3 { padding-top:5px; padding-bottom:3px; font-size:28px;} /*28px*/
-	h4, .h4 { padding-top:6px; padding-bottom:5px; font-size:24px;} /*24px*/
-	h5, .h5 { padding-top:3px; padding-bottom:2px; font-size:20px;} /*20px*/
-	h6, .h6 { padding-top:3px; padding-bottom:2px; font-size:1em;} /*14px*/
+	h1, .h1 { padding-top:7px; padding-bottom:5px; font-size:2em;}
+	h2, .h2 { padding-top:3px; padding-bottom:2px; font-size:1.6818em;}
+	h3, .h3 { padding-top:5px; padding-bottom:3px; font-size:1.4142em;}
+	h4, .h4 { padding-top:6px; padding-bottom:5px; font-size:1.1892em;}
+	h5, .h5 { padding-top:3px; padding-bottom:2px; font-size:1em;}
+	h6, .h6 { padding-top:3px; padding-bottom:2px; font-size:0.8409em;}
 	
 	.site-footer h1,
 	.site-footer h2,

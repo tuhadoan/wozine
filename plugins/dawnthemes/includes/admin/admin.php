@@ -14,10 +14,6 @@ class DT_Admin {
 		include_once (dirname( __FILE__ ) . '/meta-boxes.php');
 		
 		/**
-		 * Mega Menu
-		 */
-		include_once (dirname( __FILE__ ) . '/mega-menu.php');
-		/**
 		 * Theme Options
 		 */
 		include_once (dirname( __FILE__ ) . '/theme-options.php');
